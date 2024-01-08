@@ -8,9 +8,9 @@ import { BsFacebook, BsTwitterX, BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
-        <nav>
+    <footer>
+      <div className="footer grid-cols-1 md:grid-cols-3 p-10 bg-base-200 text-base-content">
+        <div>
           <header className="text-orange-500 font-bold text-xl">
             সহজ আইন লিমিটেড
           </header>
@@ -19,16 +19,16 @@ const Footer = () => {
           </Link>
           <Link className="link font-bold link-hover">শর্তাবলী</Link>
           <Link className="link font-bold link-hover">প্রাইভেসি পলিসি</Link>
-        </nav>
-        <nav>
+        </div>
+        <div>
           <header className="text-orange-500 font-bold text-xl">
             অন্যান্য
           </header>
           <Link className="link font-bold link-hover">আমাদের সম্পর্কে</Link>
           <Link className="link font-bold link-hover">সাধারন জিজ্ঞাসা</Link>
           <Link className="link font-bold link-hover">ব্লগ</Link>
-        </nav>
-        <nav>
+        </div>
+        <div>
           <header className="text-orange-500 font-bold text-xl">যোগাযোগ</header>
           <div className="font-bold flex">
             <FaLocationDot className="text-xl text-orange-500 mr-2" />
@@ -42,9 +42,9 @@ const Footer = () => {
             <IoMdMail className="text-orange-500 text-xl mr-2" />
             amirhamzalemon@gmail.com
           </div>
-        </nav>
-      </footer>
-      <footer className="footer gap-y-2 px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
+        </div>
+      </div>
+      <div className="footer gap-y-2 px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
         <aside className="items-center grid-flow-col">
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
           <p className="text-orange-500">
@@ -74,8 +74,8 @@ const Footer = () => {
             </Link>
           </div>
         </nav>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 

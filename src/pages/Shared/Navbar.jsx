@@ -4,10 +4,16 @@ import logo from "../../assets/shohozain.png";
 import { CgProfile } from "react-icons/cg";
 import { CiSettings } from "react-icons/ci";
 import { AiOutlineLogout } from "react-icons/ai";
+import { TiThMenu } from "react-icons/ti";
+import { RiLiveLine } from "react-icons/ri";
+import { LiaHandsHelpingSolid } from "react-icons/lia";
+import { MdConnectWithoutContact } from "react-icons/md";
+import { GoLaw } from "react-icons/go";
 
 const Navbar = () => {
+  // Theme Changer
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "halloween"
   );
 
   useEffect(() => {
@@ -18,18 +24,58 @@ const Navbar = () => {
 
   const handleTheme = (e) => {
     if (e.target.checked) {
-      setTheme("light");
+      setTheme("cupcake");
     } else {
-      setTheme("dark");
+      setTheme("halloween");
     }
   };
 
+  // Menu Handler
+  const [menuOpen, setMenuOpen] = useState();
+  const handleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const menuItem = (
+    <>
+      <Link className="text-orange-500 font-semibold pb-2 flex items-center hover:text-orange-700 ">
+        <RiLiveLine className="mr-2" /> লাইভ কথা বলুন
+      </Link>
+      <Link className="text-orange-500 font-semibold pb-2 flex items-center hover:text-orange-700">
+        <LiaHandsHelpingSolid className="mr-2" /> সার্ভিস সমুহ
+      </Link>
+      <Link className="text-orange-500 font-semibold pb-2 flex items-center hover:text-orange-700">
+        <MdConnectWithoutContact className="mr-2" /> যোগাযোগ
+      </Link>
+      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
+        <GoLaw className="mr-2" /> আমাদের সমন্ধে
+      </Link>
+    </>
+  );
+
+  console.log(menuOpen, "from menuOpen");
+
   return (
-    <div className="flex items-center w-full min-h-16 px-3 md:px-10 bg-base-300 fixed">
+    <footer className="navbar mt-2 rounded p-0 px-3 md:px-10 bg-base-300 fixed">
       <div className="flex-1">
         <Link>
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
         </Link>
+      </div>
+      <div className="flex-auto">
+        <div className="md:hidden inline-block">
+          <details className="dropdown">
+            <summary
+              onClick={handleMenu}
+              className={`${menuOpen ? "rotate-90" : ""} m-1 btn`}
+            >
+              <TiThMenu className="text-xl text-orange-500" />
+            </summary>
+            <ul className="p-5 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+              {menuItem}
+            </ul>
+          </details>
+        </div>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
@@ -77,14 +123,14 @@ const Navbar = () => {
           />
 
           <svg
-            className="swap-on fill-current w-10 h-10"
+            className="swap-on text-orange-500 fill-current w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
             <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
           </svg>
           <svg
-            className="swap-off fill-current w-10 h-10"
+            className="swap-off text-orange-500 fill-current w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -92,7 +138,7 @@ const Navbar = () => {
           </svg>
         </label>
       </div>
-    </div>
+    </footer>
   );
 };
 

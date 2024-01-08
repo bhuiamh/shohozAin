@@ -44,17 +44,17 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-      <footer className="footer px-10 py-2 border-t bg-base-300 text-base-content border-orange-500">
+      <footer className="footer gap-y-2 px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
         <aside className="items-center grid-flow-col">
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
-          <p className="text-2xl text-orange-500">
-            <span className="font-extrabold">সহজ আইন লিমিটেড</span>
+          <p className="text-orange-500">
+            <span className="font-extrabold text-xl">সহজ আইন লিমিটেড</span>
             <br />
             রক্ষণাবেক্ষন ও সার্বিক নিরাপত্তায়{" "}
             <Link
               target="blank"
               to="https://bhuiamh.netlify.app/"
-              className="font-semibold"
+              className="text-orange-700"
             >
               মাহমুদুল হাসান ভূঁইয়া
             </Link>

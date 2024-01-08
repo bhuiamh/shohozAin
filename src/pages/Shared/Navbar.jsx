@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { CiSettings } from "react-icons/ci";
 import { AiOutlineLogout } from "react-icons/ai";
 import { TiThMenu } from "react-icons/ti";
-import { RiLiveLine } from "react-icons/ri";
+import { RiHome2Fill, RiLiveLine } from "react-icons/ri";
 import { LiaHandsHelpingSolid } from "react-icons/lia";
 import { MdConnectWithoutContact } from "react-icons/md";
 import { GoLaw } from "react-icons/go";
@@ -38,17 +38,20 @@ const Navbar = () => {
 
   const menuItem = (
     <>
-      <Link className="text-orange-500 font-semibold pb-2 flex items-center hover:text-orange-700 ">
-        <RiLiveLine className="mr-2" /> লাইভ কথা বলুন
+      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700 ">
+        <RiHome2Fill className="mr-1" /> হোম
       </Link>
-      <Link className="text-orange-500 font-semibold pb-2 flex items-center hover:text-orange-700">
-        <LiaHandsHelpingSolid className="mr-2" /> সার্ভিস সমুহ
-      </Link>
-      <Link className="text-orange-500 font-semibold pb-2 flex items-center hover:text-orange-700">
-        <MdConnectWithoutContact className="mr-2" /> যোগাযোগ
+      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700 ">
+        <RiLiveLine className="mr-1" /> লাইভ কথা বলুন
       </Link>
       <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
-        <GoLaw className="mr-2" /> আমাদের সমন্ধে
+        <LiaHandsHelpingSolid className="mr-1" /> সার্ভিস সমুহ
+      </Link>
+      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
+        <MdConnectWithoutContact className="mr-1" /> যোগাযোগ
+      </Link>
+      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
+        <GoLaw className="mr-1" /> আমাদের সমন্ধে
       </Link>
     </>
   );
@@ -56,8 +59,8 @@ const Navbar = () => {
   console.log(menuOpen, "from menuOpen");
 
   return (
-    <footer className="navbar mt-2 rounded p-0 px-3 md:px-10 bg-base-300 fixed">
-      <div className="flex-1">
+    <footer className="navbar rounded p-0 px-3 md:px-10 bg-base-300 fixed">
+      <div className="flex-auto">
         <Link>
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
         </Link>
@@ -71,10 +74,13 @@ const Navbar = () => {
             >
               <TiThMenu className="text-xl text-orange-500" />
             </summary>
-            <ul className="p-5 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+            <ul className="p-5 gap-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
               {menuItem}
             </ul>
           </details>
+        </div>
+        <div className="hidden md:inline-block ">
+          <div className="flex gap-4 text-[18px]">{menuItem}</div>
         </div>
       </div>
       <div className="flex-none">

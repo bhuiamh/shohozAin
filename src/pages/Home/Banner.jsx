@@ -10,50 +10,60 @@ import banner6 from "../../assets/banner/banner6.png";
 import banner7 from "../../assets/banner/banner7.png";
 import banner8 from "../../assets/banner/banner8.png";
 import banner9 from "../../assets/banner/banner9.png";
+import { FaPowerOff } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <Carousel
-      className="pt-[80px]"
-      autoPlay
-      transitionTime={1000}
-      infiniteLoop
-      showArrows={false}
-      showIndicators={false}
-      showStatus={false}
-      centerSlidePercentage={true}
-      stopOnHover={true}
-      showThumbs={false}
-      interval={3000}
-    >
-      <div>
-        <img src={banner1} />
-      </div>
-      <div>
-        <img src={banner2} />
-      </div>
-      <div>
-        <img src={banner3} />
-      </div>
-      <div>
-        <img src={banner4} />
-      </div>
-      <div>
-        <img src={banner5} />
-      </div>
-      <div>
-        <img src={banner6} />
-      </div>
-      <div>
-        <img src={banner7} />
-      </div>
-      <div>
-        <img src={banner8} />
-      </div>
-      <div>
-        <img src={banner9} />
-      </div>
-    </Carousel>
+    <div className="relative">
+      <Carousel
+        className="pt-[80px]"
+        autoPlay
+        transitionTime={1000}
+        infiniteLoop
+        showArrows={false}
+        showIndicators={false}
+        showStatus={false}
+        centerSlidePercentage={true}
+        stopOnHover={true}
+        showThumbs={false}
+        interval={3000}
+      >
+        <div>
+          <img src={banner1} />
+        </div>
+        <div>
+          <img src={banner2} />
+        </div>
+        <div>
+          <img src={banner3} />
+        </div>
+        <div>
+          <img src={banner4} />
+        </div>
+        <div>
+          <img src={banner5} />
+        </div>
+        <div>
+          <img src={banner6} />
+        </div>
+        <div>
+          <img src={banner7} />
+        </div>
+        <div>
+          <img src={banner8} />
+        </div>
+        <div>
+          <img src={banner9} />
+        </div>
+      </Carousel>
+      <Link className="absolute top-2/3 md:top-1/2 right-1/2">
+        <FaPowerOff
+          to="/"
+          className="text-4xl hover:text-orange-700  text-orange-500 "
+        />
+      </Link>
+    </div>
   );
 };
 

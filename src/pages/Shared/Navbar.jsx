@@ -59,7 +59,7 @@ const Navbar = () => {
   console.log(menuOpen, "from menuOpen");
 
   return (
-    <footer className="navbar rounded p-0 px-3 md:px-10 bg-base-300 fixed">
+    <footer className="navbar z-10 rounded p-0 px-3 md:px-10 bg-base-300 fixed">
       <div className="flex-auto">
         <Link>
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
@@ -70,7 +70,7 @@ const Navbar = () => {
           <details className="dropdown">
             <summary
               onClick={handleMenu}
-              className={`${menuOpen ? "rotate-90" : ""} m-1 btn`}
+              className={`${menuOpen ? "rotate-90" : ""} m-1 btn btn-ghost`}
             >
               <TiThMenu className="text-xl text-orange-500" />
             </summary>

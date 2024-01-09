@@ -1,14 +1,10 @@
 import React from "react";
+import Banner from "./Banner";
 
 const Home = () => {
   return (
     <div>
-      a <br /> b <br />a <br /> b <br />a <br /> b <br />a <br /> b <br />a{" "}
-      <br /> b <br />a <br /> b <br />a <br /> b <br />a <br /> b <br />a <br />{" "}
-      b <br />a <br /> b <br />a <br /> b <br />a <br /> b <br />a <br /> b{" "}
-      <br />a <br /> b <br />a <br /> b <br />a <br /> b <br />a <br /> b <br />
-      a <br /> b <br />a <br /> b <br />a <br /> b <br />a <br /> b <br />a{" "}
-      <br /> b <br />a <br /> b <br />a <br /> b <br />a <br /> b <br />
+      <Banner />
     </div>
   );
 };

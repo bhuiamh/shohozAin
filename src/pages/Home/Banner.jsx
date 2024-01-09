@@ -57,10 +57,10 @@ const Banner = () => {
           <img src={banner9} />
         </div>
       </Carousel>
-      <Link className="absolute top-2/3 md:top-1/2 right-1/2">
+      <Link className="absolute top-24 right-4 md:right-6">
         <FaPowerOff
           to="/"
-          className="text-4xl hover:text-orange-700  text-orange-500 "
+          className="text-2xl md:text-4xl hover:text-orange-700  text-orange-500 "
         />
       </Link>
     </div>

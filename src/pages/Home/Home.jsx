@@ -1,12 +1,12 @@
 import React from "react";
 import Banner from "./Banner";
-import Category from "./Category";
+import QuickService from "./QuickService";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <Category />
+      <QuickService />
     </div>
   );
 };

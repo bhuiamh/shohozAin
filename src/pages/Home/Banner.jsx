@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="relative">
+    <div className="relative shadow-base-content shadow-md">
       <Carousel
         className="pt-[80px]"
         autoPlay

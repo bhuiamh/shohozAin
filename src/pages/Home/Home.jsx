@@ -1,12 +1,12 @@
 import React from "react";
 import Banner from "./Banner";
-import QuickService from "./QuickService";
+import QuickLearn from "./QuickLearn/QuickLearn";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <QuickService />
+      <QuickLearn />
     </div>
   );
 };

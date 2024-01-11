@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const handleTheme = (e) => {
     if (e.target.checked) {
-      setTheme("cupcake");
+      setTheme("retro");
     } else {
       setTheme("halloween");
     }

@@ -27,7 +27,7 @@ const Banner = () => {
         centerSlidePercentage={true}
         stopOnHover={true}
         showThumbs={false}
-        interval={3000}
+        interval={4000}
       >
         <div>
           <img src={banner1} />

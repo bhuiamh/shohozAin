@@ -34,12 +34,14 @@ import { CiYoutube } from "react-icons/ci";
 function QuickLearn() {
   return (
     <div className="">
-      <div className="flex items-center">
-        <SectionTitle
-          title={"দ্রুত জানুন"}
-          subTitle={"আমদের ইউটিউব ভিডিও থেকে জেনে নিন"}
-        ></SectionTitle>
-        <div className="">
+      <div className="flex justify-around items-center">
+        <div>
+          <SectionTitle
+            title={"দ্রুত জানুন"}
+            subTitle={"আমদের ইউটিউব ভিডিও থেকে জেনে নিন"}
+          ></SectionTitle>
+        </div>
+        <div className="mr-0">
           <Player
             autoplay
             loop

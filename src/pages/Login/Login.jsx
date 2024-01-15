@@ -5,7 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { GoEye } from "react-icons/go";
 const Login = () => {
   return (
-    <div className="mb-5 pt-20 md:mb-20">
+    <div className="my-10 md:my-20">
       <div className="flex justify-around items-center">
         <div>
           <SectionTitle
@@ -15,10 +15,10 @@ const Login = () => {
         </div>
         <div className="mr-0">
           <Player
+            className="h-36 md:h-48 w-36 md:w-48"
             autoplay
             loop
             src="https://lottie.host/fc79db5a-1473-439e-948e-7060f7aebdf9/kss5rqtjEH.json"
-            style={{ height: "200px", width: "200px" }}
           ></Player>
         </div>
       </div>

@@ -33,7 +33,7 @@ import { CiYoutube } from "react-icons/ci";
 
 function QuickLearn() {
   return (
-    <div className="my-20">
+    <div className="my-5 md:my-10">
       <div className="flex justify-around items-center">
         <div>
           <SectionTitle
@@ -43,10 +43,10 @@ function QuickLearn() {
         </div>
         <div className="mr-0">
           <Player
+            className="h-36 md:h-48 w-36 md:w-48"
             autoplay
             loop
             src="https://lottie.host/af93cece-3d68-4bb2-be9e-dd4a79109cc9/lM4D4p8CuK.json"
-            style={{ height: "200px", width: "200px" }}
           ></Player>
         </div>
       </div>

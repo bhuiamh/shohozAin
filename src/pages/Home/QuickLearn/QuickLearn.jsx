@@ -33,7 +33,7 @@ import { CiYoutube } from "react-icons/ci";
 
 function QuickLearn() {
   return (
-    <div className="">
+    <div className="my-20">
       <div className="flex justify-around items-center">
         <div>
           <SectionTitle

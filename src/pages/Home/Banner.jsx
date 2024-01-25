@@ -10,7 +10,8 @@ import banner6 from "../../assets/banner/banner6.png";
 import banner7 from "../../assets/banner/banner7.png";
 import banner8 from "../../assets/banner/banner8.png";
 import banner9 from "../../assets/banner/banner9.png";
-import { FaPowerOff } from "react-icons/fa6";
+import { RiLiveFill } from "react-icons/ri";
+
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -57,10 +58,10 @@ const Banner = () => {
           <img src={banner9} />
         </div>
       </Carousel>
-      <Link className="absolute top-24 right-4 md:right-6">
-        <FaPowerOff
+      <Link className="absolute top-24 right-4 tablet:right-6">
+        <RiLiveFill
           to="/"
-          className="text-2xl md:text-4xl hover:text-orange-700  text-orange-500 "
+          className="text-2xl tablet:text-4xl hover:text-orange-700  text-orange-500 "
         />
       </Link>
     </div>

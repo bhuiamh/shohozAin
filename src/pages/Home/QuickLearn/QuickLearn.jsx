@@ -33,23 +33,15 @@ import { CiYoutube } from "react-icons/ci";
 
 function QuickLearn() {
   return (
-    <div className="my-5 md:my-10">
-      <div className="flex justify-around items-center">
-        <div>
-          <SectionTitle
-            title={"দ্রুত জানুন"}
-            subTitle={"আমদের ইউটিউব ভিডিও থেকে জেনে নিন"}
-          ></SectionTitle>
-        </div>
-        <div className="mr-0">
-          <Player
-            className="h-36 md:h-48 w-36 md:w-48"
-            autoplay
-            loop
-            src="https://lottie.host/af93cece-3d68-4bb2-be9e-dd4a79109cc9/lM4D4p8CuK.json"
-          ></Player>
-        </div>
-      </div>
+    <div className="my-5 tablet:my-10">
+      <SectionTitle
+        title={"দ্রুত জানুন"}
+        subTitle={"আমদের ইউটিউব ভিডিও থেকে জেনে নিন"}
+        animation={
+          "https://lottie.host/af93cece-3d68-4bb2-be9e-dd4a79109cc9/lM4D4p8CuK.json"
+        }
+      ></SectionTitle>
+
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -73,7 +65,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail1} alt="slide_image" />
         </SwiperSlide>
@@ -83,7 +75,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail2} alt="slide_image" />
         </SwiperSlide>
@@ -93,7 +85,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail3} alt="slide_image" />
         </SwiperSlide>
@@ -103,7 +95,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail4} alt="slide_image" />
         </SwiperSlide>
@@ -113,7 +105,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail5} alt="slide_image" />
         </SwiperSlide>
@@ -123,7 +115,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail6} alt="slide_image" />
         </SwiperSlide>
@@ -133,7 +125,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail7} alt="slide_image" />
         </SwiperSlide>
@@ -143,7 +135,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail8} alt="slide_image" />
         </SwiperSlide>
@@ -153,7 +145,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail9} alt="slide_image" />
         </SwiperSlide>
@@ -163,7 +155,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail10} alt="slide_image" />
         </SwiperSlide>
@@ -173,7 +165,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail11} alt="slide_image" />
         </SwiperSlide>
@@ -183,7 +175,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail12} alt="slide_image" />
         </SwiperSlide>
@@ -193,7 +185,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail13} alt="slide_image" />
         </SwiperSlide>
@@ -203,7 +195,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail14} alt="slide_image" />
         </SwiperSlide>
@@ -213,7 +205,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail15} alt="slide_image" />
         </SwiperSlide>
@@ -223,7 +215,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail16} alt="slide_image" />
         </SwiperSlide>
@@ -233,7 +225,7 @@ function QuickLearn() {
             target="_blank"
             className="absolute bottom-0 right-0"
           >
-            <CiYoutube className="text-2xl md:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
+            <CiYoutube className="text-2xl tablet:text-5xl hover:text-orange-700 text-orange-500 font-bold" />
           </Link>
           <img src={thumbnail17} alt="slide_image" />
         </SwiperSlide>

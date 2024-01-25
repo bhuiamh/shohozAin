@@ -59,14 +59,14 @@ const Navbar = () => {
   console.log(menuOpen, "from menuOpen");
 
   return (
-    <div className="navbar z-10 rounded p-0 px-3 md:px-10 bg-base-300 fixed">
+    <div className="navbar z-10 rounded p-0 px-3 tablet:px-10 bg-base-300 fixed max-w-screen-laptop">
       <div className="flex-auto">
         <Link>
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
         </Link>
       </div>
       <div className="flex-auto">
-        <div className="md:hidden inline-block">
+        <div className="tablet:hidden inline-block">
           <details className="dropdown">
             <summary
               onClick={handleMenu}
@@ -79,7 +79,7 @@ const Navbar = () => {
             </ul>
           </details>
         </div>
-        <div className="hidden md:inline-block ">
+        <div className="hidden tablet:inline-block ">
           <div className="flex gap-4 text-[18px]">{menuItem}</div>
         </div>
       </div>

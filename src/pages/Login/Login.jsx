@@ -5,23 +5,12 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { GoEye } from "react-icons/go";
 const Login = () => {
   return (
-    <div className="my-10 md:my-20">
-      <div className="flex justify-around items-center">
-        <div>
-          <SectionTitle
-            title={"লগইন করুন"}
-            subTitle={"বিস্তারিত জানতে আমাদের সাথে যুক্ত হন"}
-          ></SectionTitle>
-        </div>
-        <div className="mr-0">
-          <Player
-            className="h-36 md:h-48 w-36 md:w-48"
-            autoplay
-            loop
-            src="https://lottie.host/fc79db5a-1473-439e-948e-7060f7aebdf9/kss5rqtjEH.json"
-          ></Player>
-        </div>
-      </div>
+    <div className="my-10 tablet:my-20 ">
+      <SectionTitle
+        title={"লগইন করুন"}
+        subTitle={"বিস্তারিত জানতে আমাদের সাথে যুক্ত হন"}
+      ></SectionTitle>
+
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img className="mx-auto h-24 w-auto" src={logo} alt="Your Company" />

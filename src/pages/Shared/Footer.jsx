@@ -9,7 +9,7 @@ import { BsFacebook, BsTwitterX, BsYoutube } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer>
-      <div className="footer grid-cols-1 md:grid-cols-3 p-10 bg-base-200 text-base-content">
+      <div className="footer grid-cols-1 tablet:grid-cols-3 p-10 bg-base-200 text-base-content">
         <div>
           <header className="text-orange-500 font-bold text-xl">
             সহজ আইন লিমিটেড
@@ -60,7 +60,7 @@ const Footer = () => {
             </Link>
           </p>
         </aside>
-        <nav className="md:place-self-center justify-self-center md:justify-self-end">
+        <nav className="tablet:place-self-center justify-self-center tablet:justify-self-end">
           <div className="grid grid-flow-col items-center gap-4">
             <Link target="blank" to="https://www.youtube.com/@ShohozAin">
               <BsYoutube className="text-2xl text-orange-500 hover:text-orange-700" />

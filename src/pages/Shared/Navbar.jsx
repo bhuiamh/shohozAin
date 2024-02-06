@@ -50,7 +50,10 @@ const Navbar = () => {
       <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
         <MdConnectWithoutContact className="mr-1" /> যোগাযোগ
       </Link>
-      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
+      <Link
+        to="about-us"
+        className="text-orange-500 font-semibold flex items-center hover:text-orange-700"
+      >
         <GoLaw className="mr-1" /> আমাদের সমন্ধে
       </Link>
     </>

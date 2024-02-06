@@ -2,17 +2,17 @@ import React from "react";
 import advocateImg from "../../../assets/advocate.png";
 import bgImage from "../../../assets/cover.png";
 import SectionTitle from "../../Shared/SectionTitle";
-const AboutUs = () => {
+const AuthorTalk = () => {
   return (
     <div className="my-5 tablet:my-10 mx-4 tablet:mx-8">
-      <SectionTitle title={"কিছু কথা"} />
+      <SectionTitle title={"কিছু কথা"} subTitle={"আমি ও সহজ আইন"} />
       <div className=" tablet:flex laptop:flex-grow laptop:flex-row-reverse tablet:flex-row-reverse tablet:flex-grow items-end">
         <div
           className="mx-auto flex items-center w-fit bg-cover bg-image"
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           <img
-            className="mobile:h-60 w-auto tablet:h-80 laptop:h-96 "
+            className="h-48 w-auto tablet:h-80 laptop:h-96 "
             src={advocateImg}
             alt="Advocate Amir Hamza Limon"
           />
@@ -46,4 +46,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AuthorTalk;

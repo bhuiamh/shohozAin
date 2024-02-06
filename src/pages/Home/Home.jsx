@@ -2,13 +2,13 @@ import React from "react";
 import Banner from "./Banner";
 import QuickLearn from "./QuickLearn/QuickLearn";
 import Login from "../Login/Login";
-import AboutUs from "./AboutUs/AboutUs";
+import AuthorTalk from "./AuthorTalk/AuthorTalk";
 
 const Home = () => {
   return (
     <div className="max-w-[1440px]">
       <Banner />
-      <AboutUs />
+      <AuthorTalk />
       <QuickLearn />
       <Login />
     </div>

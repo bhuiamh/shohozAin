@@ -11,12 +11,12 @@ const Login = () => {
         subTitle={"বিস্তারিত জানতে আমাদের সাথে যুক্ত হন"}
       ></SectionTitle>
 
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 laptop:px-8">
+        <div className="mobile:mx-auto mobile:w-full mobile:max-w-sm">
           <img className="mx-auto h-24 w-auto" src={logo} alt="Your Company" />
         </div>
 
-        <div className="mt-1 sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="mt-1 mobile:mx-auto mobile:w-full mobile:max-w-sm">
           <form className="space-y-3" action="#" method="POST">
             <div>
               <label
@@ -33,7 +33,7 @@ const Login = () => {
                   autoComplete="email"
                   required
                   placeholder="user@shohozain.com"
-                  className="block w-full rounded-md border-0 py-1.5 text-orange-500 shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-orange-500 shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-500 mobile:text-sm mobile:leading-6"
                 />
               </div>
             </div>
@@ -63,7 +63,7 @@ const Login = () => {
                   autoComplete="current-password"
                   required
                   placeholder="***************"
-                  className="block border-r-0 w-full rounded-md border-0 py-1.5 text-orange-500 shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+                  className="block border-r-0 w-full rounded-md border-0 py-1.5 text-orange-500 shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-500 mobile:text-sm mobile:leading-6"
                 />
               </div>
             </div>

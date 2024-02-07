@@ -5,7 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { GoEye } from "react-icons/go";
 const Login = () => {
   return (
-    <div className="my-10 tablet:my-20 ">
+    <div className=" min-h-[100vh] pt-[80px]">
       <SectionTitle
         title={"লগইন করুন"}
         subTitle={"বিস্তারিত জানতে আমাদের সাথে যুক্ত হন"}

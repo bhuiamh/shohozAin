@@ -17,7 +17,7 @@ const AuthorTalk = () => {
             alt="Advocate Amir Hamza Limon"
           />
         </div>
-        <div className="tablet:w-4/6 w-ful text-base tablet:text-xl text-orange-500 font-bold">
+        <div className="tablet:w-4/6 w-ful text-base tablet:text-xl  font-bold">
           <h1>আসসালামু আলাইকুম,</h1>
 
           <h1 className="py-1">

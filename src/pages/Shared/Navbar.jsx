@@ -44,7 +44,10 @@ const Navbar = () => {
       <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700 ">
         <RiLiveLine className="mr-1" /> লাইভ কথা বলুন
       </Link>
-      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
+      <Link
+        to="services"
+        className="text-orange-500 font-semibold flex items-center hover:text-orange-700"
+      >
         <LiaHandsHelpingSolid className="mr-1" /> সার্ভিস সমুহ
       </Link>
       <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">

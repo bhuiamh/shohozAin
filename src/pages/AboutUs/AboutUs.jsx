@@ -3,9 +3,9 @@ import SectionTitle from "../Shared/SectionTitle";
 
 const AboutUs = () => {
   return (
-    <div className="pt-[80px]">
+    <div className="pt-[80px] p-10">
       <div className="">
-        <div className="min-h-[100vh] px-4 py-12 tablet:px-6 laptop:px-8">
+        <div className="min-h-[100vh] py-12">
           <SectionTitle
             title={"আমাদের সমন্ধে"}
             subTitle={"উৎপত্তি, যাত্রা, লক্ষ্য ও উদ্দেশ্য"}
@@ -26,7 +26,7 @@ const AboutUs = () => {
               দৈনন্দিন জীবনের আইনি বিষয় নিয়ে ভিডিও তৈরির মাধ্যমে একটি ইউটিউব
               চ্যানেল থেকেই শুরু হয়েছিল আমাদের যাত্রা। সেখান থেকে আপনাদের আইনি
               সহায়তার জন্য কল আসতে শুরু করে। ক্রমবর্ধমান চাহিদা পূরণের লক্ষ্যে
-              আমরা "সহজ আইন" প্রতিষ্ঠা করি। "আপনারা সরাসরি কথা বলুন" পেজের
+              আমরা "সহজ আইন" প্রতিষ্ঠা করি। আপনারা "সরাসরি কথা বলুন" পেজের
               মাধ্যমে আপনি খুব সহজেই আমাদের সাথে যোগাযোগ করতে পারবেন।
             </p>
             <p className="text-base tablet:text-xl mb-4 tablet:mb-6 font-semibold">

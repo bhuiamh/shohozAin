@@ -5,7 +5,7 @@ import { servicesData } from "./ServicesData";
 
 const Services = () => {
   return (
-    <div className="pt-[80px] px-10 pb-5 tablet:pb-10">
+    <div className="pt-[80px] px-4 tablet:px-8 pb-5 tablet:pb-10">
       <SectionTitle
         title={"সার্ভিস সমূহ"}
         subTitle={"আমরা সাধারণত যেসব সেবা দিয়ে থাকি"}
@@ -22,7 +22,7 @@ const Services = () => {
 
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 my-6 tablet:my-10 ">
         {servicesData.map((service) => (
-          <div className=" hover:translate-y-4 relative rounded-lg border-orange-500 border-[2px] shadow-lg tablet:hover:shadow-2xl duration-700 transition-all min-h-60 tablet:min-h-96 group overflow-hidden grid place-items-center">
+          <div className=" tablet:hover:translate-y-4 relative rounded-lg border-orange-500 border-[2px] shadow-lg tablet:hover:shadow-2xl duration-700 transition-all min-h-60 tablet:min-h-96 group overflow-hidden grid place-items-center">
             <div>
               <div className="relative group-hover:opacity-0 duration-700 object-cover rounded-full mx-auto">
                 <img
@@ -45,16 +45,15 @@ const Services = () => {
               </div>
 
               {/* Hovered Items */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ">
-                <div className="flex items-center">
-                  <div className="font-bold text-xl tablet:text-2xl laptop:text-3xl mr-6  text-right min-w-fit">
-                    {" "}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 min-w-80 tablet:w-full flex justify-center">
+                <div className="grid grid-cols-1 tablet:grid-cols-2 items-center justify-center">
+                  <div className="font-bold text-xl tablet:text-2xl laptop:text-3xl text-center border-b-2 tablet:border-b-0 border-orange-500">
                     {service.title}
                   </div>
-                  <div className="grid grid-cols-1 gap-2 border-l-4 border-orange-500 ">
+                  <div className="grid grid-cols-2 tablet:grid-cols-1 gap-1 tablet:gap-2 border-l-0 tablet:border-l-4 border-orange-500 mt-2 tablet:mt-0">
                     {" "}
                     {service.subservices.map((subService) => (
-                      <div className="flex items-center ml-4 hover:text-orange-500  duration-300 w-44">
+                      <div className="flex items-center tablet:ml-4 hover:text-orange-500  duration-300 ml-2">
                         <FaCheck className="mr-2 text-base tablet:text-xl" />{" "}
                         <h1 className="font-bold text-base tablet:text-xl">
                           {subService}

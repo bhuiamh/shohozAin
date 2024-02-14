@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div className="pt-[80px] p-10">
       <div className="">
-        <div className="min-h-[100vh] py-12">
+        <div className=" py-12">
           <SectionTitle
             title={"আমাদের সমন্ধে"}
             subTitle={"উৎপত্তি, যাত্রা, লক্ষ্য ও উদ্দেশ্য"}

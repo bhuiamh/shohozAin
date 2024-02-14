@@ -5,7 +5,7 @@ import { servicesData } from "./ServicesData";
 
 const Services = () => {
   return (
-    <div className="pt-[80px] px-10">
+    <div className="pt-[80px] px-10 pb-5 tablet:pb-10">
       <SectionTitle
         title={"সার্ভিস সমূহ"}
         subTitle={"আমরা সাধারণত যেসব সেবা দিয়ে থাকি"}

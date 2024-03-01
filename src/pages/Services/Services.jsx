@@ -37,7 +37,6 @@ const Services = () => {
                   </h1>
                   <h1 className="flex laptop:hidden text-center text-[12px] p-1 border-t-2 text-white font-semibold border-orange-500">
                     <span className="text-center">
-                      {" "}
                       বিস্তারিত জানতে ক্লিক করুন
                     </span>
                   </h1>
@@ -47,7 +46,7 @@ const Services = () => {
               {/* Hovered Items */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 min-w-80 tablet:w-full flex justify-center">
                 <div className="grid grid-cols-1 tablet:grid-cols-2 items-center justify-center">
-                  <div className="font-bold text-xl tablet:text-2xl laptop:text-3xl text-center border-b-2 tablet:border-b-0 border-orange-500">
+                  <div className="font-bold text-xl tablet:text-2xl laptop:text-3xl mr-0 tablet:mr-4 border-b-2 tablet:border-b-0 border-orange-500 text-right">
                     {service.title}
                   </div>
                   <div className="grid grid-cols-2 tablet:grid-cols-1 gap-1 tablet:gap-2 border-l-0 tablet:border-l-4 border-orange-500 mt-2 tablet:mt-0">

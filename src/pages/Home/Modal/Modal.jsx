@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 const Modal = ({ onClose, backgroundColor = "transparent" }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -34,12 +35,12 @@ const Modal = ({ onClose, backgroundColor = "transparent" }) => {
           <button
             type="button"
             onClick={handleClose}
-            className="text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 "
+            className="text-orange-500 hover:text-white h-10 w-10 rounded-full border-orange-500 border-2 text-xl font-bold flex items-center justify-center hover:bg-orange-500 duration-300 "
           >
-            close icon
+            <RxCross2 className="" />
           </button>
         </div>
-        <div className="flex items-center justify-between p-10">
+        <div className="flex items-center justify-center p-10 ">
           <h2 className="text-4xl text-center tablet:text-6xl text-orange-500 font-extrabold">
             সহজ আইন
           </h2>

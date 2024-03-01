@@ -4,7 +4,7 @@ import bgImage from "../../../assets/cover.png";
 import SectionTitle from "../../Shared/SectionTitle";
 const AuthorTalk = () => {
   return (
-    <div className="my-5 tablet:my-10 mx-4 tablet:mx-8">
+    <div className="mb-5 mt-5 tablet:mt-24 tablet:mb-10 mx-4 tablet:mx-8">
       <SectionTitle title={"কিছু কথা"} subTitle={"আমি ও সহজ আইন"} />
       <div className=" tablet:flex laptop:flex-grow laptop:flex-row-reverse tablet:flex-row-reverse tablet:flex-grow items-end">
         <div

@@ -17,58 +17,36 @@ const Login = () => {
         </div>
 
         <div className="mt-1 mobile:mx-auto mobile:w-full mobile:max-w-sm">
-          <form className="space-y-3" action="#" method="POST">
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-base font-bold leading-6"
+          <form className="" action="#" method="POST">
+            <div className="space-y-4">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="Email"
+                className="bg-transparent block w-full border-0 py-2 text-orange-500 shadow-sm ring-0  placeholder:text-orange-500/50 focus:ring-0 border-b-2 border-orange-500 focus:border-orange-500 focus:scale-105 duration-300 mobile:text-sm mobile:leading-6"
+              />
+
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                placeholder="Password"
+                className="bg-transparent w-full border-0 py-2 text-orange-500 shadow-sm ring-0  placeholder:text-orange-500/50 focus:ring-0 border-b-2 border-orange-500 focus:border-orange-500 focus:scale-105 duration-300 mobile:text-sm mobile:leading-6 flex items-center"
+              />
+            </div>
+            <div className="flex justify-end mt-1">
+              {/* todo need to change a to Link */}
+              <a
+                href="#"
+                className="text-xs text-end text-orange-500 hover:text-orange-700"
               >
-                ইমেল
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  placeholder="user@shohozain.com"
-                  className="block w-full rounded-md border-0 py-1.5 text-orange-500 shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-500 mobile:text-sm mobile:leading-6"
-                />
-              </div>
+                পাসওয়ার্ড ভুলে গেছেন ?
+              </a>
             </div>
-
-            <div>
-              <div className="flex items-center justify-between">
-                <label
-                  htmlFor="password"
-                  className="block text-base font-bold leading-6"
-                >
-                  পাসওয়ার্ড
-                </label>
-                <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-orange-500 hover:text-orange-700"
-                  >
-                    পাসওয়ার্ড ভুলে গেছেন ?
-                  </a>
-                </div>
-              </div>
-              <div className="mt-2">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  placeholder="***************"
-                  className="block border-r-0 w-full rounded-md border-0 py-1.5 text-orange-500 shadow-sm ring-1 ring-inset ring-orange-300 placeholder:text-orange-300 focus:ring-2 focus:ring-inset focus:ring-orange-500 mobile:text-sm mobile:leading-6"
-                />
-              </div>
-            </div>
-
-            <div>
+            <div className="mt-4">
               <button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"

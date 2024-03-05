@@ -7,6 +7,7 @@ import Services from "../Services/Services";
 import AboutUs from "../AboutUs/AboutUs";
 import Modal from "./Modal/Modal";
 import FAQ from "./Faq/Faq";
+import Testimonials from "./Testimonials/Testimonials";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(true);
@@ -22,8 +23,9 @@ const Home = () => {
       <AuthorTalk />
       <Services />
       <QuickLearn />
-      <Login />
+
       <AboutUs />
+      <Testimonials />
       <FAQ />
     </div>
   );

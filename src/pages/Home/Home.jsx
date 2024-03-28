@@ -7,7 +7,7 @@ import Services from "../Services/Services";
 import AboutUs from "../AboutUs/AboutUs";
 import Modal from "./Modal/Modal";
 import FAQ from "./Faq/Faq";
-import Testimonials from "./Testimonials/Testimonials";
+import ClientSwiper from "./ClientSwiper/ClientSwiper";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(true);
@@ -23,9 +23,8 @@ const Home = () => {
       <AuthorTalk />
       <Services />
       <QuickLearn />
-
       <AboutUs />
-      <Testimonials />
+      <ClientSwiper />
       <FAQ />
     </div>
   );

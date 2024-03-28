@@ -16,13 +16,13 @@ const FAQ = () => {
   }, [contentRef, activeIndex]);
 
   return (
-    <div className="p-10">
-      <div className="pb-12">
+    <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
+      <div className="">
         <SectionTitle
           title={"সাধারন জিজ্ঞাসা"}
           subTitle={"সচরাচর যেসব প্রশ্ন যেসব প্রশ্ন আপনারা জিজ্ঞেস করেন"}
         ></SectionTitle>
-        <div className="mx-auto">
+        <div className="mx-auto mt-10">
           <div className="border-b border-gray-200">
             {faqs.map((faq, index) => (
               <div
@@ -56,7 +56,9 @@ const FAQ = () => {
                     tabIndex={activeIndex === index ? "0" : "-1"}
                     aria-labelledby={`question-${index}`}
                   >
-                    <p className="font-semibold">{faq.answer}</p>
+                    <p className="font-semibold text-base tablet:text-xl">
+                      {faq.answer}
+                    </p>
                   </div>
                 )}
               </div>

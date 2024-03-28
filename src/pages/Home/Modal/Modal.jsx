@@ -23,15 +23,13 @@ const Modal = ({ onClose, backgroundColor = "transparent" }) => {
       } z-50`}
     >
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-${backgroundColor} backdrop-blur-md backdrop-opacity-50`}
+        className={`fixed top-0 left-0 w-full h-full bg-${backgroundColor} backdrop-blur-3xl backdrop-opacity-50`}
         onClick={handleClose}
       />
       <div
         className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-white rounded-md px-4 py-5 shadow-md`}
       >
-        {" "}
         <div className="flex justify-end">
-          {" "}
           <button
             type="button"
             onClick={handleClose}

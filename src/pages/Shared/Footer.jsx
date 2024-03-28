@@ -8,44 +8,48 @@ import { BsFacebook, BsTwitterX, BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer grid-cols-1 tablet:grid-cols-3 p-10 bg-base-200 text-base-content">
+    <footer className="w-full bg-base-200 mt-32 pt-10">
+      <div className="grid grid-cols-1 tablet:grid-cols-3 max-w-[1280px] justify-center mx-auto text-base-content mb-2">
         <div>
-          <header className="text-orange-500 font-bold text-xl">
+          <h1 className="text-orange-500 font-bold text-xl mb-2">
             সহজ আইন লিমিটেড
-          </header>
-          <Link className="link font-bold link-hover">
-            সাহায্য এবং সহযোগিতা
-          </Link>
-          <Link className="link font-bold link-hover">শর্তাবলী</Link>
-          <Link className="link font-bold link-hover">প্রাইভেসি পলিসি</Link>
+          </h1>
+          <div className="flex flex-col">
+            <Link className="link font-bold link-hover">
+              সাহায্য এবং সহযোগিতা
+            </Link>
+            <Link className="link font-bold link-hover">শর্তাবলী</Link>
+            <Link className="link font-bold link-hover">প্রাইভেসি পলিসি</Link>
+          </div>
         </div>
         <div>
-          <header className="text-orange-500 font-bold text-xl">
-            অন্যান্য
-          </header>
-          <Link className="link font-bold link-hover">আমাদের সম্পর্কে</Link>
-          <Link className="link font-bold link-hover">সাধারন জিজ্ঞাসা</Link>
-          <Link className="link font-bold link-hover">ব্লগ</Link>
+          <h1 className="text-orange-500 font-bold text-xl mb-2">অন্যান্য</h1>
+          <div className="flex flex-col">
+            <Link className="link font-bold link-hover">আমাদের সম্পর্কে</Link>
+            <Link className="link font-bold link-hover">সাধারন জিজ্ঞাসা</Link>
+            <Link className="link font-bold link-hover">ব্লগ</Link>
+          </div>
         </div>
         <div>
-          <header className="text-orange-500 font-bold text-xl">যোগাযোগ</header>
-          <div className="font-bold flex">
-            <FaLocationDot className="text-xl text-orange-500 mr-2" />
-            এইচ এইচ প্রোপার্টিস, সি/১, রোড ১০, পূর্ব গোরান, খিলগাঁও, ঢাকা
-          </div>
-          <div className="font-bold flex">
-            <IoCall className="text-xl text-orange-500 mr-2" />
-            +8801671-043256
-          </div>
-          <div className="font-bold flex">
-            <IoMdMail className="text-orange-500 text-xl mr-2" />
-            amirhamzalemon@gmail.com
+          <h1 className="text-orange-500 font-bold text-xl mb-2">যোগাযোগ</h1>
+          <div className="flex flex-col">
+            <Link className="font-bold flex">
+              <FaLocationDot className="text-xl text-orange-500 mr-2" />
+              এইচ এইচ প্রোপার্টিস, সি/১, রোড ১০, পূর্ব গোরান, খিলগাঁও, ঢাকা
+            </Link>
+            <Link className="font-bold flex">
+              <IoCall className="text-xl text-orange-500 mr-2" />
+              +8801671-043256
+            </Link>
+            <Link className="font-bold flex">
+              <IoMdMail className="text-orange-500 text-xl mr-2" />
+              amirhamzalemon@gmail.com
+            </Link>
           </div>
         </div>
       </div>
-      <div className="footer gap-y-2 px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
-        <aside className="items-center grid-flow-col">
+      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 items-center justify-between px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
+        <div className="flex items-center justify-center tablet:justify-starts space-x-4">
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
           <p className="text-orange-500">
             <span className="font-extrabold text-xl">সহজ আইন লিমিটেড</span>
@@ -59,21 +63,22 @@ const Footer = () => {
               মাহমুদুল হাসান ভূঁইয়া
             </Link>
           </p>
-        </aside>
-        <nav className="tablet:place-self-center justify-self-center tablet:justify-self-end">
-          <div className="grid grid-flow-col items-center gap-4">
-            <Link target="blank" to="https://www.youtube.com/@ShohozAin">
-              <BsYoutube className="text-2xl text-orange-500 hover:text-orange-700" />
-            </Link>
+        </div>
+        <h1 className="text-base text-end tablet:text-end laptop:text-center">
+          © 2024 All Rights Reserved | Shohoz Ain
+        </h1>
+        <div className="hidden laptop:flex items-center gap-4 justify-end ">
+          <Link target="blank" to="https://www.youtube.com/@ShohozAin">
+            <BsYoutube className="text-2xl text-orange-500 hover:text-orange-700" />
+          </Link>
 
-            <Link target="blank" to="https://www.facebook.com/shohozain">
-              <BsFacebook className="text-2xl text-orange-500 hover:text-orange-700" />
-            </Link>
-            <Link target="blank" to="https://twitter.com/AdvocateLemon">
-              <BsTwitterX className="text-2xl text-orange-500 hover:text-orange-700" />
-            </Link>
-          </div>
-        </nav>
+          <Link target="blank" to="https://www.facebook.com/shohozain">
+            <BsFacebook className="text-2xl text-orange-500 hover:text-orange-700" />
+          </Link>
+          <Link target="blank" to="https://twitter.com/AdvocateLemon">
+            <BsTwitterX className="text-2xl text-orange-500 hover:text-orange-700" />
+          </Link>
+        </div>
       </div>
     </footer>
   );

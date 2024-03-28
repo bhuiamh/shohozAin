@@ -16,54 +16,56 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="relative shadow-base-content shadow-md mb-10">
-      <Carousel
-        className="pt-[80px]"
-        autoPlay
-        transitionTime={1000}
-        infiniteLoop
-        showArrows={false}
-        showIndicators={false}
-        showStatus={false}
-        centerSlidePercentage={true}
-        stopOnHover={true}
-        showThumbs={false}
-        interval={4000}
-      >
-        <div>
-          <img src={banner1} />
-        </div>
-        <div>
-          <img src={banner2} />
-        </div>
-        <div>
-          <img src={banner3} />
-        </div>
-        <div>
-          <img src={banner4} />
-        </div>
-        <div>
-          <img src={banner5} />
-        </div>
-        <div>
-          <img src={banner6} />
-        </div>
-        <div>
-          <img src={banner7} />
-        </div>
-        <div>
-          <img src={banner8} />
-        </div>
-        <div>
-          <img src={banner9} />
-        </div>
-      </Carousel>
-      <Link className="absolute top-24 right-4 tablet:right-6">
-        <RiLiveFill
-          to="/"
-          className="text-2xl tablet:text-4xl hover:text-orange-700  text-orange-500 "
-        />
-      </Link>
+    <div className="max-w-[1280px] mx-auto">
+      <div className="relative shadow-md tablet:hover:shadow-2xl">
+        <Carousel
+          className="pt-[80px]"
+          autoPlay
+          transitionTime={1000}
+          infiniteLoop
+          showArrows={false}
+          showIndicators={false}
+          showStatus={false}
+          centerSlidePercentage={true}
+          stopOnHover={true}
+          showThumbs={false}
+          interval={4000}
+        >
+          <div>
+            <img src={banner1} />
+          </div>
+          <div>
+            <img src={banner2} />
+          </div>
+          <div>
+            <img src={banner3} />
+          </div>
+          <div>
+            <img src={banner4} />
+          </div>
+          <div>
+            <img src={banner5} />
+          </div>
+          <div>
+            <img src={banner6} />
+          </div>
+          <div>
+            <img src={banner7} />
+          </div>
+          <div>
+            <img src={banner8} />
+          </div>
+          <div>
+            <img src={banner9} />
+          </div>
+        </Carousel>
+        <Link className="absolute top-24 right-4 tablet:right-6">
+          <RiLiveFill
+            to="/"
+            className="text-2xl tablet:text-4xl hover:text-orange-700  text-orange-500 "
+          />
+        </Link>
+      </div>
     </div>
   );
 };

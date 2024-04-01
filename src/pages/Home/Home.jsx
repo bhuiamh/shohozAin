@@ -22,9 +22,9 @@ const Home = () => {
       <Banner />
       <AuthorTalk />
       <Services />
-      <QuickLearn />
+      {/* <QuickLearn /> */}
       <AboutUs />
-      <ClientSwiper />
+      {/* <ClientSwiper /> */}
       <FAQ />
     </div>
   );

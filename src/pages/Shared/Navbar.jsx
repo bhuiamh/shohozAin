@@ -66,7 +66,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex justify-center fixed z-10 bg-base-300/50 backdrop-blur-md">
-      <div className="w-full flex items-center rounded p-0 px-4 tablet:px-0 max-w-[1280px]">
+      <div className="w-full flex items-center p-0 px-4 tablet:px-0 max-w-[1280px]">
         <div className="flex-auto">
           <Link>
             <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />

@@ -9,8 +9,8 @@ import { BsFacebook, BsTwitterX, BsYoutube } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer className="w-full bg-base-200 mt-32 pt-10">
-      <div className="grid grid-cols-1 tablet:grid-cols-3 max-w-[1280px] justify-center mx-auto text-base-content mb-2">
-        <div>
+      <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 max-w-[1280px] justify-center mx-auto text-base-content mb-10 laptop:mb-2 px-4 laptop:px-0 space-y-10">
+        <div className="">
           <h1 className="text-orange-500 font-bold text-xl mb-2">
             সহজ আইন লিমিটেড
           </h1>
@@ -22,7 +22,7 @@ const Footer = () => {
             <Link className="link font-bold link-hover">প্রাইভেসি পলিসি</Link>
           </div>
         </div>
-        <div>
+        <div className="">
           <h1 className="text-orange-500 font-bold text-xl mb-2">অন্যান্য</h1>
           <div className="flex flex-col">
             <Link className="link font-bold link-hover">আমাদের সম্পর্কে</Link>
@@ -30,7 +30,7 @@ const Footer = () => {
             <Link className="link font-bold link-hover">ব্লগ</Link>
           </div>
         </div>
-        <div>
+        <div className="">
           <h1 className="text-orange-500 font-bold text-xl mb-2">যোগাযোগ</h1>
           <div className="flex flex-col">
             <Link className="font-bold flex">
@@ -48,8 +48,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 items-center justify-between px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
-        <div className="flex items-center justify-center tablet:justify-starts space-x-4">
+      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 items-center justify-between px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
+        <div className="flex items-center justify-center tablet:justify-start space-x-4">
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
           <p className="text-orange-500">
             <span className="font-extrabold text-xl">সহজ আইন লিমিটেড</span>
@@ -64,21 +64,9 @@ const Footer = () => {
             </Link>
           </p>
         </div>
-        <h1 className="text-base text-end tablet:text-end laptop:text-center">
+        <h1 className="text-base text-end tablet:text-end laptop:text-center mt-5 laptop:mt-0">
           © 2024 All Rights Reserved | Shohoz Ain
         </h1>
-        <div className="hidden laptop:flex items-center gap-4 justify-end ">
-          <Link target="blank" to="https://www.youtube.com/@ShohozAin">
-            <BsYoutube className="text-2xl text-orange-500 hover:text-orange-700" />
-          </Link>
-
-          <Link target="blank" to="https://www.facebook.com/shohozain">
-            <BsFacebook className="text-2xl text-orange-500 hover:text-orange-700" />
-          </Link>
-          <Link target="blank" to="https://twitter.com/AdvocateLemon">
-            <BsTwitterX className="text-2xl text-orange-500 hover:text-orange-700" />
-          </Link>
-        </div>
       </div>
     </footer>
   );

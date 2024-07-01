@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
       <div className="">
         <SectionTitle
-          title={"আমাদের সমন্ধে details" }
+          title={"আমাদের সমন্ধে"}
           subTitle={"উৎপত্তি, যাত্রা, লক্ষ্য ও উদ্দেশ্য"}
         ></SectionTitle>
         <div className="mx-auto mt-10">

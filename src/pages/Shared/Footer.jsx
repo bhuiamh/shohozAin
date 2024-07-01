@@ -1,15 +1,14 @@
 import React from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { IoCall } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import logo from "../../assets/shohozain.png";
-import { IoCall } from "react-icons/io5";
-import { IoMdMail } from "react-icons/io";
-import { FaLocationDot } from "react-icons/fa6";
-import { BsFacebook, BsTwitterX, BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-base-200 mt-32 pt-10">
-      <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 max-w-[1280px] justify-center mx-auto text-base-content mb-10 laptop:mb-2 px-4 laptop:px-0 space-y-10">
+      <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 max-w-[1280px] justify-center mx-auto text-base-content mb-10 laptop:mb-2 px-4 laptop:px-0">
         <div className="">
           <h1 className="text-orange-500 font-bold text-xl mb-2">
             সহজ আইন লিমিটেড
@@ -64,7 +63,7 @@ const Footer = () => {
             </Link>
           </p>
         </div>
-        <h1 className="text-base text-end tablet:text-end laptop:text-center mt-5 laptop:mt-0">
+        <h1 className="text-base text-end tablet:text-end laptop:text-end mt-5 laptop:mt-0">
           © 2024 All Rights Reserved | Shohoz Ain
         </h1>
       </div>

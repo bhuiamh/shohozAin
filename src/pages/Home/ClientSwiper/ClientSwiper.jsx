@@ -8,8 +8,8 @@ import { Autoplay } from "swiper/modules";
 
 const ClientSwiper = () => {
   return (
-    <div className="mt-24 tablet:mt-32 px-4 tablet:px-0">
-      <div className="max-w-[1280px] mx-auto">
+    <div className="max-w-[1280px] mt-24 tablet:mt-32 px-4 tablet:px-0 ">
+      <div className="max-w-[1280px] mx-auto ">
         <SectionTitle
           title={"আমাদের ক্লায়েন্ট"}
           subTitle={"যেসব কোম্পানির সাথে আমি কাজ করেছি"}

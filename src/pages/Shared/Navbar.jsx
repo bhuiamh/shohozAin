@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/shohozain.png";
 
 const Navbar = () => {
-  const user = true;
+  const user = false;
   // Theme Changer
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "halloween"

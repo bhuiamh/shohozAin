@@ -10,8 +10,8 @@ export default {
       tablet: "960px",
       // => @media (min-width: 960px) { ... }
 
-      laptop: "1440px",
-      // => @media (min-width: 1440px) { ... }
+      laptop: "1280px",
+      // => @media (min-width: 1280px) { ... }
     },
   },
   daisyui: {

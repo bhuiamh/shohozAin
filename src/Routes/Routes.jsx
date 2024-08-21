@@ -5,6 +5,7 @@ import Login from "../pages/Login/Login";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Services from "../pages/Services/Services";
 import Signup from "../pages/Signup/Signup";
+import MyForm from "../pages/Form/MyForm";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
         path: "services",
         element: <Services />,
       },
+      {
+        path: "form",
+        element:<MyForm/>
+      }
     ],
   },
 ]);

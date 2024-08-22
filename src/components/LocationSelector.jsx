@@ -31,7 +31,6 @@ function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange 
           );
           const data = await response.json();
           setDistricts(data.data);
-          console.log(data.data, "data..................");
           setUpazilas([]); // Clear upazilas when a new district is selected
         } catch (error) {
           console.error("Error fetching districts:", error);
@@ -49,7 +48,7 @@ function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange 
             `https://bdapis.com/api/v1.2/district/${selectedDistrict}`
           );
           const data = await response.json();
-        
+          setUpazilas(data.data.upazillas);
         } catch (error) {
           console.error("Error fetching upazilas:", error);
         }

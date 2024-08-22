@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/shohozain.png";
 import SectionTitle from "../Shared/SectionTitle";
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ const Signup = () => {
     { _id: "11", occupation: "অন্যান্য" },
   ];
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (
       name &&
       emailOrPhone &&
@@ -44,7 +44,10 @@ const Signup = () => {
       password &&
       confirmPassword
     ) {
-      setDisabled(false);
+      if (password === confirmPassword) {
+        alert("Password Matched");
+        setDisabled(false);
+      }
     } else {
       setDisabled(true);
     }
@@ -124,7 +127,7 @@ const Signup = () => {
 
               <TextInput
                 name="password"
-                type="password"
+                type= {showPassword ? "text" : "password"}
                 placeholder="পাসওয়ার্ড"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -132,7 +135,7 @@ const Signup = () => {
               <div className="relative">
                 <TextInput
                   name="confirm-password"
-                  type="password"
+                  type= {showPassword ? "text" : "password"}
                   placeholder="পাসওয়ার্ড নিশ্চিত করুন"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}

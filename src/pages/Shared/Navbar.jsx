@@ -8,10 +8,12 @@ import { MdConnectWithoutContact } from "react-icons/md";
 import { RiHome2Fill, RiLiveLine } from "react-icons/ri";
 import { TiThMenu } from "react-icons/ti";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/shohozain.png";
 
 const Navbar = () => {
+  const activeRoute = useLocation().pathname;
+
   const user = false;
   // Theme Changer
   const [theme, setTheme] = useState(
@@ -34,24 +36,40 @@ const Navbar = () => {
 
   const menuItem = (
     <>
-      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700 ">
+      <Link
+        className={`${
+          activeRoute === "/" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center hover:text-orange-700 `}
+      >
         <RiHome2Fill className="mr-1" /> হোম
       </Link>
-      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700 ">
+      <Link
+        to="live-talk"
+        className={`${
+          activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center hover:text-orange-700 relative`}
+      >
+        <span className={`absolute -left-3 loading loading-ring loading-lg ${activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"}`}></span>
         <RiLiveLine className="mr-1" /> লাইভ কথা বলুন
       </Link>
       <Link
         to="services"
-        className="text-orange-500 font-semibold flex items-center hover:text-orange-700"
+        className={`${
+          activeRoute === "/services" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center hover:text-orange-700 `}
       >
         <LiaHandsHelpingSolid className="mr-1" /> সার্ভিস সমুহ
       </Link>
-      <Link className="text-orange-500 font-semibold flex items-center hover:text-orange-700">
+      <Link to="contact-us" className={`${
+          activeRoute === "/contact-us" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center hover:text-orange-700 `}>
         <MdConnectWithoutContact className="mr-1" /> যোগাযোগ
       </Link>
       <Link
         to="about-us"
-        className="text-orange-500 font-semibold flex items-center hover:text-orange-700"
+        className={`${
+          activeRoute === "/about-us" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center hover:text-orange-700 `}
       >
         <GoLaw className="mr-1" /> আমাদের সমন্ধে
       </Link>

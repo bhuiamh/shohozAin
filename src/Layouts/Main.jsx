@@ -14,17 +14,12 @@ const Main = () => {
     document.querySelector("html").setAttribute("data-theme", theme);
   }, [theme]);
 
-
-
   const location = useLocation();
-const noNavbarFooter = location.pathname.includes('login') || location.pathname.includes('signup');
-console.log(noNavbarFooter);
-
-
-
+  const noNavbarFooter =
+    location.pathname.includes("login") || location.pathname.includes("signup");
+  console.log(noNavbarFooter);
 
   return (
-
     <div className="w-full h-[100vh] flex flex-col items-center">
       {noNavbarFooter || <Navbar />}
       <Outlet />

@@ -76,7 +76,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="my-auto">
+    <div className="py-10 tablet:py-14 laptop:py-20">
       <SectionTitle
         title={"সাইন আপ করুন"}
         subTitle={"আমাদের সাথে যুক্ত হতে আপনার অ্যাকাউন্ট তৈরি করুন"}

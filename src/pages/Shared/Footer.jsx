@@ -24,8 +24,8 @@ const Footer = () => {
         <div className="">
           <h1 className="text-orange-500 font-bold text-xl mb-2">অন্যান্য</h1>
           <div className="flex flex-col">
-            <Link className="link font-bold link-hover">আমাদের সম্পর্কে</Link>
-            <Link className="link font-bold link-hover">সাধারন জিজ্ঞাসা</Link>
+            <Link onClick={() => window.scrollTo(0, 0)} to="/about-us" className="link font-bold link-hover">আমাদের সম্পর্কে</Link>
+            <Link onClick={() => window.scrollTo(0, 0)} to="/faq" className="link font-bold link-hover">সাধারন জিজ্ঞাসা</Link>
             <Link className="link font-bold link-hover">ব্লগ</Link>
           </div>
         </div>

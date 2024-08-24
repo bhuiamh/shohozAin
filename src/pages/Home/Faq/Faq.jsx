@@ -16,7 +16,7 @@ const FAQ = () => {
   }, [contentRef, activeIndex]);
 
   return (
-    <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
+    <div className="max-w-[1280px] w-full mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
       <div className="">
         <SectionTitle
           title={"সাধারন জিজ্ঞাসা"}

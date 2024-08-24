@@ -36,14 +36,14 @@ const Navbar = () => {
 
   const menuItem = (
     <>
-      <Link
+      <Link onClick={() => window.scrollTo(0, 0)}
         className={`${
           activeRoute === "/" ? "text-orange-700" : "text-orange-500"
         } font-semibold flex items-center tablet:hover:text-orange-700 `}
       >
         <RiHome2Fill className="mr-1" /> হোম
       </Link>
-      <Link
+      <Link onClick={() => window.scrollTo(0, 0)}
         to="live-talk"
         className={`${
           activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"
@@ -52,7 +52,7 @@ const Navbar = () => {
         <span className={`absolute -left-3 loading loading-ring loading-lg ${activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"}`}></span>
         <RiLiveLine className="mr-1" /> লাইভ কথা বলুন
       </Link>
-      <Link
+      <Link onClick={() => window.scrollTo(0, 0)}
         to="services"
         className={`${
           activeRoute === "/services" ? "text-orange-700" : "text-orange-500"
@@ -60,12 +60,12 @@ const Navbar = () => {
       >
         <LiaHandsHelpingSolid className="mr-1" /> সার্ভিস সমুহ
       </Link>
-      <Link to="contact-us" className={`${
+      <Link onClick={() => window.scrollTo(0, 0)} to="contact-us" className={`${
           activeRoute === "/contact-us" ? "text-orange-700" : "text-orange-500"
         } font-semibold flex items-center tablet:hover:text-orange-700 `}>
         <MdConnectWithoutContact className="mr-1" /> যোগাযোগ
       </Link>
-      <Link
+      <Link onClick={() => window.scrollTo(0, 0)}
         to="about-us"
         className={`${
           activeRoute === "/about-us" ? "text-orange-700" : "text-orange-500"
@@ -80,7 +80,7 @@ const Navbar = () => {
     <div className="w-full flex justify-center fixed z-10 bg-base-300/50 backdrop-blur-md">
       <div className="w-full flex items-center p-0 px-4 tablet:px-0 max-w-[1280px]">
         <div className="flex-auto">
-          <Link>
+          <Link onClick={() => window.scrollTo(0, 0)} to="/">
             <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
           </Link>
         </div>
@@ -100,7 +100,7 @@ const Navbar = () => {
           </div>
         </div>
         {!user && (
-          <Link
+          <Link onClick={() => window.scrollTo(0, 0)}
             to="login"
             className="text-orange-500 tablet:hover:bg-orange-500 tablet:hover:text-white duration-300 font-bold px-3 py-1 border border-orange-500 rounded"
           >
@@ -126,18 +126,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link className="font-semibold text-orange-500 tablet:hover:text-orange-700">
+                <Link onClick={() => window.scrollTo(0, 0)} className="font-semibold text-orange-500 tablet:hover:text-orange-700">
                   <CgProfile />
                   প্রোফাইল
                 </Link>
               </li>
               <li>
-                <Link className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700">
+                <Link onClick={() => window.scrollTo(0, 0)} className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700">
                   <CiSettings /> সেটিং
                 </Link>
               </li>
               <li>
-                <Link className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
+                <Link  className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
                   <AiOutlineLogout /> লগ আউট
                 </Link>
               </li>

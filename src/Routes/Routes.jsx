@@ -7,6 +7,7 @@ import Services from "../pages/Services/Services";
 import Signup from "../pages/Signup/Signup";
 import LiveTalk from "../pages/LiveTalk.jsx/LiveTalk";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import FAQ from "../pages/Home/Faq/Faq";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
       },
       {
         path: "login",

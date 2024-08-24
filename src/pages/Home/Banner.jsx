@@ -59,9 +59,9 @@ const Banner = () => {
             <img src={banner9} />
           </div>
         </Carousel>
-        <Link className="absolute top-24 right-4 tablet:right-6">
+        <Link onClick={() => window.scrollTo(0, 0)} to="/live-talk" className="absolute top-24 right-4 tablet:right-6">
           <RiLiveFill
-            to="/"
+            
             className="text-2xl tablet:text-4xl tablet:hover:text-orange-700  text-orange-500 "
           />
         </Link>

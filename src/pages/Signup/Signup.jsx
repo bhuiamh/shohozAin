@@ -167,6 +167,7 @@ const Signup = () => {
           <p className="mt-5 font-semibold text-center text-sm text-orange-500">
             ইতিমধ্যে একটি অ্যাকাউন্ট আছে?
             <Link
+            onClick={() => window.scrollTo(0, 0)}
               to="/login"
               className="font-bold leading-6 ml-2 text-orange-600 tablet:hover:text-orange-700"
             >

@@ -1,0 +1,129 @@
+/* Default (Mobile First) */
+.x-slider {
+    height: 100px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+} 
+
+.x-slide-track {
+    display: flex;
+    width: calc(100px * 18);
+    animation: scroll 40s linear infinite;
+}
+
+.x-slide-track:hover {
+    animation-play-state: paused;
+}
+
+.x-slide {
+    perspective: 50px; 
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.x-img {
+    width: 100%;
+    transition: transform 1s;
+}
+
+.x-img:hover {
+    transform: translateZ(20px);
+}
+
+.x-slider::before,
+.x-slider::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.x-slider::before {
+    left: 0;
+    top: 0;
+}
+
+.x-slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100px * 9));
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .x-slider {
+        height: 150px;
+    }
+
+    .x-slide-track {
+        width: calc(150px * 18);
+    }
+
+    .x-slide {
+        perspective: 75px; 
+        height: 100px;
+        width: 150px;
+        padding: 12px;
+    }
+
+    .x-img {
+        width: 100%;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-150px * 9));
+        }
+    }
+}
+
+/* Laptop and larger screens */
+@media (min-width: 1024px) {
+    .x-slider {
+        height: 250px;
+    }
+
+    .x-slide-track {
+        width: calc(250px * 18);
+    }
+
+    .x-slide {
+        perspective: 100px; 
+        height: 200px;
+        width: 250px;
+        padding: 15px;
+    }
+
+    .x-img {
+        width: 100%;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 9));
+        }
+    }
+}

@@ -1,82 +1,105 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay } from "swiper";
-import "swiper/css";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay } from "swiper/modules";
+// import "swiper/css";
 import SectionTitle from "../../Shared/SectionTitle";
 import { partnersData } from "../../../data/data";
-import { Autoplay } from "swiper/modules";
+import "./ClientSwiper.css";
+
+import img1 from "../../../assets/thumbnail/thambnail1.jpg";
+import img2 from "../../../assets/thumbnail/thambnail2.jpg";
+import img3 from "../../../assets/thumbnail/thambnail3.jpg";
+import img4 from "../../../assets/thumbnail/thambnail4.jpg";
+import img5 from "../../../assets/thumbnail/thambnail5.jpg";
+import img6 from "../../../assets/thumbnail/thambnail6.jpg";
+import img7 from "../../../assets/thumbnail/thambnail7.jpg";
+import img8 from "../../../assets/thumbnail/thambnail8.jpg";
+import img9 from "../../../assets/thumbnail/thambnail9.jpg";
+import img10 from "../../../assets/thumbnail/thambnail10.jpg";
+import img11 from "../../../assets/thumbnail/thambnail11.jpg";
+import img12 from "../../../assets/thumbnail/thambnail12.jpg";
+import img13 from "../../../assets/thumbnail/thambnail13.jpg";
+import img14 from "../../../assets/thumbnail/thambnail14.jpg";
+import img15 from "../../../assets/thumbnail/thambnail15.jpg";
+import img16 from "../../../assets/thumbnail/thambnail16.jpg";
+import img17 from "../../../assets/thumbnail/thambnail17.jpg";
+import img18 from "../../../assets/thumbnail/thambnail18.jpg";
 
 const ClientSwiper = () => {
   return (
-    <div className="max-w-[1280px] mt-24 tablet:mt-32 px-4 tablet:px-0 ">
-      <div className="max-w-[1280px] mx-auto ">
+    <div className="mt-24 tablet:mt-32 px-4 tablet:px-0 mx-auto">
+      <div className="max-w-[1280px] mx-auto">
         <SectionTitle
           title={"আমাদের ক্লায়েন্ট"}
           subTitle={"যেসব কোম্পানির সাথে আমি কাজ করেছি"}
         />
       </div>
-      <Swiper
-        loop
-        autoplay={{
-          delay: 1, // Adjust the delay for autoplay
-          disableOnInteraction: false,
-        }}
-        speed={3000} // Adjust the speed for sliding
-        modules={[Autoplay]}
-        draggable={true} // Allow dragging on mobile devices
-        mousewheel={true} // Allow scrolling on mobile devices
-        grabCursor={true} // Use grab cursor on mobile devices
-        noSwiping={true} // Allow swiping on mobile devices
-        slidesPerView={3} // Show only two slide on small screens
-        spaceBetween={16} // Add space between slides
-        breakpoints={{
-          1750: {
-            spaceBetween: 48,
-            slidesPerView: 6,
-          },
-          1536: {
-            spaceBetween: 48,
-            slidesPerView: 5,
-          },
-          1380: {
-            spaceBetween: 32,
-            slidesPerView: 5,
-          },
-          1280: {
-            spaceBetween: 32,
-            slidesPerView: 4,
-          },
-          769: {
-            spaceBetween: 32,
-            slidesPerView: 3,
-          },
-          440: {
-            spaceBetween: 32,
-            slidesPerView: 3,
-          },
-          0: {
-            spaceBetween: 32,
-            slidesPerView: 3,
-          },
-        }}
-        className="mt-10"
-      >
-        {partnersData.map((item) => {
-          const imgName = item.img.split(".")[0];
 
-          return (
-            <SwiperSlide key={item.id}>
-              <div className="w-full flex justify-center items-center">
-                <img
-                  src={`/partner/${imgName}.png`}
-                  alt=""
-                  className="tablet:tablet:hover:opacity-100 transition-all duration-300"
-                />
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+     
+     
+      <div className="grid items-center">
+        {/* Slider Div */}
+        <div className="h-16 tablet:h-[200px] relative w-full grid items-center overflow-hidden border-2">
+          {/* Slide Track */}
+          <div className="x-slide-track">
+            {/* Slide */}
+            <div className="x-slide">
+              <img className="x-img" src={img1} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img2} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img3} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img4} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img5} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img6} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img7} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img8} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img9} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img10} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img11} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img12} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img13} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img14} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img15} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img16} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img17} alt="" />
+            </div>
+            <div className="x-slide">
+              <img className="x-img" src={img18} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

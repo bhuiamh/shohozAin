@@ -32,7 +32,7 @@ import SectionTitle from "../../Shared/SectionTitle";
 
 function QuickLearn() {
   return (
-    <div className="w-screen my-5 tablet:my-10 overflow-hidden">
+    <div className="w-screen my-5 mt-24 tablet:mt-32 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-4 tablet:px-0">
         <SectionTitle
           title={"দ্রুত জানুন"}

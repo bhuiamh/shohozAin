@@ -5,7 +5,7 @@ export const partnersData = [
   },
   {
     id: 2,
-    img: "2.png",
+    img: "1.png",
   },
   {
     id: 3,
@@ -13,7 +13,7 @@ export const partnersData = [
   },
   {
     id: 4,
-    img: "4.png",
+    img: "3.png",
   },
   {
     id: 5,
@@ -21,7 +21,7 @@ export const partnersData = [
   },
   {
     id: 6,
-    img: "6.png",
+    img: "5.png",
   },
   {
     id: 7,
@@ -33,7 +33,7 @@ export const partnersData = [
   },
   {
     id: 9,
-    img: "2.png",
+    img: "1.png",
   },
   {
     id: 10,
@@ -41,7 +41,7 @@ export const partnersData = [
   },
   {
     id: 11,
-    img: "4.png",
+    img: "3.png",
   },
   {
     id: 12,
@@ -49,7 +49,7 @@ export const partnersData = [
   },
   {
     id: 13,
-    img: "6.png",
+    img: "5.png",
   },
   {
     id: 14,

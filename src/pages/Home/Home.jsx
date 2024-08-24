@@ -14,7 +14,7 @@ const Home = () => {
       <AuthorTalk />
       <Services />
       <QuickLearn />
-         <AboutUs />
+      <AboutUs />
       <ClientSwiper /> 
       <FAQ />
     </div>

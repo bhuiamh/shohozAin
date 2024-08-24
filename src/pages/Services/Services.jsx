@@ -23,9 +23,9 @@ const Services = () => {
 
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 tablet:my-10">
         {servicesData.map((service) => (
-          <div className=" tablet:tablet:hover:translate-y-4 relative rounded-lg border-orange-500 border-[2px] shadow-lg tablet:tablet:hover:shadow-2xl duration-700 transition-all min-h-60 tablet:min-h-96 group overflow-hidden grid place-items-center">
+          <div className=" tablet:hover:translate-y-4 relative rounded-lg border-orange-500 border-[2px] shadow-lg tablet:hover:shadow-2xl duration-700 transition-all min-h-60 tablet:min-h-96 group overflow-hidden grid place-items-center">
             <div>
-              <div className="relative group-tablet:hover:opacity-0 duration-700 object-cover rounded-full mx-auto">
+              <div className="relative group-hover:opacity-0 duration-700 object-cover rounded-full mx-auto">
                 <img
                   className="blur-[2px] brightness-50"
                   src={`/serviceImage/${service.image}`}
@@ -45,16 +45,16 @@ const Services = () => {
               </div>
 
               {/* Hovered Items */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-tablet:hover:opacity-100 transition-opacity duration-1000 min-w-80 tablet:w-full flex justify-center">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 min-w-80 tablet:w-full flex justify-center">
                 <div className="grid grid-cols-1 tablet:grid-cols-2 items-center justify-center">
-                  <div className="font-bold text-xl tablet:text-2xl laptop:text-3xl mr-0 tablet:mr-4 border-b-2 tablet:border-b-0 border-orange-500 text-right">
+                  <div className="font-bold text-xl tablet:text-2xl laptop:text-3xl mr-0 tablet:mr-4 border-b-2 tablet:border-b-0 border-orange-500 text-left tablet:text-right">
                     {service.title}
                   </div>
                   <div className="grid grid-cols-2 tablet:grid-cols-1 gap-1 tablet:gap-2 border-l-0 tablet:border-l-4 border-orange-500 mt-2 tablet:mt-0">
                     {service.subservices.map((subService) => (
-                      <div className="flex items-center tablet:ml-4 tablet:hover:text-orange-500  duration-300 ml-2">
+                      <div className="flex items-center tablet:ml-4 hover:text-orange-500  duration-300 ml-2">
                         <FaCheck className="mr-2 text-base tablet:text-xl" />{" "}
-                        <h1 className="font-bold text-base tablet:text-xl">
+                        <h1 className="font-bold text-xs  tablet:text-xl">
                           {subService}
                         </h1>
                       </div>

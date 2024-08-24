@@ -6,6 +6,7 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Services from "../pages/Services/Services";
 import Signup from "../pages/Signup/Signup";
 import LiveTalk from "../pages/LiveTalk.jsx/LiveTalk";
+import ContactUs from "../pages/ContactUs/ContactUs";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,22 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "live-talk",
+        element: <LiveTalk />,
+      },
+      {
+        path: "services",
+        element: <Services />,
+      },
+      {
+        path: "contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "about-us",
+        element: <AboutUs />,
+      },
+      {
         path: "login",
         element: <Login />,
       },
@@ -24,18 +41,9 @@ export const router = createBrowserRouter([
         path: "signup",
         element: <Signup />,
       },
-      {
-        path: "about-us",
-        element: <AboutUs />,
-      },
-      {
-        path: "services",
-        element: <Services />,
-      },
-      {
-        path: "live-talk",
-        element: <LiveTalk />,
-      },
+     
+      
+      
       
     ],
   },

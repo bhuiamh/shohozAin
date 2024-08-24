@@ -3,7 +3,7 @@ import React from "react";
 
 const SectionTitle = ({ title, subTitle }) => {
   return (
-    <div className="w-full">
+    <div className="w-full cursor-default">
       <div className="mx-auto">
         <h1 className="text-xl tablet:text-2xl px-4 tablet:pb-1 font-extrabold text-orange-500">
           {title}

@@ -156,7 +156,7 @@ const Signup = () => {
                 className={`flex w-full justify-center rounded-md ${
                   disabled
                     ? "bg-orange-300"
-                    : "bg-orange-600 hover:bg-orange-700"
+                    : "bg-orange-600 tablet:hover:bg-orange-700"
                 } px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600`}
               >
                 সাইন আপ করুন
@@ -168,7 +168,7 @@ const Signup = () => {
             ইতিমধ্যে একটি অ্যাকাউন্ট আছে?
             <Link
               to="/login"
-              className="font-bold leading-6 ml-2 text-orange-600 hover:text-orange-700"
+              className="font-bold leading-6 ml-2 text-orange-600 tablet:hover:text-orange-700"
             >
               লগইন করুন
             </Link>

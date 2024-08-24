@@ -39,7 +39,7 @@ const Navbar = () => {
       <Link
         className={`${
           activeRoute === "/" ? "text-orange-700" : "text-orange-500"
-        } font-semibold flex items-center hover:text-orange-700 `}
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}
       >
         <RiHome2Fill className="mr-1" /> হোম
       </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
         to="live-talk"
         className={`${
           activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"
-        } font-semibold flex items-center hover:text-orange-700 relative`}
+        } font-semibold flex items-center tablet:hover:text-orange-700 relative`}
       >
         <span className={`absolute -left-3 loading loading-ring loading-lg ${activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"}`}></span>
         <RiLiveLine className="mr-1" /> লাইভ কথা বলুন
@@ -56,20 +56,20 @@ const Navbar = () => {
         to="services"
         className={`${
           activeRoute === "/services" ? "text-orange-700" : "text-orange-500"
-        } font-semibold flex items-center hover:text-orange-700 `}
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}
       >
         <LiaHandsHelpingSolid className="mr-1" /> সার্ভিস সমুহ
       </Link>
       <Link to="contact-us" className={`${
           activeRoute === "/contact-us" ? "text-orange-700" : "text-orange-500"
-        } font-semibold flex items-center hover:text-orange-700 `}>
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}>
         <MdConnectWithoutContact className="mr-1" /> যোগাযোগ
       </Link>
       <Link
         to="about-us"
         className={`${
           activeRoute === "/about-us" ? "text-orange-700" : "text-orange-500"
-        } font-semibold flex items-center hover:text-orange-700 `}
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}
       >
         <GoLaw className="mr-1" /> আমাদের সমন্ধে
       </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
         {!user && (
           <Link
             to="login"
-            className="text-orange-500 hover:bg-orange-500 hover:text-white duration-300 font-bold px-3 py-1 border border-orange-500 rounded"
+            className="text-orange-500 tablet:hover:bg-orange-500 tablet:hover:text-white duration-300 font-bold px-3 py-1 border border-orange-500 rounded"
           >
             লগ ইন
           </Link>
@@ -126,24 +126,24 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link className="font-semibold text-orange-500 hover:text-orange-700">
+                <Link className="font-semibold text-orange-500 tablet:hover:text-orange-700">
                   <CgProfile />
                   প্রোফাইল
                 </Link>
               </li>
               <li>
-                <Link className="mt-2 font-semibold text-orange-500 hover:text-orange-700">
+                <Link className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700">
                   <CiSettings /> সেটিং
                 </Link>
               </li>
               <li>
-                <Link className="mt-2 font-semibold text-red-600 hover:text-red-700">
+                <Link className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
                   <AiOutlineLogout /> লগ আউট
                 </Link>
               </li>
               <li
                 onClick={handleTheme}
-                className="mt-2 font-semibold text-orange-500 hover:text-orange-700"
+                className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
               >
                 {theme == "halloween" && (
                   <h1 className="flex">

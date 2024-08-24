@@ -70,7 +70,7 @@ const ClientSwiper = () => {
                 <img
                   src={`/partner/${imgName}.png`}
                   alt=""
-                  className="tablet:hover:opacity-100 transition-all duration-300"
+                  className="tablet:tablet:hover:opacity-100 transition-all duration-300"
                 />
               </div>
             </SwiperSlide>

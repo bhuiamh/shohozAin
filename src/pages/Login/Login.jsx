@@ -66,7 +66,7 @@ const Login = () => {
             <div className="flex justify-end mt-1 ">
               <Link
                 to="#"
-                className="text-xs text-end text-orange-500 hover:text-orange-700"
+                className="text-xs text-end text-orange-500 tablet:hover:text-orange-700"
               >
                 পাসওয়ার্ড ভুলে গেছেন ?
               </Link>
@@ -79,7 +79,7 @@ const Login = () => {
                 className={`flex w-full justify-center rounded-md ${
                   disabled
                     ? "bg-orange-300"
-                    : "bg-orange-600 hover:bg-orange-700"
+                    : "bg-orange-600 tablet:hover:bg-orange-700"
                 } px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600`}
               >
                 সাইন ইন করুন
@@ -91,7 +91,7 @@ const Login = () => {
             নতুন মেম্বার ?
             <Link
               to="/signup"
-              className="font-bold leading-6 ml-2 text-orange-600 hover:text-orange-700"
+              className="font-bold leading-6 ml-2 text-orange-600 tablet:hover:text-orange-700"
             >
               সাইন আপ করুন
             </Link>

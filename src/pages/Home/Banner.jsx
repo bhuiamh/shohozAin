@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className="max-w-[1280px] mx-auto">
-      <div className="relative shadow-md tablet:hover:shadow-2xl">
+      <div className="relative shadow-md tablet:tablet:hover:shadow-2xl">
         <Carousel
           className="pt-[80px]"
           autoPlay
@@ -62,7 +62,7 @@ const Banner = () => {
         <Link className="absolute top-24 right-4 tablet:right-6">
           <RiLiveFill
             to="/"
-            className="text-2xl tablet:text-4xl hover:text-orange-700  text-orange-500 "
+            className="text-2xl tablet:text-4xl tablet:hover:text-orange-700  text-orange-500 "
           />
         </Link>
       </div>

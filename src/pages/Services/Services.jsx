@@ -1,12 +1,30 @@
-
 import React, { useState } from "react";
 import SectionTitle from "../Shared/SectionTitle";
 import { FaCheck } from "react-icons/fa";
 import { servicesData } from "./ServicesData";
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 const Services = () => {
+
+  const activePathname = useLocation().pathname;
   return (
     <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 cursor-pointer">
+     {activePathname === "/services" && <Helmet>
+        <title>
+          Services @ ShohozAin - Comprehensive Legal Solutions for All Your
+          Needs
+        </title>
+        <meta
+          name="description"
+          content="Explore the wide range of legal services offered by ShohozAin. From legal consultation to case management and document preparation, our expert team is here to provide reliable and tailored solutions for individuals and businesses."
+        />
+        <meta
+          name="keywords"
+          content="ShohozAin services, legal solutions, legal consultation, case management, document preparation, legal advice, business legal services, personal legal services"
+        />
+      </Helmet>}
+
       <SectionTitle
         title={"সার্ভিস সমূহ"}
         subTitle={"আমরা সাধারণত যেসব সেবা দিয়ে থাকি"}

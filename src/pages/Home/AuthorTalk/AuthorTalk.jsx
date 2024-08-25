@@ -4,6 +4,9 @@ import bgImage from "../../../assets/cover.png";
 import SectionTitle from "../../Shared/SectionTitle";
 import { Link } from "react-router-dom";
 const AuthorTalk = () => {
+
+ 
+
   return (
     <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
       <div className="">

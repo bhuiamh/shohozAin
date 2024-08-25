@@ -6,6 +6,7 @@ import TextInput from "../../components/TextInput";
 import { GoEyeClosed, GoEye } from "react-icons/go";
 import LocationSelector from "../../components/LocationSelector";
 import SelectField from "../../components/SelectField";
+import { Helmet } from "react-helmet";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -77,6 +78,20 @@ const Signup = () => {
 
   return (
     <div className="py-10 tablet:py-14 laptop:py-20">
+      <Helmet>
+        <title>
+          Signup @ ShohozAin - Join the Leading Legal Services Platform
+        </title>
+        <meta
+          name="description"
+          content="Signup for ShohozAin and join the leading legal services platform. Create your account to access expert legal advice, manage cases, and connect with professionals. Quick and secure registration process."
+        />
+        <meta
+          name="keywords"
+          content="ShohozAin signup, legal services registration, join legal platform, create account, legal advice, case management"
+        />
+      </Helmet>
+
       <SectionTitle
         title={"সাইন আপ করুন"}
         subTitle={"আমাদের সাথে যুক্ত হতে আপনার অ্যাকাউন্ট তৈরি করুন"}

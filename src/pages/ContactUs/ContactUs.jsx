@@ -7,6 +7,7 @@ import SelectField from "../../components/SelectField";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
+import { Helmet } from "react-helmet";
 // import TextArea from "../../components/TextArea";
 
 const ContactUs = () => {
@@ -56,6 +57,20 @@ const ContactUs = () => {
 
   return (
     <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 cursor-default grid grid-cols-1 laptop:grid-cols-2">
+      <Helmet>
+        <title>
+          Contact Us @ ShohozAin - Get in Touch for Legal Assistance
+        </title>
+        <meta
+          name="description"
+          content="Need legal help? Contact ShohozAin today. Reach out to our team for expert legal advice, support, and inquiries. We're here to assist you with all your legal needs."
+        />
+        <meta
+          name="keywords"
+          content="Contact ShohozAin, legal assistance, legal support, expert legal advice, ShohozAin contact, legal inquiries, customer support"
+        />
+      </Helmet>
+
       <div>
         <SectionTitle
           title={"যোগাযোগ করুন"}
@@ -108,10 +123,7 @@ const ContactUs = () => {
 
       <div className="flex flex-1 flex-col justify-center px-6 laptop:px-8">
         <div className="mt-1 mobile:mx-auto mobile:w-full mobile:max-w-sm">
-          <form
-            onSubmit={handleContactUs}
-          
-          >
+          <form onSubmit={handleContactUs}>
             <div className="space-y-4 mt-10 tablet:mt-0">
               <TextInput
                 name="name"
@@ -142,13 +154,13 @@ const ContactUs = () => {
                   placeholder="পেশা নির্বাচন করুন"
                 />
               </div>
-             <div className="pt-5s">
-             <LocationSelector
-                onDivisionChange={setDivision}
-                onDistrictChange={setDistrict}
-                onUpazilaChange={setUpazila}
-              />
-             </div>
+              <div className="pt-5s">
+                <LocationSelector
+                  onDivisionChange={setDivision}
+                  onDistrictChange={setDistrict}
+                  onUpazilaChange={setUpazila}
+                />
+              </div>
 
               <TextInput
                 name="subject"

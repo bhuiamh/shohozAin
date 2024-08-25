@@ -1,10 +1,23 @@
 import React from "react";
 import SectionTitle from "../Shared/SectionTitle";
 import PricingPlans from "../../components/PricingPlans";
+import { Helmet } from "react-helmet";
 
 const LiveTalk = () => {
   return (
     <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 cursor-pointer">
+      <Helmet>
+        <title>Live Talk @ ShohozAin - Instant Legal Advice and Support</title>
+        <meta
+          name="description"
+          content="Engage in Live Talk with ShohozAin's legal experts for instant advice and support. Connect with professionals in real-time to discuss your legal concerns and get immediate assistance."
+        />
+        <meta
+          name="keywords"
+          content="Live Talk ShohozAin, instant legal advice, real-time legal support, live chat legal help, ShohozAin live assistance, talk to legal experts"
+        />
+      </Helmet>
+
       <SectionTitle
         title={"সরাসরি কথা বলুন"}
         subTitle={"আমাদের সাথে সরাসরি কথা বলতে প্যকেজ সিলেক্ট করুন"}
@@ -22,8 +35,7 @@ const LiveTalk = () => {
       </p>
 
       <PricingPlans category="liveTalk" />
-      <div>
-      </div>
+      <div></div>
     </div>
   );
 };

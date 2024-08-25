@@ -4,6 +4,7 @@ import SectionTitle from "../Shared/SectionTitle";
 import { GoEye, GoEyeClosed } from "react-icons/go";
 import { Link } from "react-router-dom";
 import TextInput from "../../components/TextInput";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,6 +27,20 @@ const Login = () => {
 
   return (
     <div className="my-auto ">
+      <Helmet>
+        <title>
+          Login @ ShohozAin - Secure Access to Your Legal Services Portal
+        </title>
+        <meta
+          name="description"
+          content="Login to ShohozAin, your trusted legal services portal. Access personalized legal assistance, manage your cases, and connect with experienced professionals. Secure and user-friendly."
+        />
+        <meta
+          name="keywords"
+          content="ShohozAin login, legal services, secure access, online legal help, case management, legal professionals"
+        />
+      </Helmet>
+
       <SectionTitle
         title={"লগইন করুন"}
         subTitle={"বিস্তারিত জানতে আমাদের সাথে যুক্ত হন"}

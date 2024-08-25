@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import SectionTitle from "../../Shared/SectionTitle";
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -15,8 +17,28 @@ const FAQ = () => {
     }
   }, [contentRef, activeIndex]);
 
+  const activePathname = useLocation().pathname;
+
+  if (activePathname === "/faq") {
+    console.log("faq");
+  }
+
   return (
     <div className="max-w-[1280px] w-full mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
+      {activePathname === "/faq" && <Helmet>
+        <title>
+          FAQ @ ShohozAin - Frequently Asked Questions About Our Legal Services
+        </title>
+        <meta
+          name="description"
+          content="Find answers to common questions about ShohozAin's legal services. Learn more about our platform, how to get started, pricing, and how we can assist with your legal needs. Get all the information you need in our FAQ section."
+        />
+        <meta
+          name="keywords"
+          content="ShohozAin FAQ, legal services questions, ShohozAin help, legal assistance FAQ, getting started with ShohozAin, legal service pricing, common legal questions"
+        />
+      </Helmet>}
+
       <div className="">
         <SectionTitle
           title={"সাধারন জিজ্ঞাসা"}

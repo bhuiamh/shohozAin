@@ -8,11 +8,13 @@ import Signup from "../pages/Signup/Signup";
 import LiveTalk from "../pages/LiveTalk.jsx/LiveTalk";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import FAQ from "../pages/Home/Faq/Faq";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

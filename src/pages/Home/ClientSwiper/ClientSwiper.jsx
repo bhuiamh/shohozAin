@@ -27,8 +27,8 @@ import img18 from "../../../assets/thumbnail/thambnail18.jpg";
 
 const ClientSwiper = () => {
   return (
-    <div className="mt-24 tablet:mt-32 px-4 tablet:px-0 mx-auto">
-      <div className="max-w-[1280px] mx-auto">
+    <div className="mt-24 tablet:mt-32  mx-auto">
+      <div className="max-w-[1280px] px-4 tablet:px-0 mx-auto">
         <SectionTitle
           title={"আমাদের ক্লায়েন্ট"}
           subTitle={"যেসব কোম্পানির সাথে আমি কাজ করেছি"}
@@ -39,7 +39,7 @@ const ClientSwiper = () => {
      
       <div className="grid items-center">
         {/* Slider Div */}
-        <div className="h-16 tablet:h-[200px] relative w-full grid items-center overflow-hidden border-2">
+        <div className="h-16 tablet:h-[200px] relative w-full grid items-center overflow-hidden">
           {/* Slide Track */}
           <div className="x-slide-track">
             {/* Slide */}

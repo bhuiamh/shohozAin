@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import {  Link, Outlet, useLocation } from "react-router-dom";
 import Navbar from "../pages/Shared/Navbar";
 import Footer from "../pages/Shared/Footer";
 
@@ -22,6 +22,15 @@ const Main = () => {
   return (
     <div className="w-full h-[100vh] flex flex-col items-center">
       {noNavbarFooter || <Navbar />}
+     {!noNavbarFooter || <div className="p-10 w-full flex justify-start">
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          to="/"
+          className="text-orange-500 tablet:hover:bg-orange-500 tablet:hover:text-white duration-300 font-bold px-3 py-1 border border-orange-500 rounded"
+        >
+          হোম
+        </Link>
+      </div>}
       <Outlet />
       {noNavbarFooter || <Footer />}
     </div>

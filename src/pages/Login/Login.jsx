@@ -33,7 +33,13 @@ const Login = () => {
 
       <div className="flex flex-1 flex-col justify-center px-6 laptop:px-8">
         <div className="mobile:mx-auto mobile:w-full mobile:max-w-sm">
-          <img className="mx-auto h-24 w-auto" src={logo} alt="Your Company" />
+          <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+            <img
+              className="mx-auto h-24 w-auto"
+              src={logo}
+              alt="Your Company"
+            />
+          </Link>
         </div>
 
         <div className="mt-1 mobile:mx-auto mobile:w-full mobile:max-w-sm">
@@ -64,7 +70,8 @@ const Login = () => {
             </div>
 
             <div className="flex justify-end mt-1 ">
-              <Link onClick={() => window.scrollTo(0, 0)}
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
                 to="#"
                 className="text-xs text-end text-orange-500 tablet:hover:text-orange-700"
               >
@@ -89,7 +96,8 @@ const Login = () => {
 
           <p className="mt-5 font-semibold text-center text-sm text-orange-500">
             নতুন মেম্বার ?
-            <Link onClick={() => window.scrollTo(0, 0)}
+            <Link
+              onClick={() => window.scrollTo(0, 0)}
               to="/signup"
               className="font-bold leading-6 ml-2 text-orange-600 tablet:hover:text-orange-700"
             >

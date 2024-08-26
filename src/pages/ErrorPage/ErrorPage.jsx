@@ -4,7 +4,6 @@ import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import logo from "../../assets/shohozain.png";
 import { Link } from "react-router-dom";
-// import './ErrorPage.css';
 
 const ErrorPage = () => {
   return (

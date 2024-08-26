@@ -6,37 +6,37 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 
 const Services = () => {
-
   const activePathname = useLocation().pathname;
   return (
     <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 cursor-pointer">
-     {activePathname === "/services" && <Helmet>
-        <title>
-          Services @ ShohozAin - Comprehensive Legal Solutions for All Your
-          Needs
-        </title>
-        <meta
-          name="description"
-          content="Explore the wide range of legal services offered by ShohozAin. From legal consultation to case management and document preparation, our expert team is here to provide reliable and tailored solutions for individuals and businesses."
-        />
-        <meta
-          name="keywords"
-          content="ShohozAin services, legal solutions, legal consultation, case management, document preparation, legal advice, business legal services, personal legal services"
-        />
-      </Helmet>}
+      {activePathname === "/services" && (
+        <Helmet>
+          <title>
+            Services @ ShohozAin - Comprehensive Legal Solutions for All Your
+            Needs
+          </title>
+          <meta
+            name="description"
+            content="Explore the wide range of legal services offered by ShohozAin. From legal consultation to case management and document preparation, our expert team is here to provide reliable and tailored solutions for individuals and businesses."
+          />
+          <meta
+            name="keywords"
+            content="ShohozAin services, legal solutions, legal consultation, case management, document preparation, legal advice, business legal services, personal legal services"
+          />
+        </Helmet>
+      )}
 
       <SectionTitle
         title={"সার্ভিস সমূহ"}
-        subTitle={"আমরা সাধারণত যেসব সেবা দিয়ে থাকি"}
+        subTitle={"সাধারণত আমরা যেসব সেবা দিয়ে থাকি"}
       ></SectionTitle>
       <p className="text-base tablet:text-xl mb-4 font-semibold mt-10">
-        আপনার কি জমি সংক্রান্ত ঝামেলা? মামলা-মোকদ্দমায় আটকে গেছেন? চুক্তি নিয়ে
-        চিন্তা ? ব্যক্তিগত, পারিবারিক, বা ব্যবসায়িক বিষয়ে আইনি দিকনির্দেশনা
-        প্রয়োজন? চিন্তা নেই! সহজ আইন আপনার পাশে। আমরা আপনার সকল আইনি সমাধানের
-        জন্য এক-স্টপ সমাধান: অভিজ্ঞ আইনজীবীদের দল: সহজ আইনে রয়েছে জমি, মামলা,
-        চুক্তি, পরামর্শ এবং আরও অনেক কিছুতে বিশেষজ্ঞ অভিজ্ঞ আইনজীবীদের একটি দল।
-        আমরা আপনার আইনি সমস্যাগুলি দ্রুত, সাশ্রয়ী এবং কার্যকরভাবে সমাধান করতে
-        প্রতিশ্রুতিবদ্ধ। আমাদের কিছু পরিষেবা নিচে দেয়া হলো।
+        আপনি কি জমি সংক্রান্ত সমস্যায় আছেন ? আপনার নামে কি মামলা-মোকদ্দমা হয়েছে
+        ? আপনি কি চুক্তি নিয়ে চিন্তিত ? আপনার কি ব্যক্তিগত, পারিবারিক বা
+        ব্যবসায়িক বিষয়ে আইনি দিকনির্দেশনা প্রয়োজন ? চিন্তা নেই! সহজ আইন আছে
+        আপনার পাশে। আমরা আপনার সকল আইনি সমস্যা সমাধানের জন্য প্রস্তুত। সহজ আইনের
+        মাধ্যমে আপনি আপনার জমি সংক্রান্ত সমস্যা, দেওয়ানী মোকদ্দমা, পারিবারিক
+        সমস্যা ও মোকদ্দমা, চুক্তি প্রবল মোকদ্দমা, আরবিট্রেশন মোকদ্দমা, অর্থ ঋণ মোকদ্দমা, চেক সংক্রান্ত মামলা মোকদ্দমা সহ যাবতিয় আইনগত পরামর্শ পেতে পারেন । আমাদের আরো কিছু পরিষেবা নিচে দেয়া হলো।
       </p>
 
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 tablet:my-10">

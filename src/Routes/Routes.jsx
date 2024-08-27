@@ -9,6 +9,7 @@ import LiveTalk from "../pages/LiveTalk.jsx/LiveTalk";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import FAQ from "../pages/Home/Faq/Faq";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Blogs from "../pages/Blogs/Blogs";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "faq",
         element: <FAQ />,
+      },
+      {
+        path: "blogs",
+        element: <Blogs />,
       },
       {
         path: "login",

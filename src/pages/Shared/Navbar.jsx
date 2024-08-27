@@ -7,6 +7,8 @@ import { LiaHandsHelpingSolid } from "react-icons/lia";
 import { MdConnectWithoutContact } from "react-icons/md";
 import { RiHome2Fill, RiLiveLine } from "react-icons/ri";
 import { TiThMenu } from "react-icons/ti";
+import { ImBlog } from "react-icons/im";
+
 
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/shohozain.png";
@@ -72,6 +74,14 @@ const Navbar = () => {
         } font-semibold flex items-center tablet:hover:text-orange-700 `}
       >
         <GoLaw className="mr-1" /> আমাদের সমন্ধে
+      </Link>
+      <Link onClick={() => window.scrollTo(0, 0)}
+        to="blogs"
+        className={`${
+          activeRoute === "/blogs" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}
+      >
+        <ImBlog className="mr-1" /> ব্লগ
       </Link>
     </>
   );

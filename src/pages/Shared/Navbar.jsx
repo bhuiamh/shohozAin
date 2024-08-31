@@ -16,7 +16,7 @@ import logo from "../../assets/shohozain.png";
 const Navbar = () => {
   const activeRoute = useLocation().pathname;
 
-  const user = false;
+  const user = true;
   // Theme Changer
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "halloween"
@@ -87,7 +87,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="w-full flex justify-center fixed z-10 bg-base-300/50 backdrop-blur-md">
+    <div className="w-full flex justify-center fixed z-50 bg-base-300/50 backdrop-blur-md">
       <div className="w-full flex items-center p-0 px-4 tablet:px-0 max-w-[1280px]">
         <div className="flex-auto">
           <Link onClick={() => window.scrollTo(0, 0)} to="/">

@@ -20,7 +20,7 @@ const Main = () => {
   console.log(noNavbarFooter);
 
   return (
-    <div className="w-full h-[100vh] flex flex-col items-center">
+    <div className="w-full min-h-[100vh] flex flex-col items-center">
       {noNavbarFooter || <Navbar />}
      {!noNavbarFooter || <div className="p-10 w-full flex justify-start">
         <Link

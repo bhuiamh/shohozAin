@@ -4,10 +4,23 @@ import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import logo from "../../assets/shohozain.png";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ErrorPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6">
+      <Helmet>
+        <title>Error @ ShohozAin - Secure Legal Services Portal</title>
+        <meta
+          name="description"
+          content="Oops! It looks like something went wrong on ShohozAin. If you need assistance with our legal services portal, please contact our support team for help. We are here to assist you with secure and reliable access to legal professionals and case management."
+        />
+        <meta
+          name="keywords"
+          content="ShohozAin error, legal services issue, support, secure access, online legal help, case management assistance"
+        />
+      </Helmet>
+
       {/* Logo */}
       <div className="">
         <img
@@ -18,19 +31,18 @@ const ErrorPage = () => {
       </div>
 
       {/* 404 Error Text */}
-     
-        <div className="flex">
-          <h1 className="text-[100px] tablet:text-[150px] laptop:text-[200px] h-24 tablet:h-36 laptop:h-52 animate-pulse font-extrabold text-orange-500">
-            4
-          </h1>
-          <h1 className="text-[100px] tablet:text-[150px] laptop:text-[200px] h-24 tablet:h-36 laptop:h-52  font-extrabold text-orange-500">
-            0
-          </h1>
-          <h1 className="text-[100px] tablet:text-[150px] laptop:text-[200px] h-24 tablet:h-36 laptop:h-52 animate-pulse font-extrabold text-orange-500">
-            4
-          </h1>
-        </div>
-      
+
+      <div className="flex">
+        <h1 className="text-[100px] tablet:text-[150px] laptop:text-[200px] h-24 tablet:h-36 laptop:h-52 animate-pulse font-extrabold text-orange-500">
+          4
+        </h1>
+        <h1 className="text-[100px] tablet:text-[150px] laptop:text-[200px] h-24 tablet:h-36 laptop:h-52  font-extrabold text-orange-500">
+          0
+        </h1>
+        <h1 className="text-[100px] tablet:text-[150px] laptop:text-[200px] h-24 tablet:h-36 laptop:h-52 animate-pulse font-extrabold text-orange-500">
+          4
+        </h1>
+      </div>
 
       {/* Main Content */}
       <div className="text-center">

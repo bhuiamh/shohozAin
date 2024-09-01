@@ -12,9 +12,9 @@ const BlogCategories = () => {
     { id: 5, typeOfCategory: "arbitration-mokoddoma", name: "আরবিট্রেশন মোকদ্দমা" },
     { id: 6, typeOfCategory: "ortho-rin-mokoddoma", name: "অর্থ ঋণ মোকদ্দমা" },
     { id: 7, typeOfCategory: "check-songkranto-mokoddoma", name: "চেক সংক্রান্ত মামলা মোকদ্দমা" },
-    {id: 8, typeOfCategory: "recent-blogs", name: "আমাদের সমসাময়িক ব্লগসমূহ" },
-    {id: 9, typeOfCategory: "popular-blogs", name: "আমাদের পপুলার ব্লগসমূহ" },
-    {id: 10, typeOfCategory: "all-blogs", name: "আমাদের সকল ব্লগসমূহ"},
+    { id: 8, typeOfCategory: "recent-blogs", name: "সমসাময়িক ব্লগসমূহ" },
+    { id: 9, typeOfCategory: "popular-blogs", name: "পপুলার ব্লগসমূহ" },
+    { id: 10, typeOfCategory: "all-blogs", name: "সকল ব্লগ"},
 
   ];
 

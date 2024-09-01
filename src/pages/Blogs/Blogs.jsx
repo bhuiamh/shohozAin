@@ -7,8 +7,7 @@ import PopularBlogs from "./PopularBlogs";
 import RecentBlogs from "./RecentBlogs";
 import AllBlogs from "./AllBlogs";
 
-// import blogData from './blogs.json';
-
+// Function to fetch blog data from the JSON file
 const fetchBlogs = async () => {
   try {
     const response = await fetch("./blogs.json");
@@ -19,21 +18,36 @@ const fetchBlogs = async () => {
     return data;
   } catch (error) {
     console.error("Error fetching the JSON file:", error);
-    return [];
+    return []; // Return an empty array if there is an error
   }
 };
 
-
 const Blogs = () => {
+  // State hooks for blogs data and loading status
   const [blogs, setBlogs] = useState([]);
   const [blogsByCategory, setBlogsByCategory] = useState({});
+  const [recentBlogs, setRecentBlogs] = useState([]);
+  const [mostReactedBlogs, setMostReactedBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Fetch and process blog data when component mounts
     const getBlogs = async () => {
       try {
         const data = await fetchBlogs();
         setBlogs(data);
+
+        // Rearrange blogs based on the most recent date first
+        const sortedByDate = [...data].sort(
+          (a, b) => new Date(b.dateAndTime) - new Date(a.dateAndTime)
+        );
+        setRecentBlogs(sortedByDate);
+
+        // Sort blogs by the number of reactions (most to least)
+        const sortedByReactions = [...data].sort(
+          (a, b) => b.reactions - a.reactions
+        );
+        setMostReactedBlogs(sortedByReactions);
 
         // Group blogs by category and typeOfCategory
         const groupedBlogs = data.reduce((acc, blog) => {
@@ -51,14 +65,14 @@ const Blogs = () => {
       } catch (error) {
         console.error("Error processing blogs:", error);
       } finally {
-        setLoading(false);
+        setLoading(false); // Set loading to false once data is fetched and processed
       }
     };
 
-    getBlogs();
-  }, []);
+    getBlogs(); // Call the function to fetch blogs
+  }, []); // Empty dependency array means this runs only once when the component mounts
 
-  // Check if blogsByCategory is populated
+  // Extract category names from blogsByCategory object
   const categories = Object.keys(blogsByCategory);
 
   return (
@@ -89,13 +103,12 @@ const Blogs = () => {
         ইত্যাদি বিভিন্ন বিষয়ে বিস্তারিত আলোচনা করি। আরো জানতে আমাদের ব্লগ পড়ুন
         এবং আপনার আইনি জ্ঞান বাড়ান।
       </p>
-      
       <BlogCategories />
-
       {loading ? (
-        <div>Loading...</div>
+        <div>Loading...</div> // Display while data is loading
       ) : categories.length > 0 ? (
-        categories.map((category, index) => (
+        categories.map((category, index) =>
+          // Render blogs grouped by category and typeOfCategory
           Object.keys(blogsByCategory[category]).map((typeOfCategory) => (
             <CategoryBlogs
               key={`${category}-${typeOfCategory}`}
@@ -104,14 +117,15 @@ const Blogs = () => {
               blogs={blogsByCategory[category][typeOfCategory]}
             />
           ))
-        ))
+        )
       ) : (
-        <div>No blogs available</div>
+        <div>No blogs available</div> // Message when no blogs are found
       )}
-
-       <AllBlogs blogs={blogs} />
-      {/*<RecentBlogs />
-      <PopularBlogs /> */}
+      <AllBlogs blogs={blogs} />
+      <RecentBlogs blogs={recentBlogs} />{" "}
+      {/* Pass sorted blogs based on date to RecentBlogs */}
+      <PopularBlogs blogs={mostReactedBlogs} />{" "}
+      {/* Pass sorted blogs based on reactions to PopularBlogs */}
     </div>
   );
 };

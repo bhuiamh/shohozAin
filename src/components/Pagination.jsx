@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
+import React, { useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Pagination = ({ totalItems, itemsPerPage = 6, onPageChange }) => {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -45,7 +45,7 @@ const Pagination = ({ totalItems, itemsPerPage = 6, onPageChange }) => {
           key={i}
           onClick={() => handlePageChange(i)}
           className={`text-black h-10 font-semibold px-3 py-1 border-t border-b border-orange-500 tablet:hover:bg-orange-300 ${
-            currentPage === i ? 'bg-orange-500' : ''
+            currentPage === i ? "bg-orange-500" : ""
           }`}
         >
           {i}
@@ -56,27 +56,36 @@ const Pagination = ({ totalItems, itemsPerPage = 6, onPageChange }) => {
   };
 
   return (
-    <div className="flex items-center justify-center mt-8">
-      {/* Previous Page Button */}
-      <button
-        onClick={handlePreviousPage}
-        className={` ${currentPage === 1 && "cursor-not-allowed"} h-10 px-3 py-1 border border-orange-500 rounded-l-md tablet:hover:bg-orange-300`}
-        disabled={currentPage === 1}
-      >
-        <FaAngleLeft />
-      </button>
+    <div>
+      {/* Only render pagination controls if there are more items than fit on one page */}
+      {totalItems > itemsPerPage && (
+        <div className="flex items-center justify-center mt-8">
+          {/* Previous Page Button */}
+          <button
+            onClick={handlePreviousPage}
+            className={` ${
+              currentPage === 1 && "cursor-not-allowed"
+            } h-10 px-3 py-1 border border-orange-500 rounded-l-md tablet:hover:bg-orange-300`}
+            disabled={currentPage === 1}
+          >
+            <FaAngleLeft />
+          </button>
 
-      {/* Page Numbers */}
-      {renderPageNumbers()}
+          {/* Page Numbers */}
+          {renderPageNumbers()}
 
-      {/* Next Page Button */}
-      <button
-        onClick={handleNextPage}
-        className={`${currentPage === totalPages && "cursor-not-allowed"} h-10 px-3 py-1 border border-orange-500 rounded-r-md tablet:hover:bg-orange-300`}
-        disabled={currentPage === totalPages}
-      >
-        <FaAngleRight />
-      </button>
+          {/* Next Page Button */}
+          <button
+            onClick={handleNextPage}
+            className={`${
+              currentPage === totalPages && "cursor-not-allowed"
+            } h-10 px-3 py-1 border border-orange-500 rounded-r-md tablet:hover:bg-orange-300`}
+            disabled={currentPage === totalPages}
+          >
+            <FaAngleRight />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

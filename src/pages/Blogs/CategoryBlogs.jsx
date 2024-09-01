@@ -8,7 +8,7 @@ const CategoryBlogs = ({ category, typeOfCategory, blogs }) => {
   return (
     <div id={typeOfCategory} className="mt-5 tablet:mt-10">
       <SectionTitle subTitle={`${category} ব্লগ`} />
-      <h1>{typeOfCategory}</h1>
+      
 
       <div className="flex flex-wrap place-content-center gap-6 mt-5 tablet:mt-10">
         {blogs.map((blog) => (

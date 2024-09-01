@@ -17,7 +17,6 @@ const Main = () => {
   const location = useLocation();
   const noNavbarFooter =
     location.pathname.includes("login") || location.pathname.includes("signup");
-  console.log(noNavbarFooter);
 
   return (
     <div className="w-full min-h-[100vh] flex flex-col items-center">

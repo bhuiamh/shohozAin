@@ -59,7 +59,7 @@ function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange 
 
   return (
     <div className="">
-      <h1 className="text-orange-500 mobile:text-sm pl-3">আপনার জেলা ও উপজেলা নির্বাচন করুন </h1>
+      <h1 className="font-semibold text-orange-500 mobile:text-sm pl-3">আপনার জেলা ও উপজেলা নির্বাচন করুন </h1>
       <form className="flex gap-2 min-w-full">
         <SelectField
           id="division"

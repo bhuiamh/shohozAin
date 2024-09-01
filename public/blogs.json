@@ -1,0 +1,391 @@
+[
+    {
+      "id": 1001,
+      "typeOfCategory" : "jomi-songkarno",
+      "category": "জমি সংক্রান্ত",
+      "title": "জমির ই-নামজারি করার নিয়ম?",
+      "description": "কয়েক প্রকারের দলিল আছে, যেগুলো সম্পত্তি হস্তান্তরের দলিল নয়...",
+      "writer": "আব্দুল হালিম",
+      "reactions": 100,
+      "comments": [
+        {
+          "commenter": "মাহমুদুল হাসান",
+          "comment": "Its very usefull"
+        },
+        {
+          "commenter": "রেজওয়ান",
+          "comment": "খুবি সুন্দর"
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "typeOfCategory" : "jomi-songkarno",
+      "category": "জমি সংক্রান্ত",
+      "title": "খতিয়ান ও পর্চার মধ্যে পার্থক্য",
+      "description": "খতিয়ান ও পর্চা জমির মালিকানার প্রমাণ হিসেবে ব্যবহৃত হয়, তবে এদের মধ্যে পার্থক্য রয়েছে...",
+      "writer": "মোহাম্মদ আলী",
+      "reactions": 85,
+      "comments": [
+        {
+          "commenter": "ফাহিম",
+          "comment": "খুব ভালো ব্যাখ্যা!"
+        },
+        {
+          "commenter": "জান্নাতুল ফেরদৌস",
+          "comment": "বিষয়টা অনেক পরিষ্কার হল।"
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "typeOfCategory" : "jomi-songkarno",
+      "category": "জমি সংক্রান্ত",
+      "title": "জমি নিয়ে মামলা মোকদ্দমার প্রাথমিক ধাপ",
+      "description": "জমি নিয়ে মামলা মোকদ্দমার ক্ষেত্রে প্রাথমিক ধাপগুলো কী কী তা জানা অত্যন্ত জরুরি...",
+      "writer": "সাদিকুর রহমান",
+      "reactions": 70,
+      "comments": [
+        {
+          "commenter": "মুক্তার হোসেন",
+          "comment": "মোটামুটি বুঝতে পারলাম।"
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "typeOfCategory" : "dewani-mokoddoma",
+      "category": "দেওয়ানী মোকদ্দমা",
+      "title": "দেওয়ানী মোকদ্দমা করার প্রক্রিয়া",
+      "description": "দেওয়ানী মোকদ্দমা একটি জটিল প্রক্রিয়া যা সাধারণত অনেক সময় নিয়ে সম্পন্ন হয়...",
+      "writer": "ইফতেখার হাসান",
+      "reactions": 90,
+      "comments": [
+        {
+          "commenter": "শামীমা আক্তার",
+          "comment": "খুবই দরকারি তথ্য।"
+        }
+      ]
+    },
+    {
+      "id": 1005,
+      "typeOfCategory" : "dewani-mokoddoma",
+      "category": "দেওয়ানী মোকদ্দমা",
+      "title": "দেওয়ানী মামলা এবং ফৌজদারি মামলার মধ্যে পার্থক্য",
+      "description": "দেওয়ানী এবং ফৌজদারি মামলার মধ্যে পার্থক্য বুঝতে অনেকেরই সমস্যা হয়...",
+      "writer": "তাহমিদ আহমেদ",
+      "reactions": 75,
+      "comments": [
+        {
+          "commenter": "সাকিব",
+          "comment": "গুরুত্বপূর্ণ তথ্য।"
+        },
+        {
+          "commenter": "রাফি",
+          "comment": "বেশ ভালো লেগেছে।"
+        }
+      ]
+    },
+    {
+      "id": 1006,
+      "typeOfCategory" : "dewani-mokoddoma",
+      "category": "দেওয়ানী মোকদ্দমা",
+      "title": "দেওয়ানী মোকদ্দমার ক্ষেত্রে আদালতের ভূমিকা",
+      "description": "আদালত কিভাবে দেওয়ানী মোকদ্দমা পরিচালনা করে তার বিস্তারিত বিবরণ...",
+      "writer": "মোহাম্মদ ইউসুফ",
+      "reactions": 80,
+      "comments": [
+        {
+          "commenter": "তামান্না",
+          "comment": "ভালো লেগেছে।"
+        }
+      ]
+    },
+    {
+      "id": 1007,
+      "typeOfCategory" : "paribarik-somossa",
+      "category": "পারিবারিক সমস্যা",
+      "title": "পারিবারিক সমস্যা সমাধানের উপায়",
+      "description": "পারিবারিক সমস্যা সমাধানের জন্য কিছু কার্যকরী উপায় নিয়ে আলোচনা...",
+      "writer": "রাশেদুল ইসলাম",
+      "reactions": 120,
+      "comments": [
+        {
+          "commenter": "ফারহানা",
+          "comment": "এগুলো মানলে জীবনটা অনেক সহজ হবে।"
+        }
+      ]
+    },
+    {
+      "id": 1008,
+      "typeOfCategory" : "paribarik-somossa",
+      "category": "পারিবারিক সমস্যা",
+      "title": "পরিবারের মধ্যে মতবিরোধ কিভাবে মেটানো যায়?",
+      "description": "পরিবারের সদস্যদের মধ্যে মতবিরোধ মেটানোর উপায় নিয়ে আলোচনা...",
+      "writer": "নূর হোসেন",
+      "reactions": 65,
+      "comments": [
+        {
+          "commenter": "জহিরুল",
+          "comment": "খুবই দরকারি তথ্য।"
+        }
+      ]
+    },
+    {
+      "id": 1009,
+      "typeOfCategory" : "paribarik-somossa",
+      "category": "পারিবারিক সমস্যা",
+      "title": "পারিবারিক সংঘাতের আইনি সমাধান",
+      "description": "পারিবারিক সংঘাতের জন্য আইন কী কী সমাধান দেয় তা নিয়ে আলোচনা...",
+      "writer": "সাইফুল্লাহ",
+      "reactions": 78,
+      "comments": [
+        {
+          "commenter": "সাবিনা",
+          "comment": "জানার ছিল।"
+        }
+      ]
+    },
+    {
+      "id": 1010,
+      "typeOfCategory" : "Chukti-probol-mokoddoma",
+      "category": "চুক্তি প্রবল মোকদ্দমা",
+      "title": "চুক্তির মধ্যে কি কি শর্ত থাকা উচিত?",
+      "description": "একটি চুক্তির মধ্যে থাকা শর্তগুলো কিভাবে প্রস্তুত করা উচিত তা নিয়ে আলোচনা...",
+      "writer": "তানভীর আহমেদ",
+      "reactions": 88,
+      "comments": [
+        {
+          "commenter": "রেহানা",
+          "comment": "খুবই দরকারি তথ্য।"
+        }
+      ]
+    },
+    {
+      "id": 1011,
+      "typeOfCategory" : "Chukti-probol-mokoddoma",
+      "category": "চুক্তি প্রবল মোকদ্দমা",
+      "title": "চুক্তি আইন নিয়ে বিস্তারিত আলোচনা",
+      "description": "চুক্তি আইন কী এবং কিভাবে এটি প্রয়োগ হয় তা নিয়ে বিস্তারিত আলোচনা...",
+      "writer": "মাহমুদুল হাসান",
+      "reactions": 95,
+      "comments": [
+        {
+          "commenter": "সুমাইয়া",
+          "comment": "অনেক কিছু জানতে পারলাম।"
+        }
+      ]
+    },
+    {
+      "id": 1012,
+      "typeOfCategory" : "Chukti-probol-mokoddoma",
+      "category": "চুক্তি প্রবল মোকদ্দমা",
+      "title": "চুক্তি বাতিলের নিয়মাবলী",
+      "description": "কিভাবে চুক্তি বাতিল করা হয় এবং এর জন্য কি কি নিয়ম মানতে হয় তা নিয়ে আলোচনা...",
+      "writer": "মোশারফ করিম",
+      "reactions": 110,
+      "comments": [
+        {
+          "commenter": "মাহি",
+          "comment": "খুবই দরকারি তথ্য।"
+        }
+      ]
+    },
+    {
+      "id": 1013,
+      "typeOfCategory" : "arbitration-mokoddoma",
+      "category": "আরবিট্রেশন মোকদ্দমা",
+      "title": "আরবিট্রেশন কি এবং কেন এটি প্রয়োজন?",
+      "description": "আরবিট্রেশন হল এক প্রকারের সমঝোতা পদ্ধতি যেখানে বিচার ব্যবস্থা ছাড়াই মামলা নিষ্পত্তি করা হয়...",
+      "writer": "আনিসুল ইসলাম",
+      "reactions": 98,
+      "comments": [
+        {
+          "commenter": "মুহিত",
+          "comment": "খুবই দরকারি পোস্ট।"
+        }
+      ]
+    },
+    {
+      "id": 1014,
+      "typeOfCategory" : "arbitration-mokoddoma",
+      "category": "আরবিট্রেশন মোকদ্দমা",
+      "title": "আরবিট্রেশন এবং মামলার মধ্যে পার্থক্য",
+      "description": "মামলা এবং আরবিট্রেশনের মধ্যে পার্থক্য এবং এদের ব্যবহারের ক্ষেত্রে পার্থক্য নিয়ে আলোচনা...",
+      "writer": "রকিবুল হাসান",
+      "reactions": 85,
+      "comments": [
+        {
+          "commenter": "সাব্বির",
+          "comment": "ভালো ব্যাখ্যা।"
+        }
+      ]
+    },
+    {
+      "id": 1015,
+      "typeOfCategory" : "arbitration-mokoddoma",
+      "category": "আরবিট্রেশন মোকদ্দমা",
+      "title": "আরবিট্রেশন প্রক্রিয়ার ধাপসমূহ",
+      "description": "আরবিট্রেশন প্রক্রিয়ার ধাপসমূহ এবং কিভাবে এটি কার্যকরী হয় তা নিয়ে আলোচনা...",
+      "writer": "কামাল হোসেন",
+      "reactions": 90,
+      "comments": [
+        {
+          "commenter": "শামীম",
+          "comment": "খুব উপকারী।"
+        }
+      ]
+    },
+    {
+        "id": 1021,
+        "typeOfCategory" : "check-songkranto-mokoddoma",
+        "category": "চেক সংক্রান্ত মোকদ্দমা",
+        "title": "চেক সংক্রান্ত মামলার আইনি দিক",
+        "description": "চেক সংক্রান্ত মামলার আইনি দিক এবং এটি কীভাবে মোকাবেলা করতে হয় তা বিস্তারিত আলোচনা...",
+        "writer": "মোস্তফা জামান",
+        "reactions": 92,
+        "comments": [
+          {
+            "commenter": "ফারজানা",
+            "comment": "এই তথ্য খুবই সহায়ক।"
+          }
+        ]
+      },
+      {
+        "id": 1022,
+        "typeOfCategory" : "jomi-songkarno",
+        "category": "জমি সংক্রান্ত",
+        "title": "জমির রেজিস্ট্রেশন প্রক্রিয়া",
+        "description": "জমির রেজিস্ট্রেশন প্রক্রিয়া এবং এর গুরুত্বপূর্ণ দিকগুলি নিয়ে বিস্তারিত আলোচনা...",
+        "writer": "হোসেন আহমেদ",
+        "reactions": 108,
+        "comments": [
+          {
+            "commenter": "মাহফুজ",
+            "comment": "এটি খুবই দরকারি।"
+          }
+        ]
+      },
+      {
+        "id": 1023,
+        "typeOfCategory" : "dewani-mokoddoma",
+        "category": "দেওয়ানী মোকদ্দমা",
+        "title": "দেওয়ানী মামলা মোকাবেলার কৌশল",
+        "description": "দেওয়ানী মামলা মোকাবেলার জন্য কিছু কার্যকরী কৌশল নিয়ে আলোচনা...",
+        "writer": "শামসুল ইসলাম",
+        "reactions": 87,
+        "comments": [
+          {
+            "commenter": "সিরাজুল",
+            "comment": "এটি খুবই কার্যকরী।"
+          }
+        ]
+      },
+      {
+        "id": 1024,
+        "typeOfCategory" : "paribarik-somossa",
+        "category": "পারিবারিক সমস্যা",
+        "title": "পারিবারিক বিরোধ নিরসনে আইনি পদক্ষেপ",
+        "description": "পারিবারিক বিরোধ নিরসনে আইন কীভাবে সাহায্য করতে পারে তা নিয়ে আলোচনা...",
+        "writer": "সুলতান মাহমুদ",
+        "reactions": 74,
+        "comments": [
+          {
+            "commenter": "মুনিরা",
+            "comment": "বিষয়টি ভালো লাগলো।"
+          }
+        ]
+      },
+      {
+        "id": 1025,
+        "typeOfCategory" : "Chukti-probol-mokoddoma",
+        "category": "চুক্তি প্রবল মোকদ্দমা",
+        "title": "চুক্তি ভঙ্গের কারণে আইনি ব্যবস্থা",
+        "description": "চুক্তি ভঙ্গের কারণে আইনি ব্যবস্থা নেওয়ার প্রক্রিয়া এবং আইনগত দিকগুলি...",
+        "writer": "মঞ্জুরুল ইসলাম",
+        "reactions": 80,
+        "comments": [
+          {
+            "commenter": "আব্দুল্লাহ",
+            "comment": "ভালোভাবে ব্যাখ্যা করা হয়েছে।"
+          }
+        ]
+      },
+      {
+        "id": 1026,
+        "typeOfCategory" : "arbitration-mokoddoma",
+        "category": "আরবিট্রেশন মোকদ্দমা",
+        "title": "আরবিট্রেশনের সুবিধা এবং অসুবিধা",
+        "description": "আরবিট্রেশনের সুবিধা এবং অসুবিধা সম্পর্কে বিস্তারিত আলোচনা...",
+        "writer": "মামুনুর রহমান",
+        "reactions": 76,
+        "comments": [
+          {
+            "commenter": "বেগম",
+            "comment": "অভিজ্ঞতামূলক তথ্য।"
+          }
+        ]
+      },
+      {
+        "id": 1027,
+        "typeOfCategory" : "ortho-rin-mokoddoma",
+        "category": "অর্থ ঋণ মোকদ্দমা",
+        "title": "অর্থ ঋণ মামলা মোকাবেলার কৌশল",
+        "description": "অর্থ ঋণ মামলা মোকাবেলার জন্য কিছু কার্যকরী কৌশল নিয়ে আলোচনা...",
+        "writer": "মহিউদ্দিন",
+        "reactions": 83,
+        "comments": [
+          {
+            "commenter": "জাহিদ",
+            "comment": "এটি খুবই সহায়ক।"
+          }
+        ]
+      },
+      {
+        "id": 1028,
+        "typeOfCategory" : "check-songkranto-mokoddoma",
+        "category": "চেক সংক্রান্ত মোকদ্দমা",
+        "title": "চেক ফ্রড মোকাবেলার কৌশল",
+        "description": "চেক ফ্রড মোকাবেলার জন্য কিছু গুরুত্বপূর্ণ কৌশল এবং আইনি পদক্ষেপ নিয়ে আলোচনা...",
+        "writer": "রওশন আরা",
+        "reactions": 82,
+        "comments": [
+          {
+            "commenter": "অরিফ",
+            "comment": "খুবই কার্যকরী।"
+          }
+        ]
+      },
+      {
+        "id": 1029,
+        "typeOfCategory" : "jomi-songkarno",
+        "category": "জমি সংক্রান্ত",
+        "title": "জমির মালিকানা প্রমাণের উপায়",
+        "description": "জমির মালিকানা প্রমাণের জন্য প্রয়োজনীয় দলিল এবং পদক্ষেপগুলির বিস্তারিত আলোচনা...",
+        "writer": "নাজমুল হাসান",
+        "reactions": 101,
+        "comments": [
+          {
+            "commenter": "রিতু",
+            "comment": "এটি খুবই দরকারি তথ্য।"
+          }
+        ]
+      },
+      {
+        "id": 1030,
+        "typeOfCategory" : "paribarik-somossa",
+        "category": "পারিবারিক সমস্যা",
+        "title": "পারিবারিক আইনি পরামর্শের গুরুত্ব",
+        "description": "পারিবারিক আইনি পরামর্শ গ্রহণের গুরুত্ব এবং এটি কিভাবে সাহায্য করতে পারে তা নিয়ে আলোচনা...",
+        "writer": "ফারুক আহমেদ",
+        "reactions": 93,
+        "comments": [
+          {
+            "commenter": "মোনা",
+            "comment": "খুবই গুরুত্বপূর্ণ পোস্ট।"
+          }
+        ]
+      }
+    ]
+     
+  

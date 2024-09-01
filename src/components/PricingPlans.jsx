@@ -18,10 +18,8 @@ const PricingPlans = ({ category }) => {
 
   const paymentHandler = () => {
     if (userLoggedIn) {
-      console.log("Payment Successful");
       alert("Payment Successful");
     } else {
-      console.log("Please Login First");
       Swal.fire({
         title: "<strong>দুঃখিত !</strong>",
         text: "আপনার লগইন করা নেই, আপনি কি লগইন করতে চান?",
@@ -36,7 +34,6 @@ const PricingPlans = ({ category }) => {
         
       }).then((result) => {
         if (result.isConfirmed) {
-          console.log("Payment Successful");
           navigate("/login");
         }
       });

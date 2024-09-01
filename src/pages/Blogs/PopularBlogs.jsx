@@ -3,9 +3,9 @@ import SectionTitle from "../Shared/SectionTitle";
 import BlogCard from "./BlogCard";
 import Pagination from "../../components/Pagination";
 
-const PopularBlog = () => {
+const PopularBlogs = () => {
   return (
-    <div className="mt-5 tablet:mt-7 laptop:mt-10">
+    <div id="popular-blogs" className="mt-5 tablet:mt-7 laptop:mt-10">
       <SectionTitle subTitle={"আমাদের পপুলার ব্লগসমূহ"}></SectionTitle>
       <div className="flex flex-wrap place-content-center gap-6 mt-5 tablet:mt-10">
         <BlogCard />
@@ -20,4 +20,4 @@ const PopularBlog = () => {
   );
 };
 
-export default PopularBlog;
+export default PopularBlogs;

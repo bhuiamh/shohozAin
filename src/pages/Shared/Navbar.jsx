@@ -157,7 +157,7 @@ const Navbar = () => {
               >
                 {theme == "halloween" && (
                   <h1 className="flex">
-                    {" "}
+                    
                     <CiLight /> লাইট মুড
                   </h1>
                 )}

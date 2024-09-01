@@ -53,7 +53,7 @@ const Footer = () => {
           <p className="text-orange-500">
             <span className="font-extrabold text-xl">সহজ আইন লিমিটেড</span>
             <br />
-            রক্ষণাবেক্ষন ও সার্বিক নিরাপত্তায়{" "}
+            রক্ষণাবেক্ষন ও সার্বিক নিরাপত্তায়
             <Link
               target="blank"
               to="https://bhuiamh.netlify.app/"

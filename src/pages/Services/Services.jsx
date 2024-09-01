@@ -71,7 +71,7 @@ const Services = () => {
                   <div className="grid grid-cols-2 tablet:grid-cols-1 gap-1 tablet:gap-2 border-l-0 tablet:border-l-4 border-orange-500 mt-2 tablet:mt-0">
                     {service.subservices.map((subService) => (
                       <div className="flex items-center tablet:ml-4 hover:text-orange-500  duration-300 ml-2">
-                        <FaCheck className="mr-2 text-base tablet:text-xl" />{" "}
+                        <FaCheck className="mr-2 text-base tablet:text-xl" />
                         <h1 className="font-bold text-xs  tablet:text-xl">
                           {subService}
                         </h1>

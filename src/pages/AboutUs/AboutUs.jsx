@@ -49,7 +49,7 @@ const AboutUs = () => {
           <p className="text-base tablet:text-xl mb-4 tablet:mb-6 font-semibold">
             <span className=" text-orange-500 font-bold mr-2">
               আমাদের বিশ্বাস:
-            </span>{" "}
+            </span>
             আমরা বিশ্বাস করি, আপনার প্রতিটি আইনি সমস্যা সমান গুরুত্বপূর্ণ।
             আপনাদের প্রতিটি কল আমাদের কাছে অত্যন্ত গুরুত্বপূর্ণ।
           </p>

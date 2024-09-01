@@ -10,6 +10,8 @@ import ContactUs from "../pages/ContactUs/ContactUs";
 import FAQ from "../pages/Home/Faq/Faq";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Blogs from "../pages/Blogs/Blogs";
+import BlogDetails from "../pages/Blogs/BlogDetails";
+import BlogPage from "../pages/Blogs/BlogPage";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -43,7 +45,18 @@ export const router = createBrowserRouter([
       },
       {
         path: "blogs",
-        element: <Blogs />,
+        element: <BlogPage />,
+        children: [
+          {
+            path: "",
+            element: <Blogs />,
+          
+          },
+          {
+            path: ':blogId', // Use dynamic parameter :blogId for clarity
+            element: <BlogDetails />,
+          },
+        ],
       },
       {
         path: "login",

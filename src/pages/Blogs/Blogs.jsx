@@ -6,6 +6,7 @@ import CategoryBlogs from "./CategoryBlogs";
 import PopularBlogs from "./PopularBlogs";
 import RecentBlogs from "./RecentBlogs";
 import AllBlogs from "./AllBlogs";
+import BlogSearch from "./BlogSearch";
 
 // Function to fetch blog data from the JSON file
 const fetchBlogs = async () => {
@@ -90,10 +91,23 @@ const Blogs = () => {
           content="ShohozAin blog, legal blogs, legal insights, legal advice, legal updates, practical legal tips, ShohozAin articles, legal news"
         />
       </Helmet>
-      <SectionTitle
-        title={"আমাদের ব্লগ"}
-        subTitle={"আইন সম্পর্কে বিস্তারিত জানুন"}
-      ></SectionTitle>
+      <div className="w-full h-16  tablet:h-20 rounded bg-gradient-to-l via-amber-400/20 from-lime-500/20 to-orange-500/20 grid grid-cols-12 justify-between items-center px-5 shadow-xl">
+        <div className="col-span-9 flex items-center h-full my-auto">
+          <h1 className="text-2xl tablet:text-3xl laptop:text-4xl font-bold text-orange-500 pr-2">
+            ব্লগ
+          </h1>
+          <h1 className="text-2xl tablet:text-3xl laptop:text-4xl animate-pulse">
+            |
+          </h1>
+          <h1 className="pl-2 text-sm tablet:text-base laptop:text-xl font-semibold">
+            আইন সম্পর্কিত ব্লগ পড়ুন
+          </h1>
+        </div>
+        <div className="col-span-3">
+          <BlogSearch blogs={blogs} />
+        </div>
+      </div>
+
       <p className="text-base tablet:text-xl mb-4 font-semibold mt-10">
         জমি সংক্রান্ত সমস্যা, মামলা-মোকদ্দমা, বা চুক্তি নিয়ে চিন্তিত?
         ব্যক্তিগত, পারিবারিক, বা ব্যবসায়িক বিষয়ে আইনি পরামর্শের প্রয়োজন? সহজ

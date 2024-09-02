@@ -18,7 +18,7 @@ const AllBlogs = ({ blogs }) => {
   );
 
   return (
-    <div id="all-blogs" className="mt-5 tablet:mt-10">
+    <div id="all-blogs" className="mt-5 tablet:mt-10 bg-gradient-to-br to-lime-500/15 from-green-500/15 p-5 tablet:p-7 laptop:p-8 rounded shadow-xl">
       <SectionTitle subTitle={"আমাদের ব্লগসমূহ"}></SectionTitle>
 
       <div className="flex flex-wrap place-content-center gap-6 mt-5 tablet:mt-10">

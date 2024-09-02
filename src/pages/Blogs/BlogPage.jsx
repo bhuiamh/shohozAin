@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 const BlogPage = () => {
     return (
-        <div className=''>    
+        <div className='w-full'>    
            <Outlet/>
         </div>
     );

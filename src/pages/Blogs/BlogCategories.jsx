@@ -33,22 +33,19 @@ const BlogCategories = () => {
     console.log(category.typeOfCategory);
   };
   
-
   return (
     <div className="">
-      <div className="flex">
         <SectionTitle subTitle={"ব্লগ ক্যাটাগরি"} />
-        <BlogSearch />
-      </div>
+    
       <div className="mt-5 tablet:mt-10 flex flex-wrap gap-2">
         {categories.map((category) => (
           <div
             onClick={() => handleScroll(category)}
             key={category.id}
             id={`category-${category.id}`}
-            className="p-4 border-2 border-orange-500 rounded hover:bg-orange-500 hover:text-white cursor-pointer"
+            className="p-1 tablet:p-2 laptop:p-3 border tablet:border-2 border-orange-500 rounded tablet:hover:bg-orange-500 hover:text-white cursor-pointer"
           >
-            <h2 className="text-lg font-semibold">{category.name}</h2>
+            <h2 className="text-sm tablet:text-base laptop:text-lg font-semibold">{category.name}</h2>
           </div>
         ))}
       </div>

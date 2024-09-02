@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const BlogCard = ({blog}) => {
   return (
-    <Link to={`/blogs/${blog.id}`} className="group w-96 h-auto rounded-t-lg tablet:rounded-t-xl laptop:rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-500 relative">
+    <Link to={`/blogs/${blog.id}`} className="group w-72 tablet:w-96 h-auto rounded-lg tablet:rounded-xl laptop:rounded-2xl overflow-hidden shadow-2xl border-2 tablet:border-4 border-orange-500 relative">
       <div className="z-10 relative">
         <img className="w-full h-full" src={FaqImage1} alt="" />
       </div>

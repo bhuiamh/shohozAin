@@ -21,7 +21,7 @@ const FAQ = () => {
   const activePathname = useLocation().pathname;
 
   if (activePathname === "/faq") {
-    console.log("faq");
+    // console.log("faq");
   }
 
   return (

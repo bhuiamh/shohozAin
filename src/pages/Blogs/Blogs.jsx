@@ -133,13 +133,11 @@ const Blogs = () => {
           ))
         )
       ) : (
-        <div>No blogs available</div> // Message when no blogs are found
+        <div>No blogs available</div> 
       )}
       <AllBlogs blogs={blogs} />
       <RecentBlogs blogs={recentBlogs} />
-      {/* Pass sorted blogs based on date to RecentBlogs */}
       <PopularBlogs blogs={mostReactedBlogs} />
-      {/* Pass sorted blogs based on reactions to PopularBlogs */}
     </div>
   );
 };

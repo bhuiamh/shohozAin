@@ -30,7 +30,6 @@ const BlogCategories = () => {
         behavior: 'smooth'
       });
     }
-    console.log(category.typeOfCategory);
   };
   
   return (

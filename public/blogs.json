@@ -7,17 +7,50 @@
       "description": "কয়েক প্রকারের দলিল আছে, যেগুলো সম্পত্তি হস্তান্তরের দলিল নয়...",
       "writer": "আব্দুল হালিম",
       "dateAndTime": "2022-01-01 10:00:00",
-      "reaction": 30,
-      "comments": [
+      "reaction": 999,
+     "comments": [
         {
-          "commenter": "মাহমুদুল হাসান",
-          "comment": "Its very usefull"
-        },
+         "commenter": "মাহমুদুল হাসান",
+         "comment": "It's very useful"
+         },
         {
-          "commenter": "রেজওয়ান",
-          "comment": "খুবি সুন্দর"
-        }
-      ]
+         "commenter": "রেজওয়ান",
+         "comment": "খুবই সুন্দর"
+         },
+        {
+         "commenter": "জান্নাতুল ফেরদৌস",
+         "comment": "Amazing content! Keep it up."
+         },
+        {
+         "commenter": "সেলিনা",
+         "comment": "অসাধারণ কনটেন্ট! ভালো কাজ চালিয়ে যান।"
+         },
+        {
+         "commenter": "মোহাম্মদ ইউসুফ",
+         "comment": "Great insights, very informative."
+         },
+        {
+         "commenter": "নাজমুল",
+         "comment": "চমৎকার তথ্য, খুবই উপকারী।"
+         },
+        {
+         "commenter": "ফারহানা",
+         "comment": "Really helpful and easy to understand."
+         },
+        {
+         "commenter": "অর্পণ",
+         "comment": "অত্যন্ত সাহায্যকারী এবং সহজে বোঝার মতো।"
+         },
+        {
+         "commenter": "রফিকুল ইসলাম",
+         "comment": "Well explained and well presented."
+         },
+        {
+         "commenter": "মাহি",
+         "comment": "ভালভাবে ব্যাখ্যা করা হয়েছে এবং ভালভাবে উপস্থাপন করা হয়েছে।"
+  }
+]
+
     },
     {
       "id": 1002,

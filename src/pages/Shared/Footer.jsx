@@ -57,7 +57,7 @@ const Footer = () => {
             <Link
               target="blank"
               to="https://bhuiamh.netlify.app/"
-              className="text-orange-700"
+              className="text-orange-700 font-semibold pl-1"
             >
               মাহমুদুল হাসান ভূঁইয়া
             </Link>

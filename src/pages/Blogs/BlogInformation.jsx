@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from "react-icons/bi";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+
 import {
   FaShare,
   FaFacebookMessenger,
@@ -8,9 +10,6 @@ import {
   FaLinkedin,
   FaTwitter,
   FaTimes,
-  FaShareAlt,
-  FaHeart,
-  FaRegComment,
   FaComment,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -222,8 +221,8 @@ const BlogInformation = ({ blog }) => {
         {blog.comments.map((comment, index) => (
           <div className="chat chat-start">
             <div
-              className="chat-image avatar tooltip tooltip-left"
-              data-tip={comment.commenter}
+              className="chat-image avatar"
+              data-tooltip-id="my-tooltip-1"
             >
               <div className="w-10 rounded-full">
                 <img
@@ -234,6 +233,11 @@ const BlogInformation = ({ blog }) => {
               </div>
             </div>
             <div className="chat-bubble">{comment.comment}</div>
+            <ReactTooltip
+              id="my-tooltip-1"
+              place="left"
+              content={comment.commenter}
+            />
           </div>
         ))}
       </div>

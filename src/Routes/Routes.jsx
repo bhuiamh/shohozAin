@@ -12,6 +12,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Blogs from "../pages/Blogs/Blogs";
 import BlogDetails from "../pages/Blogs/BlogDetails";
 import BlogPage from "../pages/Blogs/BlogPage";
+import AddBlog from "../pages/Blogs/AddBlog";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
             path: ':blogId', // Use dynamic parameter :blogId for clarity
             element: <BlogDetails />,
           },
+          {
+            path: "add-blog",
+            element: <AddBlog />,
+          }
         ],
       },
       {

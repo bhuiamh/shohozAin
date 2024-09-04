@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from "react-icons/bi";
-import { Tooltip as ReactTooltip } from "react-tooltip";
 
 import {
   FaShare,

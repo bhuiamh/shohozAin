@@ -22,7 +22,7 @@ const AuthorTalk = () => {
           <div className="cursor-default tablet:w-4/6 w-full text-base tablet:text-xl font-semibold mt-10 tablet:mt-10 laptop:mt-0">
             <h1>আসসালামু আলাইকুম,</h1>
 
-            <h1 className="py-1">
+            <h1 className="py-1 text-justify">
               আমি এ্যাডভোকেট মোঃ আমির হামজা লিমন, আমি কুড়িগ্রাম জেলার রৌমারী
               উপজেলার নিবৃত পল্লী খতিয়ায় জন্মগ্রহণ করি। আমি ২০০৫ সালে
               দাঁতভাঙ্গা বি.এল হাইস্কুল থেকে মাধ্যমিক পরীক্ষায় উত্তীর্ণ হয়ে
@@ -34,11 +34,11 @@ const AuthorTalk = () => {
               সহজ আইনে নিয়মিত আইনগত বিষয়ে কন্টেন ও ভিডিও আপলোড করে থাকি।
             </h1>
 
-            <h1 className="py-1">
+            <h1 className="py-1 text-justify">
               <Link
                 to={"/"}
                 onClick={() => window.scrollTo(0, 0)}
-                className="text-orange-700"
+                className="text-orange-700 pr-2"
               >
                 সহজ আইনের
               </Link>
@@ -51,7 +51,7 @@ const AuthorTalk = () => {
               থেকে
               <Link
                 onClick={() => window.scrollTo(0, 0)}
-                className="text-orange-700"
+                className="text-orange-700 px-2"
                 to={"/live-talk"}
               >
                 লাইভ কথা বলুন

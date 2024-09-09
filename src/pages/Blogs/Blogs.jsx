@@ -108,7 +108,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <p className="text-base tablet:text-xl mb-4 font-semibold mt-10">
+      <p className="text-base tablet:text-xl mb-4 font-semibold mt-10 text-justify">
         জমি সংক্রান্ত সমস্যা, মামলা-মোকদ্দমা, বা চুক্তি নিয়ে চিন্তিত?
         ব্যক্তিগত, পারিবারিক, বা ব্যবসায়িক বিষয়ে আইনি পরামর্শের প্রয়োজন? সহজ
         আইন ব্লগে আপনি পাবেন এসব সমস্যা সমাধানের জন্য সঠিক তথ্য ও দিকনির্দেশনা।

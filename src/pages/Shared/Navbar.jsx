@@ -122,12 +122,13 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost btn-circle avatar  border border-orange-500"
+              className="border rounded-full border-orange-500"
             >
               <div className="w-10 rounded-full">
                 <img
+                  className="w-10 rounded-full"
                   alt="User Profile Picture"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
                 />
               </div>
             </div>

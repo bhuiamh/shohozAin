@@ -85,20 +85,20 @@ const BlogInformation = ({ blog }) => {
         <FaWhatsapp className="text-green-600 text-3xl group-hover:text-orange-500" />
       ),
     },
-    {
-      name: "LinkedIn",
-      url: `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`,
-      icon: (
-        <FaLinkedin className="text-blue-700 text-3xl  group-hover:text-orange-500" />
-      ),
-    },
-    {
-      name: "Twitter",
-      url: `https://twitter.com/intent/tweet?url=${currentUrl}&text=${text}`,
-      icon: (
-        <FaTwitter className="text-blue-400 text-3xl group-hover:text-orange-500" />
-      ),
-    },
+    // {
+    //   name: "LinkedIn",
+    //   url: `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`,
+    //   icon: (
+    //     <FaLinkedin className="text-blue-700 text-3xl  group-hover:text-orange-500" />
+    //   ),
+    // },
+    // {
+    //   name: "Twitter",
+    //   url: `https://twitter.com/intent/tweet?url=${currentUrl}&text=${text}`,
+    //   icon: (
+    //     <FaTwitter className="text-blue-400 text-3xl group-hover:text-orange-500" />
+    //   ),
+    // },
   ];
 
   const blogDate = new Date(blog.dateAndTime);
@@ -129,8 +129,8 @@ const BlogInformation = ({ blog }) => {
         </h1>
         <p className="text-sm tablet:text-base laptop:text-lg ">
           {formattedDate}{" "}
-          <span className="text-[12px] tablet:text-sm laptop:text-base text-orange-500/80">
-            {timeAgoText}
+          <span className="text-[12px] laptop:text-sm text-orange-500/80">
+           ({timeAgoText})
           </span>
         </p>
         <div className="flex items-center gap-2 pt-2">
@@ -153,7 +153,7 @@ const BlogInformation = ({ blog }) => {
               />
             )}
 
-            <h1>
+            <h1 className="cursor-pointer">
               {liked
                 ? blog.reaction + 1 > 999
                   ? "1K"

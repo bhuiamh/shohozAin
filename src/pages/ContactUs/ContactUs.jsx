@@ -76,10 +76,10 @@ const ContactUs = () => {
           title={"যোগাযোগ করুন"}
           subTitle={"আমাদের সাথে যোগাযোগ করতে নিচের ফর্মটি পূরণ করুন"}
         ></SectionTitle>
-        <p className="text-base tablet:text-xl mb-4 font-semibold mt-10">
+        <p className="text-base tablet:text-xl mb-4 font-semibold mt-10 text-justify">
           আপনার কোনো প্রশ্ন থাকলে বা আমাদের সেবা সম্পর্কে আপনার মতামত থাকলে,
           দয়া করে এই ফর্মটি পূরণ করুন অথবা
-          <span className="text-orange-500 cursor-pointer">
+          <span className="text-orange-500 cursor-pointer px-2">
             contact@shohozain.com
           </span>
           এ ইমেইল করুন। আপনার প্রতিক্রিয়া আমাদের জন্য অত্যন্ত গুরুত্বপূর্ণ।

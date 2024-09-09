@@ -6,6 +6,8 @@ import { blogCategories } from "../../data/blogCategories";
 import { Helmet } from "react-helmet";
 import SectionTitle from "../Shared/SectionTitle";
 import { FaRegClock } from "react-icons/fa";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 const AddBlog = () => {
   // State for blog fields
@@ -13,6 +15,54 @@ const AddBlog = () => {
   const [typeOfCategory, setTypeOfCategory] = useState("");
   const [title, setTitle] = useState("");
   const [writer, setWriter] = useState("");
+
+  const [image, setImage] = useState(null);
+  const [imageURL, setImageURL] = useState("");
+
+  const handleFileChange = (event) => {
+    const fileInput = event.target;
+    const file = event.target.files[0];
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+
+    img.onload = () => {
+      const width = img.width;
+      const height = img.height;
+      const aspectRatio = width / height;
+
+      if (file) {
+        // Check file size (500 KB = 500 * 1024 bytes)
+        if (file.size < 500 * 1024) {
+          if (aspectRatio == 16 / 9) {
+            console.log("File is valid");
+            setImage(file);
+          } else {
+            fileInput.value = ""; // Clear the file input
+            Swal.fire({
+              title: "<strong>দুঃখিত!</strong>",
+              html: `<strong>ছবির আকার ১৬:৯ অনুপাতের হতে হবে।</strong>`,
+              color: "black",
+              icon: "error",
+              iconColor: "#f97316",
+              confirmButtonColor: "#f97316",
+              confirmButtonText: "ঠিক আছে",
+            });
+          }
+        } else {
+          fileInput.value = ""; // Clear the file input
+          Swal.fire({
+            title: "<strong>দুঃখিত!</strong>",
+            html: `<strong>ফাইলের আকার ৫০০ কেবির বেশি হতে পারবে না।</strong>`,
+            color: "black",
+            icon: "error",
+            iconColor: "#f97316",
+            confirmButtonColor: "#f97316",
+            confirmButtonText: "ঠিক আছে",
+          });
+        }
+      }
+    };
+  };
 
   const editorRef = useRef(null);
 
@@ -58,6 +108,48 @@ const AddBlog = () => {
     // Handle form submission, e.g., send blog data to your API
   };
 
+  // const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+  const handleUpload = async (e) => {
+    e.preventDefault();
+    console.log(image, "image");
+    if (!image) {
+      alert("Please select an image first.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("image", image);
+    console.log(formData, "formData");
+    try {
+      // Optional: Add a delay if making multiple requests
+      // await delay(1000); // Delay of 1 second
+
+      const response = await axios.post(
+        "https://api.imgur.com/3/image",
+        formData,
+        {
+          headers: {
+            Authorization: `Client-ID 30f6038370d6626`, // Replace with your actual Client ID
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      const { data } = response;
+      if (data.success) {
+        setImageURL(data.data.link);
+        alert("Image uploaded successfully!");
+        console.log(data.data.link);
+      } else {
+        alert("Upload failed.");
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      alert("An error occurred during the upload.");
+    }
+  };
+
   return (
     <div className="max-w-[1280px] min-h-screen mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 w-full">
       <Helmet>
@@ -92,13 +184,16 @@ const AddBlog = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
+
             <input
               type="file"
+              accept="image/*"
               className="file-input file-input-bordered file-input-accent w-full max-w-xs"
+              onChange={handleFileChange}
             />
-          </div>
 
-          <div></div>
+            <button onClick={handleUpload}>Upload</button>
+          </div>
 
           <div className="mb-4 flex gap-10">
             <SelectField

@@ -82,7 +82,7 @@ const FAQ = () => {
                     tabIndex={activeIndex === index ? "0" : "-1"}
                     aria-labelledby={`question-${index}`}
                   >
-                    <p className="font-semibold text-base tablet:text-xl cursor-default">
+                    <p className="font-semibold text-base tablet:text-xl cursor-default text-justify">
                       {faq.answer}
                     </p>
                   </div>

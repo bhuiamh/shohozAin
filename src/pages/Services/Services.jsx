@@ -27,10 +27,10 @@ const Services = () => {
       )}
 
       <SectionTitle
-        title={"সার্ভিস সমূহ"}
-        subTitle={"সাধারণত আমরা যেসব সেবা দিয়ে থাকি"}
+        title={"আমাদের সেবাসমূহ"}
+        subTitle={"আপনি আমাদের কাছ থেকে যেসকল আইনি সেবা পাবেন"}
       ></SectionTitle>
-      <p className="text-base tablet:text-xl mb-4 font-semibold mt-10">
+      <p className="text-base tablet:text-xl mb-4 font-semibold mt-10 text-justify">
         আপনি কি জমি সংক্রান্ত সমস্যায় আছেন ? আপনার নামে কি মামলা-মোকদ্দমা হয়েছে
         ? আপনি কি চুক্তি নিয়ে চিন্তিত ? আপনার কি ব্যক্তিগত, পারিবারিক বা
         ব্যবসায়িক বিষয়ে আইনি দিকনির্দেশনা প্রয়োজন ? চিন্তা নেই! সহজ আইন আছে

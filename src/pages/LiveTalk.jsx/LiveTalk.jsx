@@ -22,7 +22,7 @@ const LiveTalk = () => {
         title={"সরাসরি কথা বলুন"}
         subTitle={"আমাদের সাথে সরাসরি কথা বলতে প্যকেজ সিলেক্ট করুন"}
       ></SectionTitle>
-      <p className="text-base tablet:text-xl mb-10 font-semibold mt-10 cursor-default">
+      <p className="text-base tablet:text-xl mb-10 font-semibold mt-10 cursor-default text-justify">
         আপনার আইনি সমস্যার সহজ সমাধান চাই? আমরা আপনার জন্য সার্বক্ষণ উপস্থিত।
         মাত্র কয়েক ক্লিকে আপনি আমাদের বিশেষজ্ঞ আইনজীবীদের সাথে সরাসরি যোগাযোগ
         করতে পারবেন। ভিডিও কল বা অফিসে এসে আপনার সমস্যাটি বিস্তারিতভাবে আলোচনা

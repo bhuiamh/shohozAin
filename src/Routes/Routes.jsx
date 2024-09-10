@@ -13,6 +13,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import BlogDetails from "../pages/Blogs/BlogDetails";
 import BlogPage from "../pages/Blogs/BlogPage";
 import AddBlog from "../pages/Blogs/AddBlog";
+import Courses from "../pages/Courses/Course";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -45,22 +46,26 @@ export const router = createBrowserRouter([
         element: <FAQ />,
       },
       {
+        path: "courses",
+        element: <Courses />,
+      },
+
+      {
         path: "blogs",
         element: <BlogPage />,
         children: [
           {
             path: "",
             element: <Blogs />,
-          
           },
           {
-            path: ':blogId', // Use dynamic parameter :blogId for clarity
+            path: ":blogId", // Use dynamic parameter :blogId for clarity
             element: <BlogDetails />,
           },
           {
             path: "add-blog",
             element: <AddBlog />,
-          }
+          },
         ],
       },
       {
@@ -71,10 +76,6 @@ export const router = createBrowserRouter([
         path: "signup",
         element: <Signup />,
       },
-     
-      
-      
-      
     ],
   },
 ]);

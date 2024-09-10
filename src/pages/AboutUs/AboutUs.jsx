@@ -4,23 +4,24 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 
 const AboutUs = () => {
-
   const activePathname = useLocation().pathname;
   return (
     <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
-     { activePathname === "/about-us" && <Helmet>
-        <title>
-          About Us @ ShohozAin - Your Trusted Partner in Legal Services
-        </title>
-        <meta
-          name="description"
-          content="Learn more about ShohozAin, your trusted partner in legal services. Discover our mission to simplify legal processes, our expert team, and how we empower individuals and businesses with reliable legal assistance."
-        />
-        <meta
-          name="keywords"
-          content="About ShohozAin, legal services, trusted legal partner, legal assistance, ShohozAin mission, legal team, legal solutions"
-        />
-      </Helmet>}
+      {activePathname === "/about-us" && (
+        <Helmet>
+          <title>
+            About Us @ ShohozAin - Your Trusted Partner in Legal Services
+          </title>
+          <meta
+            name="description"
+            content="Learn more about ShohozAin, your trusted partner in legal services. Discover our mission to simplify legal processes, our expert team, and how we empower individuals and businesses with reliable legal assistance."
+          />
+          <meta
+            name="keywords"
+            content="About ShohozAin, legal services, trusted legal partner, legal assistance, ShohozAin mission, legal team, legal solutions"
+          />
+        </Helmet>
+      )}
 
       <div className="">
         <SectionTitle

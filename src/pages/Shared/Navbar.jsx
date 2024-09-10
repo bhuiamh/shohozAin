@@ -9,7 +9,6 @@ import { RiHome2Fill, RiLiveLine } from "react-icons/ri";
 import { TiThMenu } from "react-icons/ti";
 import { ImBlog } from "react-icons/im";
 
-
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/shohozain.png";
 
@@ -38,23 +37,30 @@ const Navbar = () => {
 
   const menuItem = (
     <>
-      <Link onClick={() => window.scrollTo(0, 0)}
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
         className={`${
           activeRoute === "/" ? "text-orange-700" : "text-orange-500"
         } font-semibold flex items-center tablet:hover:text-orange-700 `}
       >
         <RiHome2Fill className="mr-1" /> হোম
       </Link>
-      <Link onClick={() => window.scrollTo(0, 0)}
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
         to="live-talk"
         className={`${
           activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"
         } font-semibold flex items-center tablet:hover:text-orange-700 relative`}
       >
-        <span className={`absolute -left-3 loading loading-ring loading-lg ${activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"}`}></span>
+        <span
+          className={`absolute -left-3 loading loading-ring loading-lg ${
+            activeRoute === "/live-talk" ? "text-orange-700" : "text-orange-500"
+          }`}
+        ></span>
         <RiLiveLine className="mr-1" /> লাইভ কথা বলুন
       </Link>
-      <Link onClick={() => window.scrollTo(0, 0)}
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
         to="services"
         className={`${
           activeRoute === "/services" ? "text-orange-700" : "text-orange-500"
@@ -62,12 +68,17 @@ const Navbar = () => {
       >
         <LiaHandsHelpingSolid className="mr-1" /> সার্ভিস সমুহ
       </Link>
-      <Link onClick={() => window.scrollTo(0, 0)} to="contact-us" className={`${
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
+        to="contact-us"
+        className={`${
           activeRoute === "/contact-us" ? "text-orange-700" : "text-orange-500"
-        } font-semibold flex items-center tablet:hover:text-orange-700 `}>
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}
+      >
         <MdConnectWithoutContact className="mr-1" /> যোগাযোগ
       </Link>
-      <Link onClick={() => window.scrollTo(0, 0)}
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
         to="about-us"
         className={`${
           activeRoute === "/about-us" ? "text-orange-700" : "text-orange-500"
@@ -75,7 +86,17 @@ const Navbar = () => {
       >
         <GoLaw className="mr-1" /> আমাদের সমন্ধে
       </Link>
-      <Link onClick={() => window.scrollTo(0, 0)}
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
+        to="courses"
+        className={`${
+          activeRoute === "/courses" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}
+      >
+        <ImBlog className="mr-1" /> কোর্স
+      </Link>
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
         to="blogs"
         className={`${
           activeRoute === "/blogs" ? "text-orange-700" : "text-orange-500"
@@ -110,7 +131,8 @@ const Navbar = () => {
           </div>
         </div>
         {!user && (
-          <Link onClick={() => window.scrollTo(0, 0)}
+          <Link
+            onClick={() => window.scrollTo(0, 0)}
             to="login"
             className="text-orange-500 tablet:hover:bg-orange-500 tablet:hover:text-white duration-300 font-bold px-3 py-1 border border-orange-500 rounded"
           >
@@ -137,18 +159,24 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link onClick={() => window.scrollTo(0, 0)} className="font-semibold text-orange-500 tablet:hover:text-orange-700">
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="font-semibold text-orange-500 tablet:hover:text-orange-700"
+                >
                   <CgProfile />
                   প্রোফাইল
                 </Link>
               </li>
               <li>
-                <Link onClick={() => window.scrollTo(0, 0)} className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700">
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
+                >
                   <CiSettings /> সেটিং
                 </Link>
               </li>
               <li>
-                <Link  className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
+                <Link className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
                   <AiOutlineLogout /> লগ আউট
                 </Link>
               </li>
@@ -158,7 +186,6 @@ const Navbar = () => {
               >
                 {theme == "halloween" && (
                   <h1 className="flex">
-                    
                     <CiLight /> লাইট মুড
                   </h1>
                 )}

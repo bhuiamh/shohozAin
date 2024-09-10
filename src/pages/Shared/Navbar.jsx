@@ -75,6 +75,11 @@ const Navbar = () => {
       >
         <GoLaw className="mr-1" /> আমাদের সমন্ধে
       </Link>
+      <Link onClick={() => window.scrollTo(0, 0)} to="courses" className={`${
+          activeRoute === "/courses" ? "text-orange-700" : "text-orange-500"
+        } font-semibold flex items-center tablet:hover:text-orange-700 `}>
+        <CiSettings className="mr-1" /> কোর্স
+      </Link>
       <Link onClick={() => window.scrollTo(0, 0)}
         to="blogs"
         className={`${
@@ -137,7 +142,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link onClick={() => window.scrollTo(0, 0)} className="font-semibold text-orange-500 tablet:hover:text-orange-700">
+                <Link to={"/dashboard"} onClick={() => window.scrollTo(0, 0)} className="font-semibold text-orange-500 tablet:hover:text-orange-700">
                   <CgProfile />
                   প্রোফাইল
                 </Link>

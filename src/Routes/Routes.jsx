@@ -13,6 +13,8 @@ import Blogs from "../pages/Blogs/Blogs";
 import BlogDetails from "../pages/Blogs/BlogDetails";
 import BlogPage from "../pages/Blogs/BlogPage";
 import AddBlog from "../pages/Blogs/AddBlog";
+import Dashboard from "../pages/dashboard/Dashboard";
+import Courses from "../pages/Courses/Courses";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -45,6 +47,10 @@ export const router = createBrowserRouter([
         element: <FAQ />,
       },
       {
+        path: "courses",
+        element: <Courses />,
+      },
+      {
         path: "blogs",
         element: <BlogPage />,
         children: [
@@ -71,7 +77,10 @@ export const router = createBrowserRouter([
         path: "signup",
         element: <Signup />,
       },
-     
+     {
+      path: "dashboard",
+      element: <Dashboard/>,
+     }
       
       
       

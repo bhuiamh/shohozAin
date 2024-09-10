@@ -56,7 +56,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 cursor-default grid grid-cols-1 laptop:grid-cols-2">
+    <div className="max-w-[1280px] mx-auto mt-20 tablet:mt-28 px-4 tablet:px-0 cursor-default grid grid-cols-1 laptop:grid-cols-2">
       <Helmet>
         <title>
           Contact Us @ ShohozAin - Get in Touch for Legal Assistance

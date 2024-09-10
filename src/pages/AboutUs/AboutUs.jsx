@@ -7,7 +7,7 @@ const AboutUs = () => {
 
   const activePathname = useLocation().pathname;
   return (
-    <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
+    <div className="max-w-[1280px] mx-auto mt-20 tablet:mt-28 px-4 tablet:px-0">
      { activePathname === "/about-us" && <Helmet>
         <title>
           About Us @ ShohozAin - Your Trusted Partner in Legal Services

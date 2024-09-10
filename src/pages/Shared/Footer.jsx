@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 items-center justify-between px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
+      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 items-center justify-between px-4 py-1 border-t bg-base-300 text-base-content border-orange-500">
         <div className="flex items-center justify-center tablet:justify-start space-x-4">
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
           <p className="text-orange-500">
@@ -63,7 +63,7 @@ const Footer = () => {
             </Link>
           </p>
         </div>
-        <h1 className="text-base text-end tablet:text-end laptop:text-end mt-5 laptop:mt-0">
+        <h1 className="text-base text-center tablet:text-end laptop:text-end mt-5 laptop:mt-0">
           © 2024 All Rights Reserved | Shohoz Ain
         </h1>
       </div>

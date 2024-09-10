@@ -77,7 +77,7 @@ const Blogs = () => {
   const categories = Object.keys(blogsByCategory);
 
   return (
-    <div className="max-w-[1280px] min-h-screen mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 w-full">
+    <div className="max-w-[1280px] min-h-screen mx-auto mt-20 tablet:mt-28 px-4 tablet:px-0 w-full">
       <Helmet>
         <title>
           Legal Blogs @ ShohozAin - Expert Insights & Practical Legal Advice

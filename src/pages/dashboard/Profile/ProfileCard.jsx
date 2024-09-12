@@ -1,17 +1,21 @@
 import React, { useState } from "react";
+import convertToBengaliDigits from "../../../commonFunction/ageConversion";
 
 const ProfileCard = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
     name: "মাহমুদুল হাসান ভূঁইয়া",
-    image: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+    image:
+      "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     email: "user@mail.com",
     phone: "+৮৮০১২৩৪৫৬৭৮৯",
     age: 25,
     occupation: "সফটওয়্যার ইঞ্জিনিয়ার",
-    division: "ঢাকা",
-    district: "ঢাকা",
-    upazila: "ধানমন্ডি",
+    location: {
+      division: "ঢাকা",
+      district: "ঢাকা",
+      upazila: "ধানমন্ডি",
+    },
   });
 
   const handleInputChange = (e) => {
@@ -23,7 +27,42 @@ const ProfileCard = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 mt-10 p-6">
+    <div className="mt-10">
+      <div className=" min-h-96">
+        <div className="flex justify-center items-center">
+          <div className="">
+            <h1 className="text-lg tablet:text-xl laptop:text-2xl font-bold text-orange-500">
+              {profile.name}
+            </h1>
+            <div className="flex pt-1 gap-3">
+              <p className="">{profile.occupation}</p>
+              <p className="">
+                {profile.age
+                  ? convertToBengaliDigits(profile.age.toString()) + " বছর"
+                  : ""}
+              </p>
+            </div>
+            <div className="pt-4">
+              <h1 className="font-semibold text-orange-500">ঠিকানা</h1>
+              <p>{profile.email}</p>
+              <p>{profile.phone}</p>
+              <p>
+                {profile.location.division}, {profile.location.district}, {profile.location.upazila}
+              </p>
+            </div>
+          </div>
+          <div className="h-96 w-1 bg-orange-500 mx-4" />
+
+          <div>
+            <img
+              className="w-48 h-48 border-2 border-orange-500"
+              src={profile.image}
+              alt="Profile"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="flex items-center justify-between">
         <img
           className="w-24 h-24 rounded-full border-2 border-orange-500"

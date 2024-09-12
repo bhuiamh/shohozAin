@@ -14,6 +14,7 @@ import BlogDetails from "../pages/Blogs/BlogDetails";
 import BlogPage from "../pages/Blogs/BlogPage";
 import AddBlog from "../pages/Blogs/AddBlog";
 import Courses from "../pages/Courses/Course";
+import Investigation from "../pages/Courses/Investigation";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
       {
         path: "courses",
         element: <Courses />,
+      },
+      {
+        path: "investigation",
+        element: <Investigation />,
       },
 
       {

@@ -63,7 +63,7 @@ const Courses = () => {
               প্রস্তুত করবে।
             </p>
             <div className="flex gap-8 justify-start">
-              <Link to="" target="_blank">
+              <Link to="/investigation" target="_blank">
                 <button className="w-32 rounded-md px-2 py-3 hover:text-white bg-orange-500 border-orange-500 tablet:hover:border-orange-700 tablet:hover:bg-orange-700">
                   অনুসন্ধান করুন
                 </button>

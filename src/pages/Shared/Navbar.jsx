@@ -148,9 +148,9 @@ const Navbar = () => {
                 role="button"
                 className="border rounded-full border-orange-500"
               >
-                <div className="w-10 rounded-full">
+                <div className="w-10 h-10 rounded-full">
                   <img
-                    className="w-10 rounded-full"
+                    className="w-10 h-10 rounded-full"
                     alt="User Profile Picture"
                     src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
                   />

@@ -13,7 +13,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import BlogDetails from "../pages/Blogs/BlogDetails";
 import AddBlog from "../pages/Blogs/AddBlog";
 import Dashboard from "../Layouts/Dashboard";
-import Courses from "../pages/Courses/Courses";
+import Course from "../pages/Courses/Course";
 import Profile from "../pages/dashboard/Profile/Profile";
 import Blog from "../Layouts/Blog";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "courses",
-        element: <Courses />,
+        element: <Course />,
       },
       {
         path: "blogs",

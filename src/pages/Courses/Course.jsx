@@ -2,6 +2,7 @@ import React from "react";
 import SectionTitle from "../Shared/SectionTitle";
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from "react-router-dom";
+import ComponentTitle from "../../components/ComponentTitle";
 
 const Courses = () => {
   const activePathname = useLocation().pathname;
@@ -78,11 +79,9 @@ const Courses = () => {
         </div>
 
         {/* card carousel  */}
-        <div>
-          <h1 className="text-xl text-center tablet:text-2xl my-20 tablet:pb-1 font-extrabold text-orange-500">
-            সাফল্যের গল্প
-          </h1>
-          <div className="carousel gap-8  rounded-box">
+        <div className="mt-20">
+          <ComponentTitle title={"সাফল্যের গল্প"} />
+          <div className=" mt-16 carousel gap-8  rounded-box">
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
@@ -128,12 +127,13 @@ const Courses = () => {
           </div>
         </div>
 
-        {/* আমাদের মিশন */}
 
+
+        {/* আমাদের মিশন */}
         <div>
-          <h1 className="text-xl tablet:text-2xl my-20 text-center tablet:pb-1 font-extrabold text-orange-500">
-            আমাদের মিশন
-          </h1>
+          <div className="mt-24">
+           <ComponentTitle title="আমাদের মিশন" />
+          </div>
           <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 tablet:my-10">
             <div className="card  w-fit ">
               <figure className=" rounded-xl">

@@ -140,6 +140,10 @@ const Signup = () => {
                   placeholder="পেশা নির্বাচন করুন"
                 />
               </div>
+              <h1 className= "pt-5 font-semibold text-orange-500 mobile:text-sm pl-3">
+                আপনার জেলা ও উপজেলা নির্বাচন করুন{" "}
+              </h1>
+
               <LocationSelector
                 onDivisionChange={setDivision}
                 onDistrictChange={setDistrict}

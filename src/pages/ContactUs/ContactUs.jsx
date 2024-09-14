@@ -154,7 +154,11 @@ const ContactUs = () => {
                   placeholder="পেশা নির্বাচন করুন"
                 />
               </div>
-              <div className="pt-5s">
+              <div className="pt-5">
+                <h1 className="font-semibold text-orange-500 mobile:text-sm pl-3">
+                  আপনার জেলা ও উপজেলা নির্বাচন করুন{" "}
+                </h1>
+
                 <LocationSelector
                   onDivisionChange={setDivision}
                   onDistrictChange={setDistrict}

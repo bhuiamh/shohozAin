@@ -2,6 +2,7 @@ import React from "react";
 import { SCHEDULES } from "../../data/Schedules";
 import { Link } from "react-router-dom";
 import Features from "./Features";
+import CourseStage from "./CourseStage";
 
 const CourseDetails = () => {
   return (
@@ -35,12 +36,17 @@ const CourseDetails = () => {
             {SCHEDULES.map((schedule, index) => (
               <div key={index}>
                 <div>
-                  <div>
-                    <h2>
-                      <schedule.icon />
+                  <div className="flex gap-5 items-center">
+                    <h2 className="text-orange-400">
+                      <schedule.icon className="w-12 h-12" />
                     </h2>
-                    <h2 className="text-slate-300">{schedule.status}</h2>
-                    <h2 className="text-2xl text-slate-50">{schedule.date}</h2>
+
+                    <div>
+                      <h2 className="text-slate-300">{schedule.status}</h2>
+                      <h2 className="text-2xl text-slate-50">
+                        {schedule.date}
+                      </h2>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -59,13 +65,14 @@ const CourseDetails = () => {
         {/* পেমেন্ট */}
         <div className="text-center">
           <Link to="/">
-            <button className="bg-orange-500 hover:bg-orange-700 py-3 px-8 hover:text-white rounded">
-              পেমেন্ট
+            <button className="bg-orange-500 hover:bg-orange-700 py-4 px-10 hover:text-white rounded">
+              পেমেন্ট করুণ
             </button>
           </Link>
         </div>
         <div>
           <Features />
+          <CourseStage />
         </div>
       </div>
     </div>

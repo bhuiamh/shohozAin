@@ -1,7 +1,7 @@
 import React from "react";
 import { SCHEDULES } from "../../data/Schedules";
 import { Link } from "react-router-dom";
-import { Code, Code2Icon, ScrollText, TvMinimalPlay } from "lucide-react";
+import Features from "./Features";
 
 const CourseDetails = () => {
   return (
@@ -64,7 +64,7 @@ const CourseDetails = () => {
             </button>
           </Link>
         </div>
-        <div></div>
+        <Features />
       </div>
     </div>
   );

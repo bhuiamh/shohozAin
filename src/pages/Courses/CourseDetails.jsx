@@ -64,7 +64,9 @@ const CourseDetails = () => {
             </button>
           </Link>
         </div>
-        <Features />
+        <div>
+          <Features />
+        </div>
       </div>
     </div>
   );

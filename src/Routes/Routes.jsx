@@ -11,10 +11,12 @@ import FAQ from "../pages/Home/Faq/Faq";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Blogs from "../pages/Blogs/Blogs";
 import BlogDetails from "../pages/Blogs/BlogDetails";
-import BlogPage from "../pages/Blogs/BlogPage";
 import AddBlog from "../pages/Blogs/AddBlog";
-import Courses from "../pages/Courses/Course";
-import Investigation from "../pages/Courses/Investigation";
+import Dashboard from "../Layouts/Dashboard";
+import Course from "../pages/Courses/Course";
+import Profile from "../pages/dashboard/Profile/Profile";
+import Blog from "../Layouts/Blog";
+import CourseDetails from "../pages/Courses/CourseDetails";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -48,16 +50,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "courses",
-        element: <Courses />,
+        element: <Course />,
       },
       {
-        path: "investigation",
-        element: <Investigation />,
+        path: "course-detail",
+        element: <CourseDetails />,
       },
-
       {
         path: "blogs",
-        element: <BlogPage />,
+        element: <Blog />,
         children: [
           {
             path: "",
@@ -80,6 +81,16 @@ export const router = createBrowserRouter([
       {
         path: "signup",
         element: <Signup />,
+      },
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+        children: [
+          {
+            path: "",
+            element: <Profile />,
+          },
+        ],
       },
     ],
   },

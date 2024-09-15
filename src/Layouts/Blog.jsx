@@ -1,12 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const BlogPage = () => {
+const Blog = () => {
     return (
-        <div className='w-full'>    
-           <Outlet/>
+        <div className='w-full'>
+            <Outlet />
         </div>
     );
 };
 
-export default BlogPage;
+export default Blog;

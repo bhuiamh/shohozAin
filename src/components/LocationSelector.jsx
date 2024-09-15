@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SelectField from "./SelectField";
 
-function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange }) {
+function LocationSelector({ preDivision="বিভাগ" , preDistrict="জেলা", preUpazila= "উপজেলা", onDivisionChange, onDistrictChange, onUpazilaChange }) {
   const [divisions, setDivisions] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [upazilas, setUpazilas] = useState([]);
@@ -59,7 +59,6 @@ function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange 
 
   return (
     <div className="">
-      <h1 className="font-semibold text-orange-500 mobile:text-sm pl-3">আপনার জেলা ও উপজেলা নির্বাচন করুন </h1>
       <form className="flex gap-2 min-w-full">
         <SelectField
           id="division"
@@ -73,7 +72,7 @@ function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange 
             onDivisionChange(division);
           }}
           options={divisions}
-          placeholder="বিভাগ"
+          placeholder={preDivision}
         />
 
          <SelectField
@@ -88,7 +87,7 @@ function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange 
           }}
           options={districts}
           disabled={!selectedDivision}
-          placeholder="জেলা"
+          placeholder={selectedDivision ? "জেলা" : preDistrict}
         /> 
 
         <SelectField
@@ -102,7 +101,7 @@ function LocationSelector({ onDivisionChange, onDistrictChange, onUpazilaChange 
           }}
           options={upazilas}
           disabled={!selectedDistrict}
-          placeholder="উপজেলা"
+          placeholder={selectedDivision ? "উপজেলা" : preUpazila}
         />
       </form>
     </div>

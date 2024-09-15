@@ -5,7 +5,7 @@ import SectionTitle from "../../Shared/SectionTitle";
 import { Link } from "react-router-dom";
 const AuthorTalk = () => {
   return (
-    <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0">
+    <div className="max-w-[1280px] mx-auto mt-20 tablet:mt-28 px-4 tablet:px-0">
       <div className="">
         <SectionTitle title={"কিছু কথা"} subTitle={"আমি ও সহজ আইন"} />
         <div className="mt-10 table:mt-14 laptop:mt-16 tablet:flex laptop:flex-grow laptop:flex-row-reverse tablet:flex-row-reverse tablet:flex-grow items-end">

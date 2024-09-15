@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 const Services = () => {
   const activePathname = useLocation().pathname;
   return (
-    <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 cursor-pointer">
+    <div className="max-w-[1280px] mx-auto mt-20 tablet:mt-28 px-4 tablet:px-0 cursor-pointer">
       {activePathname === "/services" && (
         <Helmet>
           <title>

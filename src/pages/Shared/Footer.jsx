@@ -7,10 +7,10 @@ import logo from "../../assets/shohozain.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-base-200 mt-32 pt-10">
-      <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 max-w-[1280px] justify-center mx-auto text-base-content mb-10 laptop:mb-2 px-4 laptop:px-0">
+    <footer className="w-full bg-base-200 mt-32 pt-8">
+      <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 laptop:grid-cols-3 max-w-[1280px] justify-center mx-auto text-base-content mb-10 laptop:mb-2 px-4 laptop:px-0">
         <div className="">
-          <h1 className="text-orange-500 font-bold text-xl mb-2">
+          <h1 className="text-orange-500 font-bold text-xl mb-1 laptop:mb-2">
             সহজ আইন লিমিটেড
           </h1>
           <div className="flex flex-col">
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="">
-          <h1 className="text-orange-500 font-bold text-xl mb-2">অন্যান্য</h1>
+          <h1 className="text-orange-500 font-bold text-xl mb-1 laptop:mb-2">অন্যান্য</h1>
           <div className="flex flex-col">
             <Link onClick={() => window.scrollTo(0, 0)} to="/about-us" className="link font-bold link-hover">আমাদের সম্পর্কে</Link>
             <Link onClick={() => window.scrollTo(0, 0)} to="/faq" className="link font-bold link-hover">সাধারন জিজ্ঞাসা</Link>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="">
-          <h1 className="text-orange-500 font-bold text-xl mb-2">যোগাযোগ</h1>
+          <h1 className="text-orange-500 font-bold text-xl mb-1 laptop:mb-2">যোগাযোগ</h1>
           <div className="flex flex-col">
             <Link className="font-bold flex">
               <FaLocationDot className="text-xl text-orange-500 mr-2" />
@@ -47,11 +47,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 items-center justify-between px-10 py-1 border-t bg-base-300 text-base-content border-orange-500">
+      <div className="w-full grid grid-cols-1 tablet:grid-cols-2 items-center justify-between px-4 py-1 border-t bg-base-300 text-base-content border-orange-500">
         <div className="flex items-center justify-center tablet:justify-start space-x-4">
           <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
           <p className="text-orange-500">
-            <span className="font-extrabold text-xl">সহজ আইন লিমিটেড</span>
+            <span className="font-extrabold text-lg laptop:text-xl">সহজ আইন লিমিটেড</span>
             <br />
             রক্ষণাবেক্ষন ও সার্বিক নিরাপত্তায়
             <Link
@@ -63,7 +63,7 @@ const Footer = () => {
             </Link>
           </p>
         </div>
-        <h1 className="text-base text-end tablet:text-end laptop:text-end mt-5 laptop:mt-0">
+        <h1 className="text-base text-center tablet:text-end laptop:text-end mt-5 laptop:mt-0">
           © 2024 All Rights Reserved | Shohoz Ain
         </h1>
       </div>

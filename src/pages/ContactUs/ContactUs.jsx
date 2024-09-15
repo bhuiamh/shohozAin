@@ -56,7 +56,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 cursor-default grid grid-cols-1 laptop:grid-cols-2">
+    <div className="max-w-[1280px] mx-auto mt-20 tablet:mt-28 px-4 tablet:px-0 cursor-default grid grid-cols-1 laptop:grid-cols-2">
       <Helmet>
         <title>
           Contact Us @ ShohozAin - Get in Touch for Legal Assistance
@@ -154,7 +154,11 @@ const ContactUs = () => {
                   placeholder="পেশা নির্বাচন করুন"
                 />
               </div>
-              <div className="pt-5s">
+              <div className="pt-5">
+                <h1 className="font-semibold text-orange-500 mobile:text-sm pl-3">
+                  আপনার জেলা ও উপজেলা নির্বাচন করুন{" "}
+                </h1>
+
                 <LocationSelector
                   onDivisionChange={setDivision}
                   onDistrictChange={setDistrict}

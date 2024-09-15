@@ -93,7 +93,7 @@ const Navbar = () => {
           activeRoute === "/courses" ? "text-orange-700" : "text-orange-500"
         } font-semibold flex items-center tablet:hover:text-orange-700 `}
       >
-        <ImBlog className="mr-1" /> কোর্স
+        <CiSettings className="mr-1" /> কোর্স
       </Link>
       <Link
         onClick={() => window.scrollTo(0, 0)}
@@ -108,18 +108,18 @@ const Navbar = () => {
   );
 
   return (
-    <div className="w-full flex justify-center fixed z-50 bg-base-300/50 backdrop-blur-md">
-      <div className="w-full flex items-center p-0 px-4 tablet:px-0 max-w-[1280px]">
-        <div className="flex-auto">
+    <div className="w-full flex justify-center fixed z-50 bg-base-300/50 backdrop-blur-md h-14 laptop:h-20">
+      <div className="w-full flex justify-between items-center p-0 px-4 tablet:px-0 max-w-[1280px] ">
+        <div className="h-14 w-14 tablet:h-20 laptop:w-20 ">
           <Link onClick={() => window.scrollTo(0, 0)} to="/">
-            <img src={logo} alt="Shohoz Ain" className="h-20 w-20" />
+            <img src={logo} alt="Shohoz Ain" className="h-14 w-14 tablet:h-20 laptop:w-20" />
           </Link>
         </div>
-        <div className="flex-auto">
-          <div role="button" className="tablet:hidden inline-block dropdown">
+        <div className=" ">
+          <div role="button" className="tablet:hidden inline-block dropdown ">
             <details>
-              <summary className="m-1 btn btn-ghost">
-                <TiThMenu className="text-xl text-orange-500" />
+              <summary className="m-1 btn btn-ghost  p-0">
+                <TiThMenu size={25} className=" text-orange-500 " />
               </summary>
               <ul className="p-5 gap-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                 {menuItem}
@@ -140,63 +140,66 @@ const Navbar = () => {
           </Link>
         )}
         {user && (
-          <div className="dropdown dropdown-end ">
-            <div
-              tabIndex={0}
-              role="button"
-              className="border rounded-full border-orange-500"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  className="w-10 rounded-full"
-                  alt="User Profile Picture"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                />
+          
+            <div className="dropdown dropdown-end ">
+              <div
+                tabIndex={0}
+                role="button"
+                className="border rounded-full border-orange-500"
+              >
+                <div className="w-10 h-10 rounded-full">
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    alt="User Profile Picture"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
               </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <Link
-                  onClick={() => window.scrollTo(0, 0)}
-                  className="font-semibold text-orange-500 tablet:hover:text-orange-700"
-                >
-                  <CgProfile />
-                  প্রোফাইল
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={() => window.scrollTo(0, 0)}
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <Link
+                    to={"/dashboard"}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="font-semibold text-orange-500 tablet:hover:text-orange-700"
+                  >
+                    <CgProfile />
+                    প্রোফাইল
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
+                  >
+                    <CiSettings /> সেটিং
+                  </Link>
+                </li>
+                <li>
+                  <Link className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
+                    <AiOutlineLogout /> লগ আউট
+                  </Link>
+                </li>
+                <li
+                  onClick={handleTheme}
                   className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
                 >
-                  <CiSettings /> সেটিং
-                </Link>
-              </li>
-              <li>
-                <Link className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
-                  <AiOutlineLogout /> লগ আউট
-                </Link>
-              </li>
-              <li
-                onClick={handleTheme}
-                className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
-              >
-                {theme == "halloween" && (
-                  <h1 className="flex">
-                    <CiLight /> লাইট মুড
-                  </h1>
-                )}
-                {theme == "retro" && (
-                  <h1 className="flex">
-                    <CiDark /> ডার্ক মুড
-                  </h1>
-                )}
-              </li>
-            </ul>
-          </div>
+                  {theme == "halloween" && (
+                    <h1 className="flex">
+                      <CiLight /> লাইট মুড
+                    </h1>
+                  )}
+                  {theme == "retro" && (
+                    <h1 className="flex">
+                      <CiDark /> ডার্ক মুড
+                    </h1>
+                  )}
+                </li>
+              </ul>
+            </div>
+         
         )}
       </div>
     </div>

@@ -1,4 +1,7 @@
 import React from "react";
+import { SCHEDULES } from "../../data/Schedules";
+import { Link } from "react-router-dom";
+import { Code, Code2Icon, ScrollText, TvMinimalPlay } from "lucide-react";
 
 const CourseDetails = () => {
   return (
@@ -10,7 +13,7 @@ const CourseDetails = () => {
               শিক্ষা আইন শিক্ষার্থীদের শিক্ষার অধিকার নিশ্চিত করে এবং প্রতিষ্ঠান
               ও শিক্ষকদের জন্য নিয়ম নির্ধারণ করে।
             </h1>
-            <p className="text-white md:text-start text-center text-lg pt-4 w-full md:w-6/12">
+            <p className="text-slate-300 md:text-start text-center text-lg pt-4 w-full md:w-6/12">
               শিক্ষা আইন এমন বিধি ও নিয়মাবলী নির্ধারণ করে যা শিক্ষার্থীদের জন্য
               মানসম্মত শিক্ষা নিশ্চিত করে। এটি শিক্ষা প্রতিষ্ঠান এবং শিক্ষকদের
               দায়িত্ব ও আচরণ নির্ধারণ করে, শিক্ষার্থীদের অধিকার রক্ষা করে এবং
@@ -20,10 +23,47 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="container mx-auto space-y-4 mt-28">
         <h1 className="text-xl text-center tablet:text-2xl tablet:pb-1 font-extrabold text-orange-500">
           পরবর্তী ব্যাচের সময়সূচী
         </h1>
+        <div className="bg-slate-500 tablet:text-2xl tablet:pb-1 dark:bg-slate-800 w-full p-8 rounded divide-y-2 space-y-3">
+          {/* schedule */}
+
+          {/* with out responsive */}
+          <div className="flex justify-between ">
+            {SCHEDULES.map((schedule, index) => (
+              <div key={index}>
+                <div>
+                  <div>
+                    <h2>
+                      <schedule.icon />
+                    </h2>
+                    <h2 className="text-slate-300">{schedule.status}</h2>
+                    <h2 className="text-2xl text-slate-50">{schedule.date}</h2>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div>
+            <p className="text-slate-300 tablet:text-2xl tablet:pb-1 text-center mt-4 text-xl">
+              If you are interested To{" "}
+              <span className="text-2xl text-orange-500 capitalize">
+                Enroll in 11th batch
+              </span>
+              , register on the website
+            </p>
+          </div>
+        </div>
+        {/* পেমেন্ট */}
+        <div className="text-center">
+          <Link to="/">
+            <button className="bg-orange-500 hover:bg-orange-700 py-3 px-8 hover:text-white rounded">
+              পেমেন্ট
+            </button>
+          </Link>
+        </div>
         <div></div>
       </div>
     </div>

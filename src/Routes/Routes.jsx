@@ -16,6 +16,7 @@ import Dashboard from "../Layouts/Dashboard";
 import Course from "../pages/Courses/Course";
 import Profile from "../pages/dashboard/Profile/Profile";
 import Blog from "../Layouts/Blog";
+import CourseDetails from "../pages/Courses/CourseDetails";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: "courses",
         element: <Course />,
+      },
+      {
+        path: "course-detail",
+        element: <CourseDetails />,
       },
       {
         path: "blogs",

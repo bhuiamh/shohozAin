@@ -64,7 +64,7 @@ const Courses = () => {
               প্রস্তুত করবে।
             </p>
             <div className="flex gap-8 justify-start">
-              <Link to="/investigation" target="_blank">
+              <Link to="/course-detail" target="_blank">
                 <button className="w-32 rounded-md px-2 py-3 hover:text-white bg-orange-500 border-orange-500 tablet:hover:border-orange-700 tablet:hover:bg-orange-700">
                   অনুসন্ধান করুন
                 </button>
@@ -81,58 +81,56 @@ const Courses = () => {
         {/* card carousel  */}
         <div className="mt-20">
           <ComponentTitle title={"সাফল্যের গল্প"} />
-          <div className=" mt-16 carousel gap-8  rounded-box">
+          <div className="carousel mt-16 gap-8 carousel-center rounded-box">
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-                alt="Burger"
+                alt="Pizza"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-                alt="Burger"
+                alt="Pizza"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-                alt="Burger"
+                alt="Pizza"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-                alt="Burger"
+                alt="Pizza"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-                alt="Burger"
+                alt="Pizza"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-                alt="Burger"
+                alt="Pizza"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-                alt="Burger"
+                alt="Pizza"
               />
             </div>
           </div>
         </div>
 
-
-
         {/* আমাদের মিশন */}
         <div>
           <div className="mt-24">
-           <ComponentTitle title="আমাদের মিশন" />
+            <ComponentTitle title="আমাদের মিশন" />
           </div>
           <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 tablet:my-10">
             <div className="card  w-fit ">

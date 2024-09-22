@@ -112,7 +112,11 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center p-0 px-4 tablet:px-0 max-w-[1280px] ">
         <div className="h-14 w-14 tablet:h-20 laptop:w-20 ">
           <Link onClick={() => window.scrollTo(0, 0)} to="/">
-            <img src={logo} alt="Shohoz Ain" className="h-14 w-14 tablet:h-20 laptop:w-20" />
+            <img
+              src={logo}
+              alt="Shohoz Ain"
+              className="h-14 w-14 tablet:h-20 laptop:w-20"
+            />
           </Link>
         </div>
         <div className=" ">
@@ -140,66 +144,64 @@ const Navbar = () => {
           </Link>
         )}
         {user && (
-          
-            <div className="dropdown dropdown-end ">
-              <div
-                tabIndex={0}
-                role="button"
-                className="border rounded-full border-orange-500"
-              >
-                <div className="w-10 h-10 rounded-full">
-                  <img
-                    className="w-10 h-10 rounded-full"
-                    alt="User Profile Picture"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                  />
-                </div>
+          <div className="dropdown dropdown-end ">
+            <div
+              tabIndex={0}
+              role="button"
+              className="border rounded-full border-orange-500"
+            >
+              <div className="w-10 h-10 rounded-full">
+                <img
+                  className="w-10 h-10 rounded-full"
+                  alt="User Profile Picture"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
               </div>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <Link
-                    to={"/dashboard"}
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="font-semibold text-orange-500 tablet:hover:text-orange-700"
-                  >
-                    <CgProfile />
-                    প্রোফাইল
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
-                  >
-                    <CiSettings /> সেটিং
-                  </Link>
-                </li>
-                <li>
-                  <Link className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
-                    <AiOutlineLogout /> লগ আউট
-                  </Link>
-                </li>
-                <li
-                  onClick={handleTheme}
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <Link
+                  to={"/dashboard"}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="font-semibold text-orange-500 tablet:hover:text-orange-700"
+                >
+                  <CgProfile />
+                  প্রোফাইল
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
                   className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
                 >
-                  {theme == "halloween" && (
-                    <h1 className="flex">
-                      <CiLight /> লাইট মুড
-                    </h1>
-                  )}
-                  {theme == "retro" && (
-                    <h1 className="flex">
-                      <CiDark /> ডার্ক মুড
-                    </h1>
-                  )}
-                </li>
-              </ul>
-            </div>
-         
+                  <CiSettings /> সেটিং
+                </Link>
+              </li>
+              <li>
+                <Link className="mt-2 font-semibold text-red-600 tablet:hover:text-red-700">
+                  <AiOutlineLogout /> লগ আউট
+                </Link>
+              </li>
+              <li
+                onClick={handleTheme}
+                className="mt-2 font-semibold text-orange-500 tablet:hover:text-orange-700"
+              >
+                {theme == "halloween" && (
+                  <h1 className="flex">
+                    <CiLight /> লাইট মুড
+                  </h1>
+                )}
+                {theme == "retro" && (
+                  <h1 className="flex">
+                    <CiDark /> ডার্ক মুড
+                  </h1>
+                )}
+              </li>
+            </ul>
+          </div>
         )}
       </div>
     </div>

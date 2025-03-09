@@ -11,7 +11,7 @@ const UpdateModal = ({ isOpen, onClose, children }) => {
       
     >
       <div
-        className="bg-black/25 backdrop-blur-md p-4 rounded-lg max-w-lg w-full"
+        className="bg-black/25 backdrop-blur-md p-4 rounded-lg max-w-lg m-5 tablet:m-0 tablet:w-full"
         onClick={(e) => e.stopPropagation()}
       >
         <button

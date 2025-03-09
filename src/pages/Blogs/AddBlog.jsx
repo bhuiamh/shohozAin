@@ -8,6 +8,7 @@ import SectionTitle from "../Shared/SectionTitle";
 import { FaRegClock } from "react-icons/fa";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { PrimaryButton } from "../../components/Buttons";
 
 const AddBlog = () => {
   // State for blog fields
@@ -37,7 +38,8 @@ const AddBlog = () => {
             console.log("File is valid");
             setImage(file);
           } else {
-            fileInput.value = ""; // Clear the file input
+            fileInput.value = "";
+            setImage(null);
             Swal.fire({
               title: "<strong>দুঃখিত!</strong>",
               html: `<strong>ছবির আকার ১৬:৯ অনুপাতের হতে হবে।</strong>`,
@@ -50,6 +52,7 @@ const AddBlog = () => {
           }
         } else {
           fileInput.value = ""; // Clear the file input
+          setImage(null);
           Swal.fire({
             title: "<strong>দুঃখিত!</strong>",
             html: `<strong>ফাইলের আকার ৫০০ কেবির বেশি হতে পারবে না।</strong>`,
@@ -68,17 +71,30 @@ const AddBlog = () => {
 
   const [dateAndTime, setDateAndTime] = useState(() => {
     const now = new Date();
-    // Format date as 'YYYY-MM-DDTHH:MM'
-    return now.toISOString().slice(0, 16);
+
+    // Convert to Bangladesh time by adding 6 hours (UTC+6)
+    now.setHours(now.getHours() + 6);
+
+    // Format the date as 'YYYY-MM-DDTHH:MM' in local time
+    const formattedDate = now.toISOString().slice(0, 16);
+
+    return formattedDate;
   });
 
   const handleSetCurrentDateTime = (event) => {
     event.preventDefault();
+    
     const now = new Date();
-    // Format date as 'YYYY-MM-DDTHH:MM'
+    
+    // Convert to Bangladesh time by adding 6 hours (UTC+6)
+    now.setHours(now.getHours() + 6);
+    
+    // Format the date as 'YYYY-MM-DDTHH:MM' in local time
     const formattedDate = now.toISOString().slice(0, 16);
+    
     setDateAndTime(formattedDate);
   };
+  
 
   const userName = "Mahmudul Hasan Bhuia";
 
@@ -151,7 +167,7 @@ const AddBlog = () => {
   };
 
   return (
-    <div className="max-w-[1280px] min-h-screen mx-auto mt-24 tablet:mt-32 px-4 tablet:px-0 w-full">
+    <div className="max-w-[1280px] min-h-screen mx-auto mt-[90px] tablet:mt-32 px-4 tablet:px-0 w-full">
       <Helmet>
         <title>
           Add a New Blog @ ShohozAin - Share Your Expertise & Insights
@@ -171,11 +187,11 @@ const AddBlog = () => {
       ></SectionTitle>
       <div className="mt-8 bg-amber-500/5 p-4 tablet:p-6 rounded">
         <form onSubmit={handleAddBlog}>
-          <div className="mb-4 flex items-end gap-10">
+          <div className="mb-0 laptop:mb-4 flex flex-wrap tablet:flex-nowrap items-end gap-4 tablet:gap-6 laptop:gap-10">
             <TextInput
               name="id"
               placeholder="ব্লগ আইডি"
-              value="It's generated automatically"
+              value="000113456"
               onChange={(e) => setId(e.target.value)}
             />
             <TextInput
@@ -185,17 +201,22 @@ const AddBlog = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
 
-            <input
-              type="file"
-              accept="image/*"
-              className="file-input file-input-bordered file-input-accent w-full max-w-xs"
-              onChange={handleFileChange}
-            />
-
-            <button onClick={handleUpload}>Upload</button>
+            <div className="w-full flex gap-4 items-end justify-between">
+              <input
+                type="file"
+                accept="image/*"
+                className="h-8 file-input border-none focus:border-none focus:outline-none file-input-accent w-full laptop:w-64 text-sm text-orange-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-orange-600 "
+                onChange={handleFileChange}
+              />
+             <div className="w-fit">
+             <PrimaryButton disabled={!image} onClick={handleUpload}>
+                Upload
+              </PrimaryButton>
+             </div>
+            </div>
           </div>
 
-          <div className="mb-4 flex gap-10">
+          <div className="mt-4 tablet:mt-0 mb-4 flex flex-wrap tablet:flex-nowrap gap-4 tablet:gap-6 laptop:gap-10">
             <SelectField
               options={blogCategories}
               name="name"
@@ -212,7 +233,7 @@ const AddBlog = () => {
               value={writer}
               onChange={(e) => setWriter(e.target.value)}
             />
-            <div className="relative">
+            <div className="relative w-full">
               <TextInput
                 name="dateAndTime"
                 type="datetime-local"
@@ -222,13 +243,13 @@ const AddBlog = () => {
               />
               <button
                 onClick={handleSetCurrentDateTime}
-                className="text-orange-500 hover:text-orange-600 focus:text-orange-600 absolute right-9 top-1/2 translate-y-[-65%] "
+                className="text-orange-500 hover:text-orange-600 focus:text-orange-600 absolute right-3 laptop:right-9 top-1/2 translate-y-[-33%] "
               >
                 <FaRegClock />
               </button>
             </div>
           </div>
-          <div className="mt-10">
+          <div className="my-10">
             <h1 className="text-xl tablet:text-2xl pb-2 pl-1 font-bold text-orange-500">
               {" "}
               ব্লগের ডিসক্রিপশন নিচে লিখুন
@@ -259,12 +280,12 @@ const AddBlog = () => {
             />
           </div>
 
-          <button
+          <PrimaryButton
             type="submit"
             className="bg-orange-500 text-white px-4 py-2 rounded"
           >
             সাবমিট
-          </button>
+          </PrimaryButton>
         </form>
       </div>
     </div>

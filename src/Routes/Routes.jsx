@@ -16,6 +16,9 @@ import Dashboard from "../Layouts/Dashboard";
 import Course from "../pages/Courses/Course";
 import Profile from "../pages/dashboard/Profile/Profile";
 import Blog from "../Layouts/Blog";
+import MyPackage from "../pages/MyPackage/MyPackage";
+import ChangePassword from "../pages/ChangePassword/ChangePassword";
+import MyPayment from "../pages/MyPayment/MyPayment";
 // import LiveTalk from "../pages/LiveTalk/LiveTalk";
 export const router = createBrowserRouter([
   {
@@ -85,6 +88,18 @@ export const router = createBrowserRouter([
             path: "",
             element: <Profile />,
           },
+          {
+            path: "my-package",
+            element: <MyPackage />,
+          },
+          {
+            path: "my-payment",
+            element: <MyPayment />,
+          },
+          {
+            path: "change-password",
+            element: <ChangePassword />,
+          }
         ],
       },
     ],

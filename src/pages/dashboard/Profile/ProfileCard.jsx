@@ -9,14 +9,21 @@ import SelectField from "../../../components/SelectField.jsx";
 import LocationSelector from "../../../components/LocationSelector.jsx";
 import UpdateModal from "../../../components/UpdateModal.jsx";
 import Swal from "sweetalert2";
-// import Modal from "../../../components/Modal.jsx"; // Import the Modal component
+import { FaPen, FaPencilAlt } from "react-icons/fa";
+import axios from "axios";
 
 const ProfileCard = () => {
-  const [isEditing, setIsEditing] = useState(false);
+  const [profileImage, setProfileImage] = useState("");
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
+  const [isProfileEditing, setIsProfileEditing] = useState(false);
+  const [isPictureEditing, setIsPictureEditing] = useState(false);
+  const [isEdited, setIsEdited] = useState(false);
   const [selectedOccupation, setSelectedOccupation] = useState("");
   const [division, setDivision] = useState("");
   const [district, setDistrict] = useState("");
   const [upazila, setUpazila] = useState("");
+
   const [profile, setProfile] = useState({
     name: "মাহমুদুল হাসান ভূঁইয়া",
     image:
@@ -38,19 +45,26 @@ const ProfileCard = () => {
       ...prevProfile,
 
       [name]: value,
-    }));
-  };
-
-  const handleSaveProfile = () => {
-    setProfile((prevProfile) => ({
-      ...prevProfile,
-      occupation: selectedOccupation || prevProfile.occupation, // Ensure occupation is updated
       location: {
         division: division,
         district: district,
         upazila: upazila,
       },
     }));
+    setIsEdited(true);
+  };
+
+
+
+  const handleSaveProfile = () => {
+
+    setProfile((prevProfile) => ({
+      ...prevProfile,
+      image: profileImage, // Update with new image URL
+    }));
+
+
+
     Swal.fire({
       title: "<strong>তথ্য হালনাগাদ !</strong>",
       text: "আপনি কি আপডেট তথ্য সংরক্ষণ করতে চান?",
@@ -61,8 +75,7 @@ const ProfileCard = () => {
       confirmButtonColor: "#f97316",
       cancelButtonColor: "red",
       confirmButtonText: "হ্যাঁ",
-      cancelButtonText: "না"
-      
+      cancelButtonText: "না",
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
@@ -71,49 +84,105 @@ const ProfileCard = () => {
           color: "black",
           icon: "success",
           iconColor: "green",
-         showCancelButton: false,
-         showConfirmButton: false,
-         
-        timer: 2000
-        })
-        setIsEditing(false);
+          showCancelButton: false,
+          showConfirmButton: false,
+
+          timer: 2000,
+        });
+        if (selectedImage) {
+          handleImageUpload();
+        }
+        setIsProfileEditing(false);
+        setIsEdited(false);
       }
     });
-
-    
   };
 
   useEffect(() => {
-    if (isEditing) {
+    if (isProfileEditing) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
     // Cleanup function to remove the class when component unmounts
     return () => document.body.classList.remove("no-scroll");
-  }, [isEditing]);
+  }, [isProfileEditing]);
 
   const occupations = [
-    { _id: "1", occupation: "ডাক্তার" },
-    { _id: "2", occupation: "ইঞ্জিনিয়ার" },
-    { _id: "3", occupation: "শিক্ষক" },
-    { _id: "4", occupation: "ব্যবসায়ী" },
-    { _id: "5", occupation: "আইনজীবী" },
-    { _id: "6", occupation: "সরকারি কর্মচারী" },
-    { _id: "7", occupation: "কৃষক" },
-    { _id: "8", occupation: "পুলিশ" },
-    { _id: "9", occupation: "সাংবাদিক" },
-    { _id: "10", occupation: "ব্যাংকার" },
-    { _id: "11", occupation: "অন্যান্য" },
+    { _id: "11", occupation: "ডাক্তার" },
+    { _id: "21", occupation: "ইঞ্জিনিয়ার" },
+    { _id: "31", occupation: "শিক্ষক" },
+    { _id: "41", occupation: "ব্যবসায়ী" },
+    { _id: "51", occupation: "আইনজীবী" },
+    { _id: "61", occupation: "সরকারি কর্মচারী" },
+    { _id: "71", occupation: "কৃষক" },
+    { _id: "81", occupation: "পুলিশ" },
+    { _id: "91", occupation: "সাংবাদিক" },
+    { _id: "101", occupation: "ব্যাংকার" },
+    { _id: "111", occupation: "অন্যান্য" },
   ];
 
-  console.log(division, district, upazila, "apter pesha");
+ 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setSelectedImage(file); // Store the selected image file for upload
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result); // Set the image preview URL
+      };
+      reader.readAsDataURL(file); // Read the file as a data URL
+    }
+  };
+
+  const handleImageUpload = async () => {
+
+    console.log("function activated handleImageUpload");
+  
+    if (!selectedImage) {
+      // alert("No image selected for upload.");
+      console.log("No image selected for upload")
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("image", selectedImage); // Upload the stored image file
+
+    try {
+      const response = await axios.post(
+        "https://api.imgur.com/3/image",
+        formData,
+        {
+          headers: {
+            Authorization: `Client-ID 30f6038370d6626`, // Replace with your actual Client ID
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      const { data } = response;
+      if (data.success) {
+        setSelectedImage(null); // Clear the image after successful upload
+        setImagePreview(null); // Clear the image preview after upload
+        // alert("Image uploaded successfully!");
+        setProfileImage(data.data.link);
+        console.log(profile, "from handleImageUpload >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+      } else {
+        // alert("Image upload failed.");
+        console.log("Image upload failed.");
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      // alert("An error occurred during the upload.");
+    }
+  };
   return (
     <div className="mt-10">
       <div className=" min-h-96">
-        <div className="flex justify-center items-center">
-          <div className="w-60">
-            {!isEditing ? (
+        <div className="flex justify-center items-center relative">
+          <div className="">
+            {!isProfileEditing ? (
               <>
                 <h1 className="text-lg tablet:text-xl laptop:text-2xl font-bold text-orange-500">
                   {profile.name}
@@ -128,11 +197,12 @@ const ProfileCard = () => {
                 </div>
               </>
             ) : (
+             
               <UpdateModal
-                isOpen={isEditing}
-                onClose={() => setIsEditing(false)}
+                isOpen={isProfileEditing}
+                onClose={() => setIsProfileEditing(false)}
               >
-                <h2 className="text-xl font-semibold mb-4">
+                <h2 className="text-xl font-semibold mb-4 text-white">
                   আপনার তথ্য আপডেট করুন
                 </h2>
                 <TextInput
@@ -142,6 +212,7 @@ const ProfileCard = () => {
                   onChange={handleInputChange}
                   placeholder="আপনার নাম"
                 />
+
                 <div className="grid grid-cols-12 gap-3 col mb-4">
                   <div className="col-span-8">
                     <SelectField
@@ -191,8 +262,37 @@ const ProfileCard = () => {
                   onDistrictChange={setDistrict}
                   onUpazilaChange={setUpazila}
                 />
+                <div className="flex flex-col items-center mt-4">
+                  <label className="cursor-pointer">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageChange}
+                      className="hidden"
+                    />
+                    <div className="relative w-24 h-24 rounded-full border-2 border-orange-500">
+                      <img
+                        src={imagePreview || profile.image}
+                        alt="Profile"
+                        className="w-full h-full rounded-full object-cover"
+                      />
+                      <div className="absolute bottom-0 right-0 bg-orange-500 text-white rounded-full p-2 cursor-pointer">
+                        <FaPencilAlt />
+                      </div>
+                    </div>
+                  </label>
+                  <p className="mt-2 text-sm text-white">
+                    {selectedImage
+                      ? `Selected file: ${selectedImage.name}`
+                      : "No image selected"}
+                  </p>
+                </div>
                 <div className="mt-4 flex justify-end">
-                  <SecondaryButton onClick={handleSaveProfile}>
+                  <SecondaryButton
+                    onClick={(e) => {
+                      setIsProfileEditing(false), handleInputChange(e);
+                    }}
+                  >
                     সেভ করুন
                   </SecondaryButton>
                 </div>
@@ -205,27 +305,43 @@ const ProfileCard = () => {
               <p>{profile.email}</p>
               <p>{profile.phone}</p>
               <p>
-                {profile.location.division}, {profile.location.district}
-                , {profile.location.upazila}
+                {profile.location.division}, {profile.location.district},{" "}
+                {profile.location.upazila}
               </p>
             </div>
 
-            <div>
-              {!isEditing ? (
-                <PrimaryButton onClick={() => setIsEditing(true)}>
+            <div className="absolute bottom-0">
+              {!isEdited ? (
+                <PrimaryButton onClick={() => setIsProfileEditing(true)}>
                   ইডিট করুন
                 </PrimaryButton>
-              ) : null}
+              ) : (
+                <SecondaryButton
+                  onClick={(e) => {
+                    handleSaveProfile(); // Save the image if it's uploaded
+                    setIsPictureEditing(false); // Close the modal
+                  }}
+                >
+                সংরক্ষণ করুন
+                </SecondaryButton>
+              )}
             </div>
           </div>
           <div className="h-96 w-1 bg-orange-500 mx-4" />
 
-          <div>
+          <div className="w-48 h-48 group relative">
             <img
-              className="w-48 h-48 border-2 border-orange-500"
-              src={profile.image}
+              className=" w-48 h-48 border-2 border-orange-500 object-cover"
+              src={
+                profileImage
+                  ? profileImage
+                  : imagePreview
+                  ? imagePreview
+                  : profile.image
+              }
               alt="Profile"
             />
+           
           </div>
         </div>
       </div>
@@ -234,3 +350,5 @@ const ProfileCard = () => {
 };
 
 export default ProfileCard;
+
+

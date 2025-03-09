@@ -13,8 +13,8 @@ function SelectField({ id, name, value, onChange, options, disabled, placeholder
       <option className="text-black" value="">
         {placeholder}
       </option>
-      {options.map((option) => (
-        <option className="text-black bg-secondary" key={option._id} value={option[name]}>
+      {options.map((option, index) => (
+        <option className="text-black bg-neutral-content" key={index} value={option[name]}>
          {name === 'upazila' ? option : option[name]} 
         </option>
       ))}
